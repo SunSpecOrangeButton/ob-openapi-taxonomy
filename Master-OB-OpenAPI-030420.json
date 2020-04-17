@@ -9,38 +9,6 @@
   "servers": [],
   "components" : {
     "schemas" : {
-      "PowerMeasurements" : {
-        "type" : "object",
-        "properties" : {
-          "PowerAC" : {
-            "$ref" : "Master-Solar-Taxonomy-040120.json#/components/schemas/PowerAC"
-          },
-          "PowerDC" : {
-            "$ref" : "Master-Solar-Taxonomy-040120.json#/components/schemas/PowerDC"
-          },
-          "EnergyAC" : {
-            "$ref" : "Master-Solar-Taxonomy-040120.json#/components/schemas/EnergyAC"
-          },
-          "TempMeter" : {
-            "$ref" : "Master-Solar-Taxonomy-040120.json#/components/schemas/TempMeter"
-          },
-          "TempModule" : {
-            "$ref" : "Master-Solar-Taxonomy-040120.json#/components/schemas/TempModule"
-          },
-          "TempCell" : {
-            "$ref" : "Master-Solar-Taxonomy-040120.json#/components/schemas/TempCell"
-          },
-          "CurtailLimit" : {
-            "$ref" : "Master-Solar-Taxonomy-040120.json#/components/schemas/CurtailLimit"
-          },
-          "Avail" : {
-            "$ref" : "Master-Solar-Taxonomy-040120.json#/components/schemas/Avail"
-          },
-          "SystemPF" : {
-            "$ref" : "Master-Solar-Taxonomy-040120.json#/components/schemas/SystemPF"
-          }
-        }
-      },
       "SoilingInstrumentDevice" : {
         "type" : "object",
         "properties" : {
