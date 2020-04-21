@@ -3,7 +3,7 @@
   "info": {
     "version": "1.0.0",
     "title": "OB OpenAPI Master Definition Document",
-    "description": "OB OpenAPI Definitions Orange Button."
+    "description": "OB OpenAPI Definitions For Orange Button."
   },
   "paths": {},
   "servers": [],
