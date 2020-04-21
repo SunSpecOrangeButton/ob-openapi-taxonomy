@@ -2,8 +2,8 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "OB Open API System Health",
-    "description": "OB Open API Definitions for the Solar Taxonomy System Health Monitoring and Power Performance Test use cases."
+    "title": "OB OpenAPI Master Definition Document",
+    "description": "OB OpenAPI Definitions Orange Button."
   },
   "paths": {},
   "servers": [],
