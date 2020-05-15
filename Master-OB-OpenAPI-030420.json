@@ -9,6 +9,72 @@
   "servers": [],
   "components": {
     "schemas": {
+      "EnergyMeasurement": {
+        "description": "A value of energy produced in one time period related to a device.",
+        "properties": {
+          "DeviceID": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/DeviceID"
+          },
+          "EnergyAC": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/EnergyAC"
+          }
+        },
+        "type": "object"
+      },
+      "EnergyMeasurements": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/EnergyMeasurement"
+        }
+      },
+      "EnergyPrediction": {
+        "type": "object",
+        "description": "A value of energy produced in one time period.",
+        "properties": {
+          "EnergyAC": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/EnergyAC"
+          }
+        }
+      },
+      "EnergyPredictions": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/EnergyPrediction"
+        }
+      },
+      "EnergyModel": {
+        "type": "object",
+        "description": "Energy model contains energy predictions and information about the model assumptions and information sources.",
+        "properties": {
+          "EnergyPredictions": {
+            "$ref": "#/components/schemas/EnergyPredictions"
+          },
+          "ModelWeatherSource": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/ModelWeatherSource"
+          },
+          "EnergyModelName": {
+            "$ref": "#/components/schemas/EnergyModelName"
+          },
+          "SiteID": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/SiteID"
+          },
+          "EnergyModelConfigurationFilename": {
+            "$ref": "#/components/schemas/EnergyModelConfigurationFilename"
+          }
+        }
+      },
+      "EnergyProduction": {
+        "type": "object",
+        "description": "Actual Energy Production at a System Site.",
+        "properties": {
+          "EnergyMeasurements": {
+            "$ref": "#/components/schemas/EnergyMeasurements"
+          },
+          "SiteID": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/SiteID"
+          }
+        }
+      },
       "Product": {
         "type": "object",
         "properties": {
@@ -764,6 +830,34 @@
           {
             "type": "object",
             "description": "Third line of a mailing or physical address.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "EnergyModelName": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Type of design/energy production model for the PV system which could be Pvsyst, SAM, PV Watts, or Other.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "EnergyModelConfigurationFilename": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A filename holding the configuration details of the energy prediction details. This could be a zip file containing multiple files. The intention is to be able to reproduce the energy predictions if needed.",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": ""
