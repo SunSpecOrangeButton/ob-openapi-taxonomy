@@ -497,6 +497,9 @@
           "County": {
             "$ref": "#/components/schemas/County"
           },
+		  "AddressType": {
+            "$ref": "#/components/schemas/AddressType"
+          },
           "Location": {
             "$ref": "#/components/schemas/Location"
           },
@@ -508,6 +511,9 @@
           },
           "AddrLine3": {
             "$ref": "#/components/schemas/AddrLine3"
+          },
+		  "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
@@ -533,9 +539,135 @@
           "FirstName": {
             "$ref": "#/components/schemas/FirstName"
           },
+		  "MiddleName": {
+            "$ref": "#/components/schemas/MiddleName"
+          },
           "LastName": {
             "$ref": "#/components/schemas/LastName"
+          },
+		  "ContactType": {
+            "$ref": "#/components/schemas/ContactType"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
+        }
+      },
+      "AuthorityHavingJurisdiction": {
+        "type": "object",
+        "description": "The authority having jurisdiction over any permit, site, or governance decision",
+        "properties": {
+          "Address": {
+            "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/Address"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "BuildingCode": {
+            "$ref": "#/components/schemas/BuildingCode"
+          },
+          "BuildingCodeNotes": {
+            "$ref": "#/components/schemas/BuildingCodeNotes"
+          },
+          "ElectricCode": {
+            "$ref": "#/components/schemas/ElectricCode"
+          },
+          "ElectricCodeNotes": {
+            "$ref": "#/components/schemas/ElectricCodeNotes"
+          },
+          "FireCode": {
+            "$ref": "#/components/schemas/FireCode"
+          },
+          "FireCodeNotes": {
+            "$ref": "#/components/schemas/FireCodeNotes"
+          },
+          "ResidentialCode": {
+            "$ref": "#/components/schemas/ResidentialCode"
+          },
+          "ResidentialCodeNotes": {
+            "$ref": "#/components/schemas/ResidentialCodeNotes"
+          },
+          "DocumentSubmissionMethod": {
+            "$ref": "#/components/schemas/DocumentSubmissionMethod"
+          },
+          "DocumentSubmissionMethodNotes": {
+            "$ref": "#/components/schemas/DocumentSubmissionMethodNotes"
+          },
+          "EngineeringReviewRequirements": {
+            "$ref": "#/components/schemas/EngineeringReviews"
+          },
+          "AHJID": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/AHJID"
+          },
+          "AHJName": {
+            "$ref": "#/components/schemas/AHJName"
+          }
+        }
+      },
+      "EngineeringReviewRequirements": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/EngineeringReviewRequirement"
+        }
+      },
+      "EngineeringReviewRequirement": {
+        "type": "object",
+        "description": "A review by a single engineer or other professional of a design or drawing set",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "StampType": {
+            "$ref": "#/components/schemas/StampType"
+          },
+          "EngineeringReviewType": {
+            "$ref": "#/components/schemas/EngineeringReviewType"
+          },
+          "RequirementLevel": {
+            "$ref": "#/components/schemas/RequirementLevel"
+          }
+        }
+      },
+      "Site": {
+        "type": "object",
+        "description": "The site of a solar installation or potential solar installation",
+        "properties": {
+          "SiteID": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/SiteID"
+          },
+          "SiteName": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/SiteName"
+          },
+          "SiteParcelID": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/SiteParcelID"
+          },
+          "SiteMandatoryAccessReqrmnts": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/SiteMandatoryAccessReqrmnts"
+          },
+          "Addresses": {
+            "$ref": "#/components/schemas/Addresses"
+          },
+          "Locations": {
+            "$ref": "#/components/schemas/Locations"
+          }
+        }
+      },
+      "Addresses": {
+        "type": "array",
+        "items": {
+          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/Address"
+        }
+      },
+      "Locations": {
+        "type": "array",
+        "items": {
+          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/Location"
+        }
+      },
+      "Contacts": {
+        "type": "array",
+        "items": {
+          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/Contact"
         }
       },
       "City": {
@@ -712,6 +844,20 @@
           }
         ]
       },
+	  "MiddleName": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Middle name of a person.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": "",
+            "x-ob-enum": ""
+          }
+        ]
+      },
       "LastName": {
         "allOf": [
           {
@@ -733,7 +879,7 @@
           },
           {
             "type": "object",
-            "description": "Decimal value of latitude of the physical site in degrees. Positive North of the Equator. Negative South of the Equator",
+            "description": "The height of ground level at a location relative to sea level.",
             "x-ob-item-type": "num:lengthItemType",
             "x-ob-unit": [
               "Foot",
@@ -766,6 +912,15 @@
           },
           "Elevation": {
             "$ref": "#/components/schemas/Elevation"
+          },
+		  "LocationType": {
+            "$ref": "#/components/schemas/LocationType"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+		  "LocationDeterminationMethod": {
+            "$ref": "#/components/schemas/LocationDeterminationMethod"
           }
         }
       },
@@ -861,6 +1016,355 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": ""
+          }
+        ]
+      },
+      "Description": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Generic Text field used in fields to provide more detail",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "BuildingCode": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The applicable building code the AHJ enforces.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "2021IBC",
+              "2018IBC",
+              "2015IBC",
+              "2012IBC",
+              "2009IBC",
+              "NoSolarRegulations"
+            ]
+          }
+        ]
+      },
+      "BuildingCodeNotes": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Notes for special requirements related to the building code in this AHJ.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "ResidentialCode": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The applicable residential code the AHJ enforces.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "2021IRC",
+              "2018IRC",
+              "2015IRC",
+              "2012IRC",
+              "2009IRC",
+              "NoSolarRegulations"
+            ]
+          }
+        ]
+      },
+      "FireCode": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The applicable fire code the AHJ enforces.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "2021IFC",
+              "2018IFC",
+              "2015IFC",
+              "2012IFC",
+              "2009IFC",
+              "NoSolarRegulations"
+            ]
+          }
+        ]
+      },
+      "ElectricCode": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The applicable electric code the AHJ enforces.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "2020NEC",
+              "2017NEC",
+              "2014NEC",
+              "2011NEC",
+              "NoSolarRegulations"
+            ]
+          }
+        ]
+      },
+      "ResidentialCodeNotes": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Notes for special requirements related to the residential code in this AHJ.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "FireCodeNotes": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Notes for special requirements related to the fire code in this AHJ.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "ElectricCodeNotes": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Notes for special requirements related to the electric code in this AHJ.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "DocumentSubmissionMethod": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The method for submitting AHJ documents.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "Epermitting",
+              "Email",
+              "InPerson"
+            ]
+          }
+        ]
+      },
+      "DocumentSubmissionMethodNotes": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Notes about the document submission process for this AHJ.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "EngineeringReviewType": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of engineering or professional review",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "StructuralEngineer",
+              "ElectricalEngineer",
+              "PVEngineer",
+              "MasterElectrician",
+              "EnvironmentalEngineer"
+            ]
+          }
+        ]
+      },
+      "StampType": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of certifying stamp that is applied to the design or drawing set",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "Wet",
+              "Digital",
+			  "Notary",
+              "None"
+            ]
+          }
+        ]
+      },
+      "AHJName": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the Authority Having Jurisdiction",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "RequirementLevel": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The degree of application of the requirement. Required should be used when the review is always required. Optional for if it is appreciated but not required, and conditionally optional if there are requirements that have special conditions to become required. Additional comments can be placed in the description. ",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "Required",
+              "Optional",
+              "ConditionallyOptional"
+            ]
+          }
+        ]
+      },
+      "LocationDeterminationMethod": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Method of the determining the location",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "GPS",
+              "Survey",
+              "AerialImage",
+              "EngineeringReport",
+              "AddressGeocoding",
+              "Unknown"
+            ]
+          }
+        ]
+      },
+      "ContactType": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of contact being specified",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "Homeowner",
+              "OffTaker",
+              "Inspector",
+              "Engineer",
+              "Orginitator",
+              "Installer",
+              "Investor",
+              "PermittingOfficial"
+            ]
+          }
+        ]
+      },
+      "LocationType": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of location being specified",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "DeviceSpecific",
+              "SiteEntrance",
+              "GeneralProximity"
+            ]
+          }
+        ]
+      },
+      "AddressType": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of address being specified",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "Mailing",
+              "Billing",
+              "Installation",
+              "Shipping"
+            ]
           }
         ]
       }
