@@ -81,14 +81,14 @@
           "ProdName": {
             "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/ProdName"
           },
-          "ProdID": {
-            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/ProdID"
-          },
           "ProdMfr": {
             "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/ProdMfr"
           },
+          "ProdCode": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/ProdCode"
+          },
           "ProdType": {
-            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/ProdType"
+            "$ref": "#/components/schemas/ProdType"
           }
         }
       },
@@ -101,11 +101,17 @@
           "SerialNum": {
             "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/SerialNum"
           },
-          "ProdTypeID": {
-            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/ProdTypeID"
-          },
           "DeviceMaintenance": {
             "$ref": "#/components/schemas/DeviceMaintenance"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "URL": {
+            "$ref": "#/components/schemas/URL"
+          },
+          "ProdCode": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/ProdCode"
           }
         }
       },
@@ -497,8 +503,11 @@
           "County": {
             "$ref": "#/components/schemas/County"
           },
-		  "AddressType": {
+          "AddressType": {
             "$ref": "#/components/schemas/AddressType"
+          },
+          "AddressID": {
+            "$ref": "#/components/schemas/AddressID"
           },
           "Location": {
             "$ref": "#/components/schemas/Location"
@@ -512,7 +521,7 @@
           "AddrLine3": {
             "$ref": "#/components/schemas/AddrLine3"
           },
-		  "Description": {
+          "Description": {
             "$ref": "#/components/schemas/Description"
           }
         }
@@ -523,6 +532,9 @@
         "properties": {
           "Address": {
             "$ref": "#/components/schemas/Address"
+          },
+          "ContactID": {
+            "$ref": "#/components/schemas/ContactID"
           },
           "Email": {
             "$ref": "#/components/schemas/Email"
@@ -539,17 +551,26 @@
           "FirstName": {
             "$ref": "#/components/schemas/FirstName"
           },
-		  "MiddleName": {
+          "MiddleName": {
             "$ref": "#/components/schemas/MiddleName"
           },
           "LastName": {
             "$ref": "#/components/schemas/LastName"
           },
-		  "ContactType": {
+          "ContactType": {
             "$ref": "#/components/schemas/ContactType"
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "PreferredContactMethod": {
+            "$ref": "#/components/schemas/PreferredContactMethod"
+          },
+          "ContactTimezone": {
+            "$ref": "#/components/schemas/ContactTimezone"
+          },
+          "Title": {
+            "$ref": "#/components/schemas/Title"
           }
         }
       },
@@ -558,7 +579,7 @@
         "description": "The authority having jurisdiction over any permit, site, or governance decision",
         "properties": {
           "Address": {
-            "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/Address"
+            "$ref": "#/components/schemas/Address"
           },
           "Contacts": {
             "$ref": "#/components/schemas/Contacts"
@@ -601,6 +622,12 @@
           },
           "AHJName": {
             "$ref": "#/components/schemas/AHJName"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
@@ -625,6 +652,9 @@
           },
           "RequirementLevel": {
             "$ref": "#/components/schemas/RequirementLevel"
+          },
+          "RequirementNotes": {
+            "$ref": "#/components/schemas/RequirementNotes"
           }
         }
       },
@@ -649,6 +679,27 @@
           },
           "Locations": {
             "$ref": "#/components/schemas/Locations"
+          },
+          "EnergyConsumption": {
+            "$ref": "#/components/schemas/EnergyConsumption"
+          },
+          "PVSystems": {
+            "$ref": "#/components/schemas/PVSystems"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "AuthorityHavingJurisdiction": {
+            "$ref": "#/components/schemas/AuthorityHavingJurisdiction"
+          },
+          "Utility": {
+            "$ref": "#/components/schemas/Utility"
           }
         }
       },
@@ -844,7 +895,7 @@
           }
         ]
       },
-	  "MiddleName": {
+      "MiddleName": {
         "allOf": [
           {
             "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
@@ -913,13 +964,16 @@
           "Elevation": {
             "$ref": "#/components/schemas/Elevation"
           },
-		  "LocationType": {
+          "LocationType": {
             "$ref": "#/components/schemas/LocationType"
+          },
+          "LocationID": {
+            "$ref": "#/components/schemas/LocationID"
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
-		  "LocationDeterminationMethod": {
+          "LocationDeterminationMethod": {
             "$ref": "#/components/schemas/LocationDeterminationMethod"
           }
         }
@@ -1190,7 +1244,8 @@
             "enum": [
               "Epermitting",
               "Email",
-              "InPerson"
+              "InPerson",
+              "SolarApp"
             ]
           }
         ]
@@ -1225,6 +1280,7 @@
               "ElectricalEngineer",
               "PVEngineer",
               "MasterElectrician",
+              "FireMarshal",
               "EnvironmentalEngineer"
             ]
           }
@@ -1244,7 +1300,7 @@
             "enum": [
               "Wet",
               "Digital",
-			  "Notary",
+              "Notary",
               "None"
             ]
           }
@@ -1278,7 +1334,7 @@
             "enum": [
               "Required",
               "Optional",
-              "ConditionallyOptional"
+              "ConditionallyRequired"
             ]
           }
         ]
@@ -1324,8 +1380,91 @@
               "Orginitator",
               "Installer",
               "Investor",
-              "PermittingOfficial"
+              "PermittingOfficial",
+              "FireMarshal",
+              "ProjectManager"
             ]
+          }
+        ]
+      },
+      "PreferredContactMethod": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The method of contact the contact prefers",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "Email",
+              "WorkPhone",
+              "CellPhone",
+              "HomePhone",
+              "CellTextMessage"
+            ]
+          }
+        ]
+      },
+      "LocationID": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The identifier of the location.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": []
+          }
+        ]
+      },
+      "AddressID": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The identifier of the address.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": []
+          }
+        ]
+      },
+      "ContactID": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The identifier of the contact.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": []
+          }
+        ]
+      },
+      "ContactTimezone": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The timezone where the contact is located.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": []
           }
         ]
       },
@@ -1343,8 +1482,37 @@
             "enum": [
               "DeviceSpecific",
               "SiteEntrance",
-              "GeneralProximity"
+              "GeneralProximity",
+              "Warehouse"
             ]
+          }
+        ]
+      },
+      "FileFolderURL": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A generic URL to a file folder for transmitting documents",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "URL": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A URL string",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
           }
         ]
       },
@@ -1365,6 +1533,467 @@
               "Installation",
               "Shipping"
             ]
+          }
+        ]
+      },
+      "Task": {
+        "type": "object",
+        "description": "A task to accomplish",
+        "properties": {
+          "TaskType": {
+            "$ref": "#/components/schemas/TaskType"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "TaskName": {
+            "$ref": "#/components/schemas/TaskName"
+          },
+          "TaskStatus": {
+            "$ref": "#/components/schemas/TaskStatus"
+          },
+          "TaskCompletedDate": {
+            "$ref": "#/components/schemas/TaskCompletedDate"
+          }
+        }
+      },
+      "TaskType": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of Task. Select SeeDescription if task is not within the enumerated list.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "Design",
+              "ElectricalInspection",
+              "EquipmentOrder",
+              "EquipmentReceipt",
+              "HOAApplication",
+              "Installation",
+              "Interconnection",
+              "Other",
+              "PermitApplication",
+              "SiteSurvey",
+              "StructuralInspection"
+            ]
+          }
+        ]
+      },
+      "TaskName": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of a task",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "Tasks": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Task"
+        }
+      },
+      "TaskStatus": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The status of a task",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "NotStarted",
+              "Ready",
+              "Submitted",
+              "InProgress",
+              "Completed"
+            ]
+          }
+        ]
+      },
+      "UtilityName": {
+        "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/UtilityName"
+      },
+      "Devices": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Device"
+        }
+      },
+      "PVSystem": {
+        "type": "object",
+        "description": "A solar photovoltaic system",
+        "properties": {
+          "CapacityDC": {
+            "$ref": "#/components/schemas/CapacityDC"
+          },
+          "PVSystemID": {
+            "$ref": "#/components/schemas/PVSystemID"
+          },
+          "PVSystemPrice": {
+            "$ref": "#/components/schemas/PVSystemPrice"
+          },
+          "Devices": {
+            "$ref": "#/components/schemas/Devices"
+          },
+          "EnergyModel": {
+            "$ref": "#/components/schemas/EnergyModel"
+          },
+          "EnergyProduction": {
+            "$ref": "#/components/schemas/EnergyProduction"
+          },
+          "ProjectedSavingsAmt": {
+            "$ref": "#/components/schemas/ProjectedSavingsAmt"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "OperationalPhase": {
+            "$ref": "#/components/schemas/OperationalPhase"
+          },
+          "BOM": {
+            "$ref": "#/components/schemas/BOM"
+          },
+          "Tasks": {
+            "$ref": "#/components/schemas/Tasks"
+          },
+          "OperationalStatus": {
+            "$ref": "#/components/schemas/OperationalStatus"
+          }
+        }
+      },
+      "PVSystemPrice": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The price of the PV system",
+            "x-ob-item-type": "xbrli:monetaryItemType",
+            "x-ob-unit": [
+              "Canadian dollar",
+              "Euro",
+              "Mexican peso",
+              "US Dollar",
+              "Next Day US Dollar",
+              "Same Day US Dollar"
+            ],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "EnergyUsage": {
+        "type": "object",
+        "description": "A value of energy consumed in one time period.",
+        "properties": {
+          "EnergyAC": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/EnergyAC"
+          }
+        }
+      },
+      "EnergyUsages": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/EnergyUsage"
+        }
+      },
+      "EnergyConsumption": {
+        "type": "object",
+        "description": "The energy consumption history of a site",
+        "properties": {
+          "EnergyUsages": {
+            "$ref": "#/components/schemas/EnergyUsages"
+          }
+        }
+      },
+      "PVSystemID": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Identifier of the system",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-unit": null,
+            "x-ob-enum": [
+              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
+            ]
+          }
+        ]
+      },
+      "CapacityDC": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Capacity in DC at Standard Test Conditions",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-unit": [
+              "Horsepower",
+              "Gigawatt",
+              "Kilowatt",
+              "Megawatt",
+              "Terawatt",
+              "Watt",
+              "Volt-ampere reactive",
+              "Volt-ampere"
+            ],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "ProdQty": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "Quantity of a Product",
+            "x-ob-item-type": "us-types:perUnitItemType",
+            "x-ob-unit": [
+              "Monetary/Decimal"
+            ],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "ProductEntry": {
+        "type": "object",
+        "description": "A product used within a PVSystem and the quantity of that product",
+        "properties": {
+          "ProdQty": {
+            "$ref": "#/components/schemas/ProdQty"
+          },
+          "Product": {
+            "$ref": "#/components/schemas/Product"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        }
+      },
+      "PVSystems": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PVSystem"
+        }
+      },
+      "Utility": {
+        "type": "object",
+        "description": "A electric service provider",
+        "properties": {
+          "UtilityLegalEntityID": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/UtilityLegalEntityID"
+          },
+          "UtilityName": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/UtilityName"
+          }
+        }
+      },
+      "ProjectedSavingsAmt": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The projected savings to the consumer from reduced electricity demand over a period of time.",
+            "x-ob-item-type": "xbrli:monetaryItemType",
+            "x-ob-unit": [
+              "Canadian dollar",
+              "Euro",
+              "Mexican peso",
+              "US Dollar",
+              "Next Day US Dollar",
+              "Same Day US Dollar"
+            ],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "OperationalStatus": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The status of the operation of the PVSystem",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "Online",
+              "Offline",
+              "Curtailed"
+            ]
+          }
+        ]
+      },
+      "OperationalPhase": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The status of the operation of the PVSystem",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "Proposed",
+              "UnderConstruction",
+              "Commissioned",
+              "Decommissioned"
+            ]
+          }
+        ]
+      },
+      "ProdType": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of product",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": [
+              "Module",
+              "Optimizer",
+              "DCDisconnectSwitch",
+              "ACDisconnectSwitch",
+              "Inverter",
+              "Tracker",
+              "Combiner",
+              "MetStation",
+              "Transformer",
+              "Battery",
+              "BatteryManagementSystem",
+              "Logger",
+              "Meter",
+              "String",
+              "Mounting"
+            ]
+          }
+        ]
+      },
+      "BOM": {
+        "type": "object",
+        "description": "Bill of Materials for a System",
+        "properties": {
+          "ProductEntries": {
+            "$ref": "#/components/schemas/ProductEntries"
+          },
+          "BOMStatus": {
+            "$ref": "#/components/schemas/BOMStatus"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          }
+        }
+      },
+      "ProductEntries": {
+        "type": "array",
+        "items": {
+          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/ProductEntry"
+        }
+      },
+      "BOMStatus": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The status of the BOM",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "NotStarted",
+              "InProgress",
+              "Complete",
+              "Cancelled"
+            ]
+          }
+        ]
+      },
+      "Title": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The title of the contact",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "RequirementNotes": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The notes about the requirement level of the engineering review",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "TaskCompletedDate": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The date the task was completed",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
           }
         ]
       }
