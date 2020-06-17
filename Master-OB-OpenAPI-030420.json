@@ -1415,7 +1415,7 @@
           },
           {
             "type": "object",
-            "description": "(review needed) The identifier of the location.",
+            "description": "The identifier of the location.",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
@@ -1430,7 +1430,7 @@
           },
           {
             "type": "object",
-            "description": "(review needed) The identifier of the address.",
+            "description": "The identifier of the address.",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
@@ -1445,7 +1445,7 @@
           },
           {
             "type": "object",
-            "description": "(review needed) The identifier of the contact.",
+            "description": "The identifier of the contact.",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
@@ -1460,7 +1460,7 @@
           },
           {
             "type": "object",
-            "description": "(review needed) The timezone where the contact is located.",
+            "description": "The timezone where the contact is located.",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
@@ -1797,6 +1797,9 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
           }
         }
       },
