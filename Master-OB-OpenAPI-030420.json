@@ -706,19 +706,19 @@
       "Addresses": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/Address"
+          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/Address"
         }
       },
       "Locations": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/Location"
+          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/Location"
         }
       },
       "Contacts": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/Contact"
+          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/Contact"
         }
       },
       "City": {
@@ -1929,7 +1929,7 @@
       "ProductEntries": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/ProductEntry"
+          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/ProductEntry"
         }
       },
       "BOMStatus": {
