@@ -2309,10 +2309,10 @@
             "x-ob-unit": [],
             "x-ob-enum": "",
             "enum": [
-              "MRI10-Year",
-              "MRI25-Year",
-              "MRI50-Year",
-              "MRI100-Year",
+              "MRI10Year",
+              "MRI25Year",
+              "MRI50Year",
+              "MRI100Year",
               "RiskCategoryI",
               "RiskCategoryII",
               "RiskCategoryIII",
@@ -2333,9 +2333,9 @@
             "x-ob-unit": [],
             "x-ob-enum": "",
             "enum": [
-              "ASCE7-16",
-              "ASCE7-10",
-              "ASCE7-05",
+              "ASCE716",
+              "ASCE710",
+              "ASCE705",
               "SpecialWindZone"
             ]
           }
