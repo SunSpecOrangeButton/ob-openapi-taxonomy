@@ -110,6 +110,9 @@
           "URL": {
             "$ref": "#/components/schemas/URL"
           },
+          "Product": {
+            "$ref": "#/components/schemas/Product"
+          },
           "ProdCode": {
             "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/ProdCode"
           }
@@ -628,6 +631,12 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "WindCode": {
+            "$ref": "#/components/schemas/WindCode"
+          },
+          "WindCodeNotes": {
+            "$ref": "#/components/schemas/WindCodeNotes"
           }
         }
       },
@@ -698,8 +707,14 @@
           "AuthorityHavingJurisdiction": {
             "$ref": "#/components/schemas/AuthorityHavingJurisdiction"
           },
-          "Utility": {
-            "$ref": "#/components/schemas/Utility"
+          "Structures": {
+            "$ref": "#/components/schemas/Structures"
+          },
+          "ElectricalServices": {
+            "$ref": "#/components/schemas/ElectricalServices"
+          },
+          "HomeownersAssociation": {
+            "$ref": "#/components/schemas/HomeownersAssociation"
           }
         }
       },
@@ -1382,7 +1397,8 @@
               "Investor",
               "PermittingOfficial",
               "FireMarshal",
-              "ProjectManager"
+              "ProjectManager",
+              "Salesperson"
             ]
           }
         ]
@@ -1560,6 +1576,9 @@
           },
           "TaskCompletedDate": {
             "$ref": "#/components/schemas/TaskCompletedDate"
+          },
+          "TaskID": {
+            "$ref": "#/components/schemas/TaskID"
           }
         }
       },
@@ -1682,6 +1701,15 @@
           },
           "OperationalStatus": {
             "$ref": "#/components/schemas/OperationalStatus"
+          },
+          "StructureID": {
+            "$ref": "#/components/schemas/StructureID"
+          },
+          "ElectricalServiceID": {
+            "$ref": "#/components/schemas/ElectricalServiceID"
+          },
+          "RiskDesignCriteria": {
+            "$ref": "#/components/schemas/RiskDesignCriteria"
           }
         }
       },
@@ -1994,6 +2022,544 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": ""
+          }
+        ]
+      },
+      "Structure": {
+        "type": "object",
+        "description": "A structure on a site",
+        "properties": {
+          "StructureType": {
+            "$ref": "#/components/schemas/StructureType"
+          },
+          "RoofType": {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/RoofType"
+          },
+          "Locations": {
+            "$ref": "#/components/schemas/Locations"
+          },
+          "StructureID": {
+            "$ref": "#/components/schemas/StructureID"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "ElectricalServiceID": {
+            "$ref": "#/components/schemas/ElectricalServiceID"
+          },
+          "YearBuilt": {
+            "$ref": "#/components/schemas/YearBuilt"
+          },
+          "FoundationType": {
+            "$ref": "#/components/schemas/FoundationType"
+          },
+          "ConstructionType": {
+            "$ref": "#/components/schemas/ConstructionType"
+          },
+          "RiskDesignCriteria": {
+            "$ref": "#/components/schemas/RiskDesignCriteria"
+          }
+        }
+      },
+      "StructureType": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of Structure",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "DetachedGarage",
+              "Barn",
+              "Shed",
+              "HouseFoundationBuilt",
+              "HouseManufactured",
+              "HouseMobile",
+              "Hospital",
+              "ParkingGarage",
+              "Warehouse",
+              "Retail",
+              "Industrial",
+              "Hotel",
+              "School",
+              "Carport",
+              "Office"
+            ]
+          }
+        ]
+      },
+      "RoofType": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of roof of the structure",
+            "x-ob-item-type": "solar-types:roofItemType",
+            "x-ob-unit": null,
+            "x-ob-enum": [
+              "Asphalt Shingle",
+              "Built Up Bituminous",
+              "Composite Shingle",
+              "Ethylene Propylene Diene Terpolymer",
+              "Metal Roof",
+              "Poly Vinyl Chloride",
+              "SBS",
+              "Slate",
+              "Thermoplastic Polyolefin",
+              "Tile Concrete",
+              "Tile Roof",
+              "Wood Shingle"
+            ]
+          }
+        ]
+      },
+      "WindLoad": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The ultimate wind speed of a structural design per ASCE 7",
+            "x-ob-item-type": "num-us:speedItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "SnowLoad": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The snow depth of a structural design per ASCE 7",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "SeismicLoad": {
+        "type": "object",
+        "description": "The combined parameters for the Seismic Load condition of a structural design",
+        "properties": {
+          "MCERgroundmotionSS": {
+            "$ref": "#/components/schemas/MCERgroundmotionSS"
+          },
+          "MCERgroundmotionS1": {
+            "$ref": "#/components/schemas/MCERgroundmotionS1"
+          }
+        }
+      },
+      "MCERgroundmotionSS": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": " MCER ground motion (period=0.2s)",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "MCERgroundmotionS1": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "MCER ground motion (period=1.0s)",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "StructureID": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The ID of the structure",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-unit": "",
+            "x-ob-enum": [
+              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
+            ]
+          }
+        ]
+      },
+      "Structures": {
+        "type": "array",
+        "items": {
+          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/Structure"
+        }
+      },
+      "ElectricalServiceID": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The identifier of the electrical service system",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "ElectricalService": {
+        "type": "object",
+        "description": "A electrical service of a site",
+        "properties": {
+          "Devices": {
+            "$ref": "#/components/schemas/Devices"
+          },
+          "ElectricalServiceID": {
+            "$ref": "#/components/schemas/ElectricalServiceID"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Utility": {
+            "$ref": "#/components/schemas/Utility"
+          },
+          "TempLowASHRAE": {
+            "$ref": "#/components/schemas/TempLowASHRAE"
+          },
+          "TempHighASHRAE": {
+            "$ref": "#/components/schemas/TempHighASHRAE"
+          },
+          "ElectricalServiceRating": {
+            "$ref": "#/components/schemas/ElectricalServiceRating"
+          },
+          "UtilityInterconnectionVoltage": {
+            "$ref": "#/components/schemas/UtilityInterconnectionVoltage"
+          },
+          "UtilityInterconnectionPhase": {
+            "$ref": "#/components/schemas/UtilityInterconnectionPhase"
+          }
+        }
+      },
+      "TempLowASHRAE": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The extreme low temperature for the wire sizing calculations",
+            "x-ob-item-type": "num-us:temperatureItemType",
+            "x-ob-unit": [
+              "Celsius",
+              "Kelvin",
+              "Fahrenheit"
+            ],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "TempHighASHRAE": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The 2% high temperature for the wire sizing calculations",
+            "x-ob-item-type": "num-us:temperatureItemType",
+            "x-ob-unit": [
+              "Celsius",
+              "Kelvin",
+              "Fahrenheit"
+            ],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "RiskCategory": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The risk category from ASCE7",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "MRI10Year",
+              "MRI25Year",
+              "MRI50Year",
+              "MRI100Year",
+              "RiskCategoryI",
+              "RiskCategoryII",
+              "RiskCategoryIII",
+              "RiskCategoryIV"
+            ]
+          }
+        ]
+      },
+      "WindCode": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The wind code adopted by the authority having jurisdiction",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "ASCE716",
+              "ASCE710",
+              "ASCE705",
+              "SpecialWindZone"
+            ]
+          }
+        ]
+      },
+      "ElectricalServices": {
+        "type": "array",
+        "items": {
+          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/ElectricalService"
+        }
+      },
+      "ElectricalServiceRating": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The rating of the main electrical service breaker",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-unit": [
+              "Ampere"
+            ],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "WindCodeNotes": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The notes about the wind code if there are special requirements",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "TaskID": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The UUID of the task",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-unit": "",
+            "x-ob-enum": [
+              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
+            ]
+          }
+        ]
+      },
+      "YearBuilt": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The year the structure was built",
+            "x-ob-item-type": "xbrli:dateItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": null
+          }
+        ]
+      },
+      "HomeownersAssociation": {
+        "type": "object",
+        "description": "The Homeowner's Association of a site",
+        "properties": {
+          "HOAName": {
+            "$ref": "#/components/schemas/HOAName"
+          },
+          "Address": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        }
+      },
+      "HOAName": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of the homeowner's association",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "FoundationType": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of foundation the structure has",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "Pier",
+              "Raft",
+              "Pile",
+              "Slab",
+              "ContinuousFooting",
+              "IndividualFooting"
+            ]
+          }
+        ]
+      },
+      "ConstructionType": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of construction of the structure",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "Wood",
+              "Steel",
+              "ConcreteBlocks",
+              "Bricks",
+              "ConcretePoured"
+            ]
+          }
+        ]
+      },
+      "RiskDesignCriteria": {
+        "type": "object",
+        "description": "The risk design criteria",
+        "properties": {
+          "SnowLoad": {
+            "$ref": "#/components/schemas/SnowLoad"
+          },
+          "WindLoad": {
+            "$ref": "#/components/schemas/WindLoad"
+          },
+          "SeismicLoad": {
+            "$ref": "#/components/schemas/SeismicLoad"
+          },
+          "RiskCategory": {
+            "$ref": "#/components/schemas/RiskCategory"
+          },
+          "ExposureCategory": {
+            "$ref": "#/components/schemas/ExposureCategory"
+          }
+        }
+      },
+      "ExposureCategory": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The exposure category of the RiskDesignCriteria",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "B",
+              "C",
+              "D"
+            ]
+          }
+        ]
+      },
+      "UtilityInterconnectionVoltage": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "The voltage of the utility being interconnected too",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-unit": [
+              "Volt",
+              "Kilovolt",
+              "Megavolt",
+              "Gigavolt"
+            ],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "UtilityInterconnectionPhase": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "The phase of the utility being interconnected too",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": null,
+            "enum": [
+              "SinglePhase",
+              "ThreePhase"
+            ]
           }
         ]
       }
