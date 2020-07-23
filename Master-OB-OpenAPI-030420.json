@@ -598,6 +598,9 @@
           },
           "Title": {
             "$ref": "#/components/schemas/Title"
+          },
+          "URL": {
+            "$ref": "#/components/schemas/URL"
           }
         },
         "x-ob-usage-tips": ""
@@ -643,7 +646,7 @@
             "$ref": "#/components/schemas/DocumentSubmissionMethodNotes"
           },
           "EngineeringReviewRequirements": {
-            "$ref": "#/components/schemas/EngineeringReviews"
+            "$ref": "#/components/schemas/EngineeringReviewRequirements"
           },
           "AHJID": {
             "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/AHJID"
@@ -662,6 +665,12 @@
           },
           "WindCodeNotes": {
             "$ref": "#/components/schemas/WindCodeNotes"
+          },
+          "FeeStructures": {
+            "$ref": "#/components/schemas/FeeStructures"
+          },
+          "URL": {
+            "$ref": "#/components/schemas/URL"
           }
         },
         "x-ob-usage-tips": ""
@@ -743,6 +752,9 @@
           },
           "HomeownersAssociation": {
             "$ref": "#/components/schemas/HomeownersAssociation"
+          },
+          "Fees": {
+            "$ref": "#/components/schemas/Fees"
           }
         },
         "x-ob-usage-tips": ""
@@ -750,21 +762,21 @@
       "Addresses": {
         "type": "array",
         "items": {
-          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/Address"
+          "$ref": "#/components/schemas/Address"
         },
         "x-ob-usage-tips": ""
       },
       "Locations": {
         "type": "array",
         "items": {
-          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/Location"
+          "$ref": "#/components/schemas/Location"
         },
         "x-ob-usage-tips": ""
       },
-      "Contacts": {
+      "Contacts": { 
         "type": "array",
         "items": {
-          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/Contact"
+          "$ref": "#/components/schemas/Contact"
         },
         "x-ob-usage-tips": ""
       },
@@ -1659,6 +1671,9 @@
           },
           "TaskID": {
             "$ref": "#/components/schemas/TaskID"
+          },
+          "TaskDueDate": {
+            "$ref": "#/components/schemas/TaskDueDate"
           }
         },
         "x-ob-usage-tips": ""
@@ -1675,17 +1690,19 @@
             "x-ob-unit": [],
             "x-ob-enum": "",
             "enum": [
+              "Contract",
+              "SiteSurvey",
               "Design",
-              "ElectricalInspection",
+              "HOAApplication",
+              "PermitApplication",
               "EquipmentOrder",
               "EquipmentReceipt",
-              "HOAApplication",
               "Installation",
+              "InspectionElectrical",
+              "InspectionStructural",
               "Interconnection",
-              "Other",
-              "PermitApplication",
-              "SiteSurvey",
-              "StructuralInspection"
+              "FinalReceipt",
+              "Other"
             ],
             "x-ob-usage-tips": ""
           }
@@ -1942,6 +1959,24 @@
           },
           "UtilityName": {
             "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/UtilityName"
+          },
+          "FeeStructures": {
+            "$ref": "#/components/schemas/FeeStructures"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Addresses": {
+            "$ref": "#/components/schemas/Addresses"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "URL": {
+            "$ref": "#/components/schemas/URL"
           }
         },
         "x-ob-usage-tips": ""
@@ -2062,7 +2097,7 @@
       "ProductEntries": {
         "type": "array",
         "items": {
-          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/ProductEntry"
+          "$ref": "#/components/schemas/ProductEntry"
         },
         "x-ob-usage-tips": ""
       },
@@ -2325,7 +2360,7 @@
       "Structures": {
         "type": "array",
         "items": {
-          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/Structure"
+          "$ref": "#/components/schemas/Structure"
         },
         "x-ob-usage-tips": ""
       },
@@ -2468,7 +2503,7 @@
       "ElectricalServices": {
         "type": "array",
         "items": {
-          "$ref": "Master-OB-OpenAPI-030420.json#/components/schemas/ElectricalService"
+          "$ref": "#/components/schemas/ElectricalService"
         },
         "x-ob-usage-tips": ""
       },
@@ -2554,6 +2589,12 @@
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "FeeStructures": {
+            "$ref": "#/components/schemas/FeeStructures"
+          },
+          "URL": {
+            "$ref": "#/components/schemas/URL"
           }
         },
         "x-ob-usage-tips": ""
@@ -2696,6 +2737,354 @@
               "ThreePhase"
             ],
             "x-ob-usage-tips": ""
+          }
+        ]
+      },
+      "FeeStructure": {
+        "type": "object",
+        "description": "A fee for a good or service",
+        "properties": {
+          "FeeStructureID": {
+            "$ref": "#/components/schemas/FeeStructureID"
+          },
+          "FeeStructureName": {
+            "$ref": "#/components/schemas/FeeStructureName"
+          },
+          "FeeStructureType": {
+            "$ref": "#/components/schemas/FeeStructureType"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          }
+        }
+      },
+      "FeeAmount": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The amount of the fee",
+            "x-ob-item-type": "xbrli:monetaryItemType",
+            "x-ob-unit": [
+              "U.A.E. dirham",
+              "Afghan afghani",
+              "Albanian lek",
+              "Armenian dram",
+              "Netherlands Antillean guilder",
+              "Angolan kwanza",
+              "Argentine peso",
+              "Australian dollar",
+              "Aruban florin",
+              "Azerbaijani manat",
+              "Bosnia and Herzegovina convertible mark",
+              "Barbados dollar",
+              "Bangladeshi taka",
+              "Bulgarian lev",
+              "Bahraini dinar",
+              "Burundian franc",
+              "Bermuda Dollar",
+              "Brunei dollar",
+              "Boliviano",
+              "Bolivian Mvdol",
+              "Brazilian real",
+              "Bahamian dollar",
+              "Bhutanese ngultrum",
+              "Botswana pula",
+              "Belarusian ruble",
+              "Belarusian ruble",
+              "Belize dollar",
+              "Canadian dollar",
+              "Congolese franc",
+              "WIR Bank",
+              "Swiss franc",
+              "WIR Bank",
+              "Unidad de Fomento",
+              "Chilean peso",
+              "Chinese yuan",
+              "Colombian peso",
+              "Unidad de Valor Real",
+              "Costa Rican colon",
+              "Cuban convertible peso",
+              "Cuban peso",
+              "Cape Verde escudo",
+              "Czech koruna",
+              "Djiboutian franc",
+              "Danish krone",
+              "Dominican peso",
+              "Algerian dinar",
+              "Estonian kroon",
+              "Egyptian pound",
+              "Eritrean nakfa",
+              "Ethiopian birr",
+              "Euro",
+              "Fiji dollar",
+              "Falkland Islands pound",
+              "Pound sterling",
+              "Georgian lari",
+              "Ghanaian cedi",
+              "Gibraltar pound",
+              "Gambian dalasi",
+              "Guinean franc",
+              "Guatemalan quetzal",
+              "Guyanese dollar",
+              "Hong Kong dollar",
+              "Honduran lempira",
+              "Croatian kuna",
+              "Haitian gourde",
+              "Hungarian forint",
+              "Indonesian rupiah",
+              "Israeli new sheqel",
+              "Indian rupee",
+              "Iraqi dinar",
+              "Iranian rial",
+              "Icelandic króna",
+              "Jamaican dollar",
+              "Jordanian dinar",
+              "Japanese yen",
+              "Kenyan shilling",
+              "Kyrgyzstani som",
+              "Cambodian riel",
+              "Comoro franc",
+              "North Korean won",
+              "South Korean won",
+              "Kuwaiti dinar",
+              "Cayman Islands dollar",
+              "Kazakhstani tenge",
+              "Lao kip",
+              "Lebanese pound",
+              "Sri Lanka rupee",
+              "Liberian dollar",
+              "Lesotho loti",
+              "Lithuanian litas",
+              "Latvian lats",
+              "Libyan dinar",
+              "Moroccan dirham",
+              "Moldovan leu",
+              "Malagasy ariary",
+              "Macedonian denar",
+              "Myanma kyat",
+              "Mongolian tugrik",
+              "Macanese pataca",
+              "Mauritanian ouguiya",
+              "Mauritian rupee",
+              "Maldivian rufiyaa",
+              "Malawian kwacha",
+              "Mexican peso",
+              "Mexican UDI",
+              "Malaysian ringgit",
+              "Mozambican metical",
+              "Namibian dollar",
+              "Nigerian naira",
+              "Cordoba oro",
+              "Norwegian krone",
+              "Nepalese rupee",
+              "New Zealand dollar",
+              "Omani rial",
+              "Panamanian balboa",
+              "Peruvian nuevo sol",
+              "Papua New Guinean kina",
+              "Philippine peso",
+              "Pakistani rupee",
+              "Polish złoty",
+              "Paraguayan guaraní",
+              "Qatari rial",
+              "Romanian new leu",
+              "Serbian dinar",
+              "Rouble",
+              "Rwandan franc",
+              "Riyal",
+              "Solomon Islands dollar",
+              "Seychelles rupee",
+              "Sudanese pound",
+              "Swedish krona",
+              "Singapore dollar",
+              "Saint Helena pound",
+              "Leone",
+              "Somali shilling",
+              "Surinamese dollar",
+              "South Sudanese pound",
+              "São Tomé and Príncipe dobra",
+              "Salvadoran colón",
+              "Syrian pound",
+              "Lilangeni",
+              "Baht",
+              "Tajikistani somoni",
+              "Turkmenistani manat",
+              "Tunisian dinar",
+              "Pa'anga",
+              "Turkish lira",
+              "Trinidad and Tobago dollar",
+              "New Taiwan dollar",
+              "Tanzanian shilling",
+              "Hryvnia",
+              "Ugandan shilling",
+              "US Dollar",
+              "Next Day US Dollar",
+              "Same Day US Dollar",
+              "Uruguay Peso en Unidades Indexadas",
+              "Uruguayan peso",
+              "Som",
+              "Venezualan Bolivar",
+              "Venezuelan Bolivar Fuerte",
+              "đồng",
+              "Vanuatu vatu",
+              "Samoan tala",
+              "CFA Franc BEAC",
+              "Silver",
+              "Gold",
+              "EURCO",
+              "E.M.U.-6",
+              "E.U.A.-9",
+              "E.U.A.-17",
+              "East Caribbean dollar",
+              "Special Drawing Rights",
+              "UIC Franc",
+              "CFA Franc BCEAO",
+              "Palladium",
+              "CFP Franc",
+              "Platinum",
+              "SUCRE",
+              "ADB Unit of Account",
+              "Yemeni rial",
+              "South African rand",
+              "Zambian kwacha",
+              "Zambian kwacha",
+              "Zimbabwe dollar"
+            ],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "FeeStructureType": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of fee period",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "enum": [
+              "PermitApplication",
+              "HOAApplication",
+              "LoanPayment",
+              "EngineeringService",
+              "InspectionFee",
+              "Other",
+              "InterconnectionFee",
+              "UtilityService"
+            ]
+          }
+        ]
+      },
+      "FeeName": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of the fee payment",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "FeeID": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The ID of a particular fee",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-unit": "",
+            "x-ob-enum": [
+              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
+            ]
+          }
+        ]
+      },
+      "FeeStructures": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/FeeStructure"
+        }
+      },
+      "FeeStructureID": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The uuid of the FeeStructure",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-unit": "",
+            "x-ob-enum": [
+              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
+            ]
+          }
+        ]
+      },
+      "Fee": {
+        "type": "object",
+        "description": "A fee for a good or service",
+        "properties": {
+          "FeeID": {
+            "$ref": "#/components/schemas/FeeID"
+          },
+          "FeeName": {
+            "$ref": "#/components/schemas/FeeName"
+          },
+          "FeeAmount": {
+            "$ref": "#/components/schemas/FeeAmount"
+          },
+          "FeeStructureID": {
+            "$ref": "#/components/schemas/FeeStructureID"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          }
+        }
+      },
+      "FeeStructureName": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of the FeeStructure",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
+          }
+        ]
+      },
+      "Fees": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Fee"
+        }
+      },
+      "TaskDueDate": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy-040120.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The due date of a task",
+            "x-ob-item-type": "xbrli:dateItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": ""
           }
         ]
       }
