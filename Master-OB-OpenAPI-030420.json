@@ -773,7 +773,7 @@
         },
         "x-ob-usage-tips": ""
       },
-      "Contacts": { 
+      "Contacts": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/Contact"
@@ -791,7 +791,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": "",
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -806,7 +814,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": "",
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -821,7 +837,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": "",
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -836,7 +860,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": "",
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -854,7 +886,15 @@
               "Radian"
             ],
             "x-ob-enum": null,
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -872,7 +912,15 @@
               "Radian"
             ],
             "x-ob-enum": null,
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -887,7 +935,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": "",
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -902,7 +958,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": "",
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -917,7 +981,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": "",
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -932,7 +1004,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": "",
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -947,7 +1027,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": "",
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -962,7 +1050,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": "",
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -977,7 +1073,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": "",
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -992,7 +1096,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": "",
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1018,7 +1130,15 @@
               "Millimetre"
             ],
             "x-ob-enum": null,
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1075,7 +1195,15 @@
               "Millimetre"
             ],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1090,7 +1218,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1105,7 +1241,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1120,7 +1264,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1135,7 +1287,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1150,7 +1310,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1165,7 +1333,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1188,7 +1364,15 @@
               "2009IBC",
               "NoSolarRegulations"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1203,7 +1387,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1226,7 +1418,15 @@
               "2009IRC",
               "NoSolarRegulations"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1249,7 +1449,15 @@
               "2009IFC",
               "NoSolarRegulations"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1271,7 +1479,15 @@
               "2011NEC",
               "NoSolarRegulations"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1286,7 +1502,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1301,7 +1525,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1316,7 +1548,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1337,7 +1577,15 @@
               "InPerson",
               "SolarApp"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1352,7 +1600,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1375,7 +1631,15 @@
               "FireMarshal",
               "EnvironmentalEngineer"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1396,7 +1660,15 @@
               "Notary",
               "None"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1411,7 +1683,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1431,7 +1711,15 @@
               "Optional",
               "ConditionallyRequired"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1454,7 +1742,15 @@
               "AddressGeocoding",
               "Unknown"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1482,7 +1778,15 @@
               "ProjectManager",
               "Salesperson"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1504,7 +1808,15 @@
               "HomePhone",
               "CellTextMessage"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1520,7 +1832,15 @@
             "x-ob-unit": [],
             "x-ob-enum": "",
             "enum": [],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1536,7 +1856,15 @@
             "x-ob-unit": [],
             "x-ob-enum": "",
             "enum": [],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1552,7 +1880,15 @@
             "x-ob-unit": [],
             "x-ob-enum": "",
             "enum": [],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1568,7 +1904,15 @@
             "x-ob-unit": [],
             "x-ob-enum": "",
             "enum": [],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1589,7 +1933,15 @@
               "GeneralProximity",
               "Warehouse"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1604,7 +1956,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1619,7 +1979,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1640,7 +2008,15 @@
               "Installation",
               "Shipping"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1704,7 +2080,15 @@
               "FinalReceipt",
               "Other"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1719,7 +2103,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1748,7 +2140,15 @@
               "InProgress",
               "Completed"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1835,7 +2235,15 @@
               "Same Day US Dollar"
             ],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1879,7 +2287,15 @@
             "x-ob-enum": [
               "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1903,7 +2319,15 @@
               "Volt-ampere"
             ],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1920,7 +2344,15 @@
               "Monetary/Decimal"
             ],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -1999,7 +2431,15 @@
               "Same Day US Dollar"
             ],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2019,7 +2459,15 @@
               "Offline",
               "Curtailed"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2040,7 +2488,15 @@
               "Commissioned",
               "Decommissioned"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2071,7 +2527,15 @@
               "String",
               "Mounting"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2118,7 +2582,15 @@
               "Complete",
               "Cancelled"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2133,7 +2605,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2148,7 +2628,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2163,7 +2651,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2235,7 +2731,15 @@
               "Carport",
               "Office"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2263,7 +2767,15 @@
               "Tile Roof",
               "Wood Shingle"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2278,7 +2790,15 @@
             "x-ob-item-type": "num-us:speedItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2293,7 +2813,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2321,7 +2849,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2336,7 +2872,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2353,7 +2897,15 @@
             "x-ob-enum": [
               "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2375,7 +2927,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2431,7 +2991,15 @@
               "Fahrenheit"
             ],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2450,7 +3018,15 @@
               "Fahrenheit"
             ],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2475,7 +3051,15 @@
               "RiskCategoryIII",
               "RiskCategoryIV"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2496,7 +3080,15 @@
               "ASCE705",
               "SpecialWindZone"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2520,7 +3112,15 @@
               "Ampere"
             ],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2535,7 +3135,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2552,7 +3160,15 @@
             "x-ob-enum": [
               "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2567,7 +3183,15 @@
             "x-ob-item-type": "xbrli:dateItemType",
             "x-ob-unit": [],
             "x-ob-enum": null,
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2610,7 +3234,15 @@
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2633,7 +3265,15 @@
               "ContinuousFooting",
               "IndividualFooting"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2655,7 +3295,15 @@
               "Bricks",
               "ConcretePoured"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2697,7 +3345,15 @@
               "C",
               "D"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2717,7 +3373,15 @@
               "Gigavolt"
             ],
             "x-ob-enum": "",
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2736,7 +3400,15 @@
               "SinglePhase",
               "ThreePhase"
             ],
-            "x-ob-usage-tips": ""
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2953,7 +3625,15 @@
               "Zambian kwacha",
               "Zimbabwe dollar"
             ],
-            "x-ob-enum": ""
+            "x-ob-enum": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2977,7 +3657,15 @@
               "Other",
               "InterconnectionFee",
               "UtilityService"
-            ]
+            ],
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -2991,7 +3679,15 @@
             "description": "The name of the fee payment",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
-            "x-ob-enum": ""
+            "x-ob-enum": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -3007,7 +3703,15 @@
             "x-ob-unit": "",
             "x-ob-enum": [
               "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
-            ]
+            ],
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -3029,7 +3733,15 @@
             "x-ob-unit": "",
             "x-ob-enum": [
               "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
-            ]
+            ],
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -3064,7 +3776,15 @@
             "description": "The name of the FeeStructure",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
-            "x-ob-enum": ""
+            "x-ob-enum": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       },
@@ -3084,7 +3804,15 @@
             "description": "The due date of a task",
             "x-ob-item-type": "xbrli:dateItemType",
             "x-ob-unit": [],
-            "x-ob-enum": ""
+            "x-ob-enum": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
           }
         ]
       }
