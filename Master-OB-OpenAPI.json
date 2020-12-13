@@ -640,9 +640,6 @@
           "ResidentialCodeNotes": {
             "$ref": "#/components/schemas/ResidentialCodeNotes"
           },
-          "DocumentSubmissionMethod": {
-            "$ref": "#/components/schemas/DocumentSubmissionMethod"
-          },
           "DocumentSubmissionMethodNotes": {
             "$ref": "#/components/schemas/DocumentSubmissionMethodNotes"
           },
@@ -682,11 +679,14 @@
           "AHJInspections": {
             "$ref": "#/components/schemas/AHJInspections"
           },
-          "PermitIssueMethod": {
-            "$ref": "#/components/schemas/PermitIssueMethod"
-          },
           "PermitIssueMethodNotes": {
             "$ref": "#/components/schemas/PermitIssueMethodNotes"
+          },
+          "PermitIssueMethods": {
+            "$ref": "#/components/schemas/PermitIssueMethods"
+          },
+          "DocumentSubmissionMethods": {
+            "$ref": "#/components/schemas/DocumentSubmissionMethods"
           }
         },
         "x-ob-usage-tips": ""
@@ -3119,7 +3119,7 @@
             "x-ob-item-type": "xbrli:dateItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
-			"x-ob-usage-tips": "Use the Value for the actual due date, start and end time can be used for the task start and completed dates",
+            "x-ob-usage-tips": "Use the Value for the actual due date, start and end time can be used for the task start and completed dates",
             "x-ob-sample-value": {
               "EndTime": "2020-04-28",
               "StartTime": "2020-04-01",
@@ -6144,7 +6144,6 @@
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             }
-			
           }
         ]
       },
@@ -6256,6 +6255,18 @@
             }
           }
         ]
+      },
+      "PermitIssueMethods": {
+        "type": "array",
+        "items": {
+          "$ref": "Master-OB-OpenAPI.json#/components/schemas/PermitIssueMethod"
+        }
+      },
+      "DocumentSubmissionMethods": {
+        "type": "array",
+        "items": {
+          "$ref": "Master-OB-OpenAPI.json#/components/schemas/DocumentSubmissionMethod"
+        }
       }
     }
   }
