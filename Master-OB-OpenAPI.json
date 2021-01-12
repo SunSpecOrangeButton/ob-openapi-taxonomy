@@ -93,6 +93,9 @@
           },
           "ProdCertifications": {
             "$ref": "#/components/schemas/ProdCertifications"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         },
         "x-ob-usage-tips": ""
@@ -1938,11 +1941,8 @@
           "OperationalPhase": {
             "$ref": "#/components/schemas/OperationalPhase"
           },
-          "BOM": {
-            "$ref": "#/components/schemas/BOM"
-          },
-          "Tasks": {
-            "$ref": "#/components/schemas/Tasks"
+          "BillOfMaterials": {
+            "$ref": "#/components/schemas/BillOfMaterials"
           },
           "OperationalStatus": {
             "$ref": "#/components/schemas/OperationalStatus"
@@ -1961,6 +1961,9 @@
           },
           "EnergyProductions": {
             "$ref": "#/components/schemas/EnergyProductions"
+          },
+          "Tasks": {
+            "$ref": "#/components/schemas/Tasks"
           }
         },
         "x-ob-usage-tips": ""
@@ -2082,13 +2085,10 @@
           }
         ]
       },
-      "ProductEntry": {
+      "ProductLineItem": {
         "type": "object",
         "description": "A product used within a PVSystem and the quantity of that product",
         "properties": {
-          "ProdQty": {
-            "$ref": "#/components/schemas/ProdQty"
-          },
           "Product": {
             "$ref": "#/components/schemas/Product"
           },
@@ -2097,6 +2097,12 @@
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Quantity": {
+            "$ref": "#/components/schemas/Quantity"
+          },
+          "AmountExtended": {
+            "$ref": "#/components/schemas/AmountExtended"
           }
         },
         "x-ob-usage-tips": ""
@@ -2248,15 +2254,15 @@
           }
         ]
       },
-      "BOM": {
+      "BillOfMaterials": {
         "type": "object",
         "description": "Bill of Materials for a System",
         "properties": {
-          "ProductEntries": {
-            "$ref": "#/components/schemas/ProductEntries"
+          "ProductLineItems": {
+            "$ref": "#/components/schemas/ProductLineItems"
           },
-          "BOMStatus": {
-            "$ref": "#/components/schemas/BOMStatus"
+          "BillOfMaterialsStatus": {
+            "$ref": "#/components/schemas/BillOfMaterialsStatus"
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
@@ -2267,21 +2273,21 @@
         },
         "x-ob-usage-tips": ""
       },
-      "ProductEntries": {
+      "ProductLineItems": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/ProductEntry"
+          "$ref": "#/components/schemas/ProductLineItem"
         },
         "x-ob-usage-tips": ""
       },
-      "BOMStatus": {
+      "BillOfMaterialsStatus": {
         "allOf": [
           {
             "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
           },
           {
             "type": "object",
-            "description": "The status of the BOM",
+            "description": "The status of the BillOfMaterials",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
@@ -5751,8 +5757,8 @@
           "StructureID": {
             "$ref": "#/components/schemas/StructureID"
           },
-          "BOM": {
-            "$ref": "#/components/schemas/BOM"
+          "BillOfMaterials": {
+            "$ref": "#/components/schemas/BillOfMaterials"
           },
           "Devices": {
             "$ref": "#/components/schemas/Devices"
@@ -6266,6 +6272,777 @@
         "type": "array",
         "items": {
           "$ref": "Master-OB-OpenAPI.json#/components/schemas/DocumentSubmissionMethod"
+        }
+      },
+      "Service": {
+        "type": "object",
+        "description": "A service",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "ServiceName": {
+            "$ref": "#/components/schemas/ServiceName"
+          },
+          "ServiceID": {
+            "$ref": "#/components/schemas/ServiceID"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "ServiceType": {
+            "$ref": "#/components/schemas/ServiceType"
+          }
+        }
+      },
+      "Quantity": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "A quantity",
+            "x-ob-item-type": "xbrli:pureItemType",
+            "x-ob-unit": [
+              "Monetary/Monetary",
+              "pure",
+              "Rate"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
+          }
+        ]
+      },
+      "ServiceLineItem": {
+        "type": "object",
+        "description": "A ServiceLineItem",
+        "properties": {
+          "Service": {
+            "$ref": "#/components/schemas/Service"
+          },
+          "Quantity": {
+            "$ref": "#/components/schemas/Quantity"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "ServiceQuantityUnit": {
+            "$ref": "#/components/schemas/ServiceQuantityUnit"
+          },
+          "ServicePaidTo": {
+            "$ref": "#/components/schemas/ServicePaidTo"
+          },
+          "ServicePaidBy": {
+            "$ref": "#/components/schemas/ServicePaidBy"
+          },
+          "UnitPrice": {
+            "$ref": "#/components/schemas/UnitPrice"
+          },
+          "AmountExtended": {
+            "$ref": "#/components/schemas/AmountExtended"
+          }
+        }
+      },
+      "ServiceName": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of the service",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Trenching"
+            }
+          }
+        ]
+      },
+      "ServiceProvider": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of the person or organization providing the service",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Hampton's Trenching"
+            }
+          }
+        ]
+      },
+      "ServiceLineItems": {
+        "type": "array",
+        "items": {
+          "$ref": "Master-OB-OpenAPI.json#/components/schemas/ServiceLineItem"
+        }
+      },
+      "BillOfServices": {
+        "type": "object",
+        "description": "The scope of work for the given context in which the object appears.",
+        "properties": {
+          "ServiceLineItems": {
+            "$ref": "#/components/schemas/ServiceLineItems"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "BillOfServicesStatus": {
+            "$ref": "#/components/schemas/BillOfServicesStatus"
+          }
+        }
+      },
+      "BillOfServicesStatus": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The status of the overall scope of work",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "NotStarted"
+            },
+            "enum": [
+              "NotStarted",
+              "InProgress",
+              "Complete",
+              "Cancelled"
+            ]
+          }
+        ]
+      },
+      "ServiceID": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The UUID of the service",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-unit": "",
+            "x-ob-enum": [
+              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
+            ],
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
+            }
+          }
+        ]
+      },
+      "ServiceQuantityUnit": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The method by which the cost of a service is evaluated.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "Used in combination with the Quantity field. This provides the information required to calculate the cost of a given service.",
+            "x-ob-sample-value": {
+              "Value": "Foot"
+            },
+            "enum": [
+              "Fixed",
+              "Foot",
+              "Watt",
+              "Module",
+              "Inverter"
+            ]
+          }
+        ]
+      },
+      "ServiceType": {
+        "type": "object",
+        "description": "The type of Service",
+        "properties": {
+          "ServiceTypeName": {
+            "$ref": "#/components/schemas/ServiceTypeName"
+          },
+          "ServiceTypeID": {
+            "$ref": "#/components/schemas/ServiceTypeID"
+          },
+          "ServiceGroup": {
+            "$ref": "#/components/schemas/ServiceGroup"
+          }
+        }
+      },
+      "ServiceTypeName": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of the service type",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Trenching"
+            }
+          }
+        ]
+      },
+      "ServiceTypeID": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The UUID of the ServiceType",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-unit": "",
+            "x-ob-enum": [
+              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
+            ],
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
+            }
+          }
+        ]
+      },
+      "ServiceGroup": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The optional list of normalized services that allow for cross-platform comparison of service data.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Trenching"
+            },
+            "enum": [
+              "Trenching",
+              "EquipmentRental",
+              "TreeRemoval"
+            ]
+          }
+        ]
+      },
+      "ServicePaymentResponsibility": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Information on who or what is performing the payment responsibility of the service",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "PaidByInstaller"
+            },
+            "enum": [
+              "PaidByInstaller",
+              "PaidByOriginator",
+              "PaidByOriginatorToInstaller",
+              "PaidToInstaller",
+              "PaidToOriginator"
+            ]
+          }
+        ]
+      },
+      "ServicePaidTo": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The Service Payment Responsibility for the Payee of the Service",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Originator"
+            },
+            "enum": [
+              "Originator",
+              "Installer",
+              "GeneralContractor"
+            ]
+          }
+        ]
+      },
+      "ServicePaidBy": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The Service Payment Responsibility for the Payer of the Service",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "GeneralContractor"
+            },
+            "enum": [
+              "Originator",
+              "Installer",
+              "GeneralContractor"
+            ]
+          }
+        ]
+      },
+      "UnitPrice": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Amount Per ServiceQuantityUnit",
+            "x-ob-item-type": "xbrli:monetaryItemType",
+            "x-ob-unit": [
+              "U.A.E. dirham",
+              "Afghan afghani",
+              "Albanian lek",
+              "Armenian dram",
+              "Netherlands Antillean guilder",
+              "Angolan kwanza",
+              "Argentine peso",
+              "Australian dollar",
+              "Aruban florin",
+              "Azerbaijani manat",
+              "Bosnia and Herzegovina convertible mark",
+              "Barbados dollar",
+              "Bangladeshi taka",
+              "Bulgarian lev",
+              "Bahraini dinar",
+              "Burundian franc",
+              "Bermuda Dollar",
+              "Brunei dollar",
+              "Boliviano",
+              "Bolivian Mvdol",
+              "Brazilian real",
+              "Bahamian dollar",
+              "Bhutanese ngultrum",
+              "Botswana pula",
+              "Belarusian ruble",
+              "Belarusian ruble",
+              "Belize dollar",
+              "Canadian dollar",
+              "Congolese franc",
+              "WIR Bank",
+              "Swiss franc",
+              "WIR Bank",
+              "Unidad de Fomento",
+              "Chilean peso",
+              "Chinese yuan",
+              "Colombian peso",
+              "Unidad de Valor Real",
+              "Costa Rican colon",
+              "Cuban convertible peso",
+              "Cuban peso",
+              "Cape Verde escudo",
+              "Czech koruna",
+              "Djiboutian franc",
+              "Danish krone",
+              "Dominican peso",
+              "Algerian dinar",
+              "Estonian kroon",
+              "Egyptian pound",
+              "Eritrean nakfa",
+              "Ethiopian birr",
+              "Euro",
+              "Fiji dollar",
+              "Falkland Islands pound",
+              "Pound sterling",
+              "Georgian lari",
+              "Ghanaian cedi",
+              "Gibraltar pound",
+              "Gambian dalasi",
+              "Guinean franc",
+              "Guatemalan quetzal",
+              "Guyanese dollar",
+              "Hong Kong dollar",
+              "Honduran lempira",
+              "Croatian kuna",
+              "Haitian gourde",
+              "Hungarian forint",
+              "Indonesian rupiah",
+              "Israeli new sheqel",
+              "Indian rupee",
+              "Iraqi dinar",
+              "Iranian rial",
+              "Icelandic króna",
+              "Jamaican dollar",
+              "Jordanian dinar",
+              "Japanese yen",
+              "Kenyan shilling",
+              "Kyrgyzstani som",
+              "Cambodian riel",
+              "Comoro franc",
+              "North Korean won",
+              "South Korean won",
+              "Kuwaiti dinar",
+              "Cayman Islands dollar",
+              "Kazakhstani tenge",
+              "Lao kip",
+              "Lebanese pound",
+              "Sri Lanka rupee",
+              "Liberian dollar",
+              "Lesotho loti",
+              "Lithuanian litas",
+              "Latvian lats",
+              "Libyan dinar",
+              "Moroccan dirham",
+              "Moldovan leu",
+              "Malagasy ariary",
+              "Macedonian denar",
+              "Myanma kyat",
+              "Mongolian tugrik",
+              "Macanese pataca",
+              "Mauritanian ouguiya",
+              "Mauritian rupee",
+              "Maldivian rufiyaa",
+              "Malawian kwacha",
+              "Mexican peso",
+              "Mexican UDI",
+              "Malaysian ringgit",
+              "Mozambican metical",
+              "Namibian dollar",
+              "Nigerian naira",
+              "Cordoba oro",
+              "Norwegian krone",
+              "Nepalese rupee",
+              "New Zealand dollar",
+              "Omani rial",
+              "Panamanian balboa",
+              "Peruvian nuevo sol",
+              "Papua New Guinean kina",
+              "Philippine peso",
+              "Pakistani rupee",
+              "Polish złoty",
+              "Paraguayan guaraní",
+              "Qatari rial",
+              "Romanian new leu",
+              "Serbian dinar",
+              "Rouble",
+              "Rwandan franc",
+              "Riyal",
+              "Solomon Islands dollar",
+              "Seychelles rupee",
+              "Sudanese pound",
+              "Swedish krona",
+              "Singapore dollar",
+              "Saint Helena pound",
+              "Leone",
+              "Somali shilling",
+              "Surinamese dollar",
+              "South Sudanese pound",
+              "São Tomé and Príncipe dobra",
+              "Salvadoran colón",
+              "Syrian pound",
+              "Lilangeni",
+              "Baht",
+              "Tajikistani somoni",
+              "Turkmenistani manat",
+              "Tunisian dinar",
+              "Pa'anga",
+              "Turkish lira",
+              "Trinidad and Tobago dollar",
+              "New Taiwan dollar",
+              "Tanzanian shilling",
+              "Hryvnia",
+              "Ugandan shilling",
+              "US Dollar",
+              "Next Day US Dollar",
+              "Same Day US Dollar",
+              "Uruguay Peso en Unidades Indexadas",
+              "Uruguayan peso",
+              "Som",
+              "Venezualan Bolivar",
+              "Venezuelan Bolivar Fuerte",
+              "đồng",
+              "Vanuatu vatu",
+              "Samoan tala",
+              "CFA Franc BEAC",
+              "Silver",
+              "Gold",
+              "EURCO",
+              "E.M.U.-6",
+              "E.U.A.-9",
+              "E.U.A.-17",
+              "East Caribbean dollar",
+              "Special Drawing Rights",
+              "UIC Franc",
+              "CFA Franc BCEAO",
+              "Palladium",
+              "CFP Franc",
+              "Platinum",
+              "SUCRE",
+              "ADB Unit of Account",
+              "Yemeni rial",
+              "South African rand",
+              "Zambian kwacha",
+              "Zambian kwacha",
+              "Zimbabwe dollar"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "US Dollar",
+              "Value": "10.00"
+            }
+          }
+        ]
+      },
+      "AmountExtended": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The total amount of the individual line item calculated by multiplying Quantity by UnitPrice",
+            "x-ob-item-type": "xbrli:monetaryItemType",
+            "x-ob-unit": [
+              "U.A.E. dirham",
+              "Afghan afghani",
+              "Albanian lek",
+              "Armenian dram",
+              "Netherlands Antillean guilder",
+              "Angolan kwanza",
+              "Argentine peso",
+              "Australian dollar",
+              "Aruban florin",
+              "Azerbaijani manat",
+              "Bosnia and Herzegovina convertible mark",
+              "Barbados dollar",
+              "Bangladeshi taka",
+              "Bulgarian lev",
+              "Bahraini dinar",
+              "Burundian franc",
+              "Bermuda Dollar",
+              "Brunei dollar",
+              "Boliviano",
+              "Bolivian Mvdol",
+              "Brazilian real",
+              "Bahamian dollar",
+              "Bhutanese ngultrum",
+              "Botswana pula",
+              "Belarusian ruble",
+              "Belarusian ruble",
+              "Belize dollar",
+              "Canadian dollar",
+              "Congolese franc",
+              "WIR Bank",
+              "Swiss franc",
+              "WIR Bank",
+              "Unidad de Fomento",
+              "Chilean peso",
+              "Chinese yuan",
+              "Colombian peso",
+              "Unidad de Valor Real",
+              "Costa Rican colon",
+              "Cuban convertible peso",
+              "Cuban peso",
+              "Cape Verde escudo",
+              "Czech koruna",
+              "Djiboutian franc",
+              "Danish krone",
+              "Dominican peso",
+              "Algerian dinar",
+              "Estonian kroon",
+              "Egyptian pound",
+              "Eritrean nakfa",
+              "Ethiopian birr",
+              "Euro",
+              "Fiji dollar",
+              "Falkland Islands pound",
+              "Pound sterling",
+              "Georgian lari",
+              "Ghanaian cedi",
+              "Gibraltar pound",
+              "Gambian dalasi",
+              "Guinean franc",
+              "Guatemalan quetzal",
+              "Guyanese dollar",
+              "Hong Kong dollar",
+              "Honduran lempira",
+              "Croatian kuna",
+              "Haitian gourde",
+              "Hungarian forint",
+              "Indonesian rupiah",
+              "Israeli new sheqel",
+              "Indian rupee",
+              "Iraqi dinar",
+              "Iranian rial",
+              "Icelandic króna",
+              "Jamaican dollar",
+              "Jordanian dinar",
+              "Japanese yen",
+              "Kenyan shilling",
+              "Kyrgyzstani som",
+              "Cambodian riel",
+              "Comoro franc",
+              "North Korean won",
+              "South Korean won",
+              "Kuwaiti dinar",
+              "Cayman Islands dollar",
+              "Kazakhstani tenge",
+              "Lao kip",
+              "Lebanese pound",
+              "Sri Lanka rupee",
+              "Liberian dollar",
+              "Lesotho loti",
+              "Lithuanian litas",
+              "Latvian lats",
+              "Libyan dinar",
+              "Moroccan dirham",
+              "Moldovan leu",
+              "Malagasy ariary",
+              "Macedonian denar",
+              "Myanma kyat",
+              "Mongolian tugrik",
+              "Macanese pataca",
+              "Mauritanian ouguiya",
+              "Mauritian rupee",
+              "Maldivian rufiyaa",
+              "Malawian kwacha",
+              "Mexican peso",
+              "Mexican UDI",
+              "Malaysian ringgit",
+              "Mozambican metical",
+              "Namibian dollar",
+              "Nigerian naira",
+              "Cordoba oro",
+              "Norwegian krone",
+              "Nepalese rupee",
+              "New Zealand dollar",
+              "Omani rial",
+              "Panamanian balboa",
+              "Peruvian nuevo sol",
+              "Papua New Guinean kina",
+              "Philippine peso",
+              "Pakistani rupee",
+              "Polish złoty",
+              "Paraguayan guaraní",
+              "Qatari rial",
+              "Romanian new leu",
+              "Serbian dinar",
+              "Rouble",
+              "Rwandan franc",
+              "Riyal",
+              "Solomon Islands dollar",
+              "Seychelles rupee",
+              "Sudanese pound",
+              "Swedish krona",
+              "Singapore dollar",
+              "Saint Helena pound",
+              "Leone",
+              "Somali shilling",
+              "Surinamese dollar",
+              "South Sudanese pound",
+              "São Tomé and Príncipe dobra",
+              "Salvadoran colón",
+              "Syrian pound",
+              "Lilangeni",
+              "Baht",
+              "Tajikistani somoni",
+              "Turkmenistani manat",
+              "Tunisian dinar",
+              "Pa'anga",
+              "Turkish lira",
+              "Trinidad and Tobago dollar",
+              "New Taiwan dollar",
+              "Tanzanian shilling",
+              "Hryvnia",
+              "Ugandan shilling",
+              "US Dollar",
+              "Next Day US Dollar",
+              "Same Day US Dollar",
+              "Uruguay Peso en Unidades Indexadas",
+              "Uruguayan peso",
+              "Som",
+              "Venezualan Bolivar",
+              "Venezuelan Bolivar Fuerte",
+              "đồng",
+              "Vanuatu vatu",
+              "Samoan tala",
+              "CFA Franc BEAC",
+              "Silver",
+              "Gold",
+              "EURCO",
+              "E.M.U.-6",
+              "E.U.A.-9",
+              "E.U.A.-17",
+              "East Caribbean dollar",
+              "Special Drawing Rights",
+              "UIC Franc",
+              "CFA Franc BCEAO",
+              "Palladium",
+              "CFP Franc",
+              "Platinum",
+              "SUCRE",
+              "ADB Unit of Account",
+              "Yemeni rial",
+              "South African rand",
+              "Zambian kwacha",
+              "Zambian kwacha",
+              "Zimbabwe dollar"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "US Dollar",
+              "Value": "1000"
+            }
+          }
+        ]
+      },
+      "Tasks": {
+        "type": "array",
+        "items": {
+          "$ref": "Master-OB-OpenAPI.json#/components/schemas/Task"
         }
       }
     }
