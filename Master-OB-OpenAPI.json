@@ -1874,9 +1874,8 @@
       "Tasks": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/Task"
-        },
-        "x-ob-usage-tips": ""
+          "$ref": "Master-OB-OpenAPI.json#/components/schemas/Task"
+        }
       },
       "TaskStatus": {
         "allOf": [
@@ -1964,6 +1963,9 @@
           },
           "Tasks": {
             "$ref": "#/components/schemas/Tasks"
+          },
+          "BillOfServices": {
+            "$ref": "#/components/schemas/BillOfServices"
           }
         },
         "x-ob-usage-tips": ""
@@ -2227,7 +2229,7 @@
           },
           {
             "type": "object",
-            "description": "The type of product",
+            "description": "The type of product.  Clarifying Notes:  A Combiner Box takes DC and moves to AC while a CombinerPanel combines AC Loads.",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": [
@@ -2250,7 +2252,25 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Module"
-            }
+            },
+            "enum": [
+              "Module",
+              "Optimizer",
+              "DCDisconnectSwitch",
+              "ACDisconnectSwitch",
+              "Inverter",
+              "Tracker",
+              "CombinerPanel",
+              "CombinerBox",
+              "MetStation",
+              "Transformer",
+              "Battery",
+              "BatteryManagementSystem",
+              "Logger",
+              "Meter",
+              "String",
+              "Mounting"
+            ]
           }
         ]
       },
@@ -4253,9 +4273,6 @@
         "type": "object",
         "description": "A certification for a product",
         "properties": {
-          "ProdCertificationName": {
-            "$ref": "#/components/schemas/ProdCertificationName"
-          },
           "ProdCertificationValue": {
             "$ref": "#/components/schemas/ProdCertificationValue"
           },
@@ -4267,6 +4284,9 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "ProdCertificationType": {
+            "$ref": "#/components/schemas/ProdCertificationType"
           }
         }
       },
@@ -6544,7 +6564,7 @@
           },
           {
             "type": "object",
-            "description": "The optional list of normalized services that allow for cross-platform comparison of service data.",
+            "description": "TEST The optional list of normalized services that allow for cross-platform comparison of service data.",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
