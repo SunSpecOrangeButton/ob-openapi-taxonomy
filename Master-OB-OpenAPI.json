@@ -6564,7 +6564,7 @@
           },
           {
             "type": "object",
-            "description": "TEST The optional list of normalized services that allow for cross-platform comparison of service data.",
+            "description": "The optional list of normalized services that allow for cross-platform comparison of service data.",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": "",
