@@ -6553,9 +6553,30 @@
               "Value": "Trenching"
             },
             "enum": [
-              "Trenching",
-              "EquipmentRental",
-              "TreeRemoval"
+              "AdditionalStructural",
+              "AtticRunAdder",
+              "BallastedSystem",
+              "BirdNetting",
+              "BoomLift",
+              "Carport",
+              "Derate",
+              "ElectricalEngineeringStamp",
+              "FlatRoof",
+              "FoundationCertification",
+              "GroundMount",
+              "HomeEfficiency",
+              "LineSideTap",
+              "LoadController",
+              "MainPanelUpgrade",
+              "Other",
+              "RoofRepair",
+              "SmallSystem",
+              "SolarWaterHeater",
+              "SteepRoof",
+              "StructuralEngineeringStamp",
+              "SubpanelUpgrade",
+              "TrencherRental",
+              "Trenching"
             ]
           }
         ]
