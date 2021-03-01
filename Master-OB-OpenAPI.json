@@ -1874,9 +1874,8 @@
       "Tasks": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/Task"
-        },
-        "x-ob-usage-tips": ""
+          "$ref": "Master-OB-OpenAPI.json#/components/schemas/Task"
+        }
       },
       "TaskStatus": {
         "allOf": [
@@ -1964,6 +1963,9 @@
           },
           "Tasks": {
             "$ref": "#/components/schemas/Tasks"
+          },
+          "BillOfServices": {
+            "$ref": "#/components/schemas/BillOfServices"
           }
         },
         "x-ob-usage-tips": ""
@@ -2227,7 +2229,7 @@
           },
           {
             "type": "object",
-            "description": "The type of product",
+            "description": "The type of product.  Clarifying Notes:  A Combiner Box takes DC and moves to AC while a CombinerPanel combines AC Loads.",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": [
@@ -2250,7 +2252,25 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Module"
-            }
+            },
+            "enum": [
+              "Module",
+              "Optimizer",
+              "DCDisconnectSwitch",
+              "ACDisconnectSwitch",
+              "Inverter",
+              "Tracker",
+              "CombinerPanel",
+              "CombinerBox",
+              "MetStation",
+              "Transformer",
+              "Battery",
+              "BatteryManagementSystem",
+              "Logger",
+              "Meter",
+              "String",
+              "Mounting"
+            ]
           }
         ]
       },
@@ -4253,9 +4273,6 @@
         "type": "object",
         "description": "A certification for a product",
         "properties": {
-          "ProdCertificationName": {
-            "$ref": "#/components/schemas/ProdCertificationName"
-          },
           "ProdCertificationValue": {
             "$ref": "#/components/schemas/ProdCertificationValue"
           },
@@ -4267,6 +4284,9 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "ProdCertificationType": {
+            "$ref": "#/components/schemas/ProdCertificationType"
           }
         }
       },
@@ -6553,9 +6573,30 @@
               "Value": "Trenching"
             },
             "enum": [
-              "Trenching",
-              "EquipmentRental",
-              "TreeRemoval"
+              "AdditionalStructural",
+              "AtticRunAdder",
+              "BallastedSystem",
+              "BirdNetting",
+              "BoomLift",
+              "Carport",
+              "Derate",
+              "ElectricalEngineeringStamp",
+              "FlatRoof",
+              "FoundationCertification",
+              "GroundMount",
+              "HomeEfficiency",
+              "LineSideTap",
+              "LoadController",
+              "MainPanelUpgrade",
+              "Other",
+              "RoofRepair",
+              "SmallSystem",
+              "SolarWaterHeater",
+              "SteepRoof",
+              "StructuralEngineeringStamp",
+              "SubpanelUpgrade",
+              "TrencherRental",
+              "Trenching"
             ]
           }
         ]
@@ -7044,6 +7085,101 @@
         "items": {
           "$ref": "Master-OB-OpenAPI.json#/components/schemas/Task"
         }
+      },
+      "ProdCertificationType": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An enumerated list of the possible certifications that a product can have.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "UL1741"
+            },
+            "enum": [
+              "IEC61215",
+              "IEC61646",
+              "IEC61701",
+              "IEC61730",
+              "IEC60364-4-41",
+              "IEC62108",
+              "UL1703",
+              "Other",
+              "UL1741SA",
+              "IEC61683",
+              "IEC62109-1",
+              "IEC62109-2",
+              "EN61000",
+              "IEC61010",
+              "UL1741",
+              "UL2703",
+              "UL3741"
+            ]
+          }
+        ]
+      },
+      "BusbarCapacityAC": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum AC Capacity or Load that the busbar is rated to handle.",
+            "x-ob-item-type": "num:energyItemType",
+            "x-ob-unit": [
+              "Barrel of Oil Equivalent",
+              "British Thermal Unit",
+              "Foot-Pound",
+              "Thousand Barrels of Oil Equivalent",
+              "Thousand Cubic Foot Equivalent",
+              "Millions of Barrels of Oil Equivalent",
+              "Millions of BTU",
+              "Calorie",
+              "Joule",
+              "Kilojoule",
+              "Kilowatt-Hours",
+              "mJ",
+              "Megawatt-Hour",
+              "Gigawatt-Hour",
+              "Terawatt-Hour",
+              "Million Cubic Foot Equivalent",
+              "Billion Cubic Foot Equivalent",
+              "Trillion Cubic Foot Equivalent",
+              "Megawatt-Month",
+              "Gigawatt-Month",
+              "Watt-Hours",
+              "Volt-ampere-hours"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "",
+              "Value": ""
+            }
+          }
+        ]
+      },
+      "ProdCombinerPanel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
+          },
+          {
+            "type": "object",
+            "description": "Specific Details for a Combiner Panel product",
+            "properties": {
+              "BusbarCapacityAC": {
+                "$ref": "#/components/schemas/BusbarCapacityAC"
+              }
+            }
+          }
+        ]
       }
     }
   }
