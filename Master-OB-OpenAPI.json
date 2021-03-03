@@ -2087,7 +2087,7 @@
           }
         ]
       },
-      "ProductLineItem": {
+      "ProdLineItem": {
         "type": "object",
         "description": "A product used within a PVSystem and the quantity of that product",
         "properties": {
@@ -2278,8 +2278,8 @@
         "type": "object",
         "description": "Bill of Materials for a System",
         "properties": {
-          "ProductLineItems": {
-            "$ref": "#/components/schemas/ProductLineItems"
+          "ProdLineItems": {
+            "$ref": "#/components/schemas/ProdLineItems"
           },
           "BillOfMaterialsStatus": {
             "$ref": "#/components/schemas/BillOfMaterialsStatus"
@@ -2293,10 +2293,10 @@
         },
         "x-ob-usage-tips": ""
       },
-      "ProductLineItems": {
+      "ProdLineItems": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/ProductLineItem"
+          "$ref": "#/components/schemas/ProdLineItem"
         },
         "x-ob-usage-tips": ""
       },
