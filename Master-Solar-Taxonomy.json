@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "1.0.0",
-    "title": "Solar Taxonomy 2020-04-01",
+    "version": "1.1.0",
+    "title": "Solar Taxonomy 2021-03-06",
     "description": "Master Solar Taxonomy OB OpenAPI Definition File"
   },
   "paths": {},

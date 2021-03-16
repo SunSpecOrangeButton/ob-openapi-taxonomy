@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "1.0.0",
-    "title": "OB OpenAPI Master Definition Document",
+    "version": "1.1.0",
+    "title": "OB OpenAPI Taxonomy 2021-03-06",
     "description": "OB OpenAPI Definitions For Orange Button."
   },
   "paths": {},
