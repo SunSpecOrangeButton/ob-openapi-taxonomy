@@ -814,12 +814,11 @@
             "type": "object",
             "description": "Name of the city in the physical or mailing address.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Billings"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -832,12 +831,11 @@
             "type": "object",
             "description": "State of a Province of the mailing or physical address.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "MT"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -850,12 +848,11 @@
             "type": "object",
             "description": "Zip Code / Postal Code of a mailing or physical address.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "59101"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -868,12 +865,11 @@
             "type": "object",
             "description": "ISO country code where system is located.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "USA"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -886,16 +882,12 @@
             "type": "object",
             "description": "Decimal value of latitude of the physical site in degrees.  Positive North of the Equator.  Negative South of the Equator",
             "x-ob-item-type": "num-us:planeAngleItemType",
-            "x-ob-unit": [
-              "Degree",
-              "Radian"
-            ],
-            "x-ob-enum": null,
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Degree",
               "Value": "45.7783517"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -908,16 +900,12 @@
             "type": "object",
             "description": "Decimal value of longitude of the physical site in degrees.  Positive east of the Prime Meridian.  Negative west of the Prime Meridian.  North America is negative..",
             "x-ob-item-type": "num-us:planeAngleItemType",
-            "x-ob-unit": [
-              "Degree",
-              "Radian"
-            ],
-            "x-ob-enum": null,
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Degree",
               "Value": "-108.5203597"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -930,12 +918,11 @@
             "type": "object",
             "description": "County of the physical or mailing address",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Yellowstone County"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -948,12 +935,11 @@
             "type": "object",
             "description": "Email address",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Test@sunspec.com"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -966,12 +952,11 @@
             "type": "object",
             "description": "Phone Number of a cell phone or mobile device.  This phone is expected to be able to receive text messages.  Characters like hyphen, period, x for extension are allowed.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "9999999999"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -984,12 +969,11 @@
             "type": "object",
             "description": "Phone number to be used during working hours.  Characters like hyphen, period, x for extension are allowed.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "9999999999"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1002,12 +986,11 @@
             "type": "object",
             "description": "Phone number to be used for high priority calls only.  Characters like hyphen, period, x for extension are allowed.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "9999999999"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1020,12 +1003,11 @@
             "type": "object",
             "description": "First name of a person.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Bob"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1038,12 +1020,11 @@
             "type": "object",
             "description": "Middle name of a person.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Alex"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1056,12 +1037,11 @@
             "type": "object",
             "description": "The last name of person.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Smith"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1074,24 +1054,12 @@
             "type": "object",
             "description": "The height of ground level at a location relative to sea level.",
             "x-ob-item-type": "num:lengthItemType",
-            "x-ob-unit": [
-              "Foot",
-              "Inch",
-              "Mile",
-              "Nautical Mile",
-              "Yard",
-              "Centimetre",
-              "Decimetre",
-              "Kilometre",
-              "Metre",
-              "Millimetre"
-            ],
-            "x-ob-enum": null,
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Foot",
               "Value": "3123"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1135,24 +1103,12 @@
             "type": "object",
             "description": "Height from ground level.",
             "x-ob-item-type": "num:lengthItemType",
-            "x-ob-unit": [
-              "Foot",
-              "Inch",
-              "Mile",
-              "Nautical Mile",
-              "Yard",
-              "Centimetre",
-              "Decimetre",
-              "Kilometre",
-              "Metre",
-              "Millimetre"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Foot",
               "Value": "20"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1165,12 +1121,11 @@
             "type": "object",
             "description": "First line of a mailing or physical address.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "135 Wyoming Avenue"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1183,12 +1138,11 @@
             "type": "object",
             "description": "Second line of a mailing or physical address.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Apt 31"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1201,12 +1155,11 @@
             "type": "object",
             "description": "Third line of a mailing or physical address.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Building H"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1219,12 +1172,11 @@
             "type": "object",
             "description": "Type of design/energy production model for the PV system which could be Pvsyst, SAM, PV Watts, or Other.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Pvsyst Model 1"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1237,12 +1189,11 @@
             "type": "object",
             "description": "A filename holding the configuration details of the energy prediction details. This could be a zip file containing multiple files. The intention is to be able to reproduce the energy predictions if needed.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Pvsyst Model 1.dxf"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1255,12 +1206,11 @@
             "type": "object",
             "description": "Generic Text field used in fields to provide more detail",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "A description for generic commentary on a object. Not intended for machine analysis"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1273,20 +1223,11 @@
             "type": "object",
             "description": "The applicable building code the AHJ enforces.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "2021IBC",
-              "2018IBC",
-              "2015IBC",
-              "2012IBC",
-              "2009IBC",
-              "NoSolarRegulations"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "2018IBC"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1299,12 +1240,11 @@
             "type": "object",
             "description": "Notes for special requirements related to the building code in this AHJ.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Locally denoted as the 2018 state code"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1317,20 +1257,11 @@
             "type": "object",
             "description": "The applicable residential code the AHJ enforces.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "2021IRC",
-              "2018IRC",
-              "2015IRC",
-              "2012IRC",
-              "2009IRC",
-              "NoSolarRegulations"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "2018IRC"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1343,20 +1274,11 @@
             "type": "object",
             "description": "The applicable fire code the AHJ enforces.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "2021IFC",
-              "2018IFC",
-              "2015IFC",
-              "2012IFC",
-              "2009IFC",
-              "NoSolarRegulations"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "2018IFC"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1369,19 +1291,11 @@
             "type": "object",
             "description": "The applicable electric code the AHJ enforces.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "2020NEC",
-              "2017NEC",
-              "2014NEC",
-              "2011NEC",
-              "NoSolarRegulations"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "2017NEC"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1394,12 +1308,11 @@
             "type": "object",
             "description": "Notes for special requirements related to the residential code in this AHJ.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Locally denoted as the 2018 state code"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1412,12 +1325,11 @@
             "type": "object",
             "description": "Notes for special requirements related to the fire code in this AHJ.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Locally denoted as the 2018 state code"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1430,12 +1342,11 @@
             "type": "object",
             "description": "Notes for special requirements related to the electric code in this AHJ.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Locally denoted as the 2018 state code"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1448,18 +1359,11 @@
             "type": "object",
             "description": "The method for submitting AHJ documents.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "Epermitting",
-              "Email",
-              "InPerson",
-              "SolarApp"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Email"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1472,12 +1376,11 @@
             "type": "object",
             "description": "Notes about the document submission process for this AHJ.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "The documents need to be submitted in PDF format with everything combined into a single document"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1490,20 +1393,11 @@
             "type": "object",
             "description": "The type of engineering or professional review",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "StructuralEngineer",
-              "ElectricalEngineer",
-              "PVEngineer",
-              "MasterElectrician",
-              "FireMarshal",
-              "EnvironmentalEngineer"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "StructuralEngineer"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1516,18 +1410,11 @@
             "type": "object",
             "description": "The type of certifying stamp that is applied to the design or drawing set",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "Wet",
-              "Digital",
-              "Notary",
-              "None"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Digital"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1540,12 +1427,11 @@
             "type": "object",
             "description": "Name of the Authority Having Jurisdiction",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Calhoun County"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1558,17 +1444,11 @@
             "type": "object",
             "description": "This field indicates if this instance of an object is required or optional. Conditionally optional the conditions can be described in RequirementNotes.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "Required",
-              "Optional",
-              "ConditionallyRequired"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Required"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1581,20 +1461,11 @@
             "type": "object",
             "description": "Method of the determining the location",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "GPS",
-              "Survey",
-              "AerialImage",
-              "EngineeringReport",
-              "AddressGeocoding",
-              "Unknown"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "AddressGeocoding"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1607,27 +1478,11 @@
             "type": "object",
             "description": "The type of contact being specified",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "Homeowner",
-              "OffTaker",
-              "Inspector",
-              "Engineer",
-              "Originator",
-              "Installer",
-              "Investor",
-              "PermittingOfficial",
-              "FireMarshal",
-              "ProjectManager",
-              "Salesperson",
-              "ReportPreparer",
-              "Referrer"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Homeowner"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1640,19 +1495,11 @@
             "type": "object",
             "description": "The method of contact the contact prefers",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "Email",
-              "WorkPhone",
-              "CellPhone",
-              "HomePhone",
-              "CellTextMessage"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Email"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1665,13 +1512,11 @@
             "type": "object",
             "description": "The identifier of the location.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1684,13 +1529,11 @@
             "type": "object",
             "description": "The identifier of the address.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1703,13 +1546,11 @@
             "type": "object",
             "description": "The identifier of the contact.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1722,13 +1563,11 @@
             "type": "object",
             "description": "The timezone where the contact is located.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "PST"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1741,18 +1580,11 @@
             "type": "object",
             "description": "The type of location being specified",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "DeviceSpecific",
-              "SiteEntrance",
-              "GeneralProximity",
-              "Warehouse"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "GeneralProximity"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1765,12 +1597,11 @@
             "type": "object",
             "description": "A generic URL to a file folder for transmitting documents",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "https://www.lg.com/us/business/download/resources/BT00002151/[Print]%20Neon_2_60_BF_80308_ck_FRD_v4.pdf"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1783,12 +1614,11 @@
             "type": "object",
             "description": "A URL string",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "https://ahjregistry.sunspec.org/#/ahj-search"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1801,18 +1631,11 @@
             "type": "object",
             "description": "The type of address being specified",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "Mailing",
-              "Billing",
-              "Installation",
-              "Shipping"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Installation"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1862,12 +1685,11 @@
             "type": "object",
             "description": "The name of a task",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Site Survey"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1886,19 +1708,11 @@
             "type": "object",
             "description": "The status of a task",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "NotStarted",
-              "Ready",
-              "Submitted",
-              "InProgress",
-              "Completed"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "NotStarted"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -1979,20 +1793,12 @@
             "type": "object",
             "description": "The price of the PV system",
             "x-ob-item-type": "xbrli:monetaryItemType",
-            "x-ob-unit": [
-              "Canadian dollar",
-              "Euro",
-              "Mexican peso",
-              "US Dollar",
-              "Next Day US Dollar",
-              "Same Day US Dollar"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
               "Value": "43095"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2028,14 +1834,11 @@
             "type": "object",
             "description": "Identifier of the system",
             "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-unit": null,
-            "x-ob-enum": [
-              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2048,22 +1851,12 @@
             "type": "object",
             "description": "Capacity in DC at Standard Test Conditions",
             "x-ob-item-type": "num:powerItemType",
-            "x-ob-unit": [
-              "Horsepower",
-              "Gigawatt",
-              "Kilowatt",
-              "Megawatt",
-              "Terawatt",
-              "Watt",
-              "Volt-ampere reactive",
-              "Volt-ampere"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Kilowatt",
               "Value": "11.5"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2076,14 +1869,11 @@
             "type": "object",
             "description": "Quantity of a Product",
             "x-ob-item-type": "us-types:perUnitItemType",
-            "x-ob-unit": [
-              "Monetary/Decimal"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "4"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2156,22 +1946,14 @@
             "type": "object",
             "description": "The projected savings to the consumer from reduced electricity demand over a period of time.",
             "x-ob-item-type": "xbrli:monetaryItemType",
-            "x-ob-unit": [
-              "Canadian dollar",
-              "Euro",
-              "Mexican peso",
-              "US Dollar",
-              "Next Day US Dollar",
-              "Same Day US Dollar"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "EndTime": "'2020-12-30'",
               "StartTime": "2020-01-01",
               "Unit": "US Dollar",
               "Value": "120"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2184,17 +1966,11 @@
             "type": "object",
             "description": "The status of the operation of the PVSystem",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "Online",
-              "Offline",
-              "Curtailed"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Online"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2207,18 +1983,11 @@
             "type": "object",
             "description": "The status of the operation of the PVSystem",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "Proposed",
-              "UnderConstruction",
-              "Commissioned",
-              "Decommissioned"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Proposed"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2231,46 +2000,11 @@
             "type": "object",
             "description": "The type of product.  Clarifying Notes:  A Combiner Box takes DC and moves to AC while a CombinerPanel combines AC Loads.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": [
-              "Module",
-              "Optimizer",
-              "DCDisconnectSwitch",
-              "ACDisconnectSwitch",
-              "Inverter",
-              "Tracker",
-              "Combiner",
-              "MetStation",
-              "Transformer",
-              "Battery",
-              "BatteryManagementSystem",
-              "Logger",
-              "Meter",
-              "String",
-              "Mounting"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Module"
             },
-            "enum": [
-              "Module",
-              "Optimizer",
-              "DCDisconnectSwitch",
-              "ACDisconnectSwitch",
-              "Inverter",
-              "Tracker",
-              "CombinerPanel",
-              "CombinerBox",
-              "MetStation",
-              "Transformer",
-              "Battery",
-              "BatteryManagementSystem",
-              "Logger",
-              "Meter",
-              "String",
-              "Mounting"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2309,18 +2043,11 @@
             "type": "object",
             "description": "The status of the BillOfMaterials",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "NotStarted",
-              "InProgress",
-              "Complete",
-              "Cancelled"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "NotStarted"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2333,12 +2060,11 @@
             "type": "object",
             "description": "The title of the contact",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Department Manager"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2351,12 +2077,11 @@
             "type": "object",
             "description": "The notes about the requirement level of the engineering review",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "The structural engineering stamp is only required for houses built before 1990"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2369,13 +2094,12 @@
             "type": "object",
             "description": "The date the task was completed",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "Use EndTime for the actual completed date. StartTime should be the task start date",
             "x-ob-sample-value": {
               "EndTime": "2020-11-30",
               "StartTime": "2020-05-30"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2428,29 +2152,11 @@
             "type": "object",
             "description": "The type of Structure",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "DetachedGarage",
-              "Barn",
-              "Shed",
-              "HouseFoundationBuilt",
-              "HouseManufactured",
-              "HouseMobile",
-              "Hospital",
-              "ParkingGarage",
-              "Warehouse",
-              "Retail",
-              "Industrial",
-              "Hotel",
-              "School",
-              "Carport",
-              "Office"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "DetachedGarage"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2463,25 +2169,11 @@
             "type": "object",
             "description": "The type of roof of the structure",
             "x-ob-item-type": "solar-types:roofItemType",
-            "x-ob-unit": null,
-            "x-ob-enum": [
-              "Asphalt Shingle",
-              "Built Up Bituminous",
-              "Composite Shingle",
-              "Ethylene Propylene Diene Terpolymer",
-              "Metal Roof",
-              "Poly Vinyl Chloride",
-              "SBS",
-              "Slate",
-              "Thermoplastic Polyolefin",
-              "Tile Concrete",
-              "Tile Roof",
-              "Wood Shingle"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Asphalt Shingle"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2507,12 +2199,11 @@
             "type": "object",
             "description": " MCER ground motion (period=0.2s)",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "0.131"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2525,12 +2216,11 @@
             "type": "object",
             "description": "MCER ground motion (period=1.0s)",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "0.057"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2543,14 +2233,11 @@
             "type": "object",
             "description": "The ID of the structure",
             "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": [
-              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2570,12 +2257,11 @@
             "type": "object",
             "description": "The identifier of the electrical service system",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2631,17 +2317,12 @@
             "type": "object",
             "description": "The extreme low temperature for the wire sizing calculations",
             "x-ob-item-type": "num-us:temperatureItemType",
-            "x-ob-unit": [
-              "Celsius",
-              "Kelvin",
-              "Fahrenheit"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Fahrenheit",
               "Value": "22"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2654,17 +2335,12 @@
             "type": "object",
             "description": "The 2% high temperature for the wire sizing calculations",
             "x-ob-item-type": "num-us:temperatureItemType",
-            "x-ob-unit": [
-              "Celsius",
-              "Kelvin",
-              "Fahrenheit"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Fahrenheit",
               "Value": "105"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2677,22 +2353,11 @@
             "type": "object",
             "description": "The risk category from ASCE7",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "MRI10Year",
-              "MRI25Year",
-              "MRI50Year",
-              "MRI100Year",
-              "RiskCategoryI",
-              "RiskCategoryII",
-              "RiskCategoryIII",
-              "RiskCategoryIV"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "RiskCategoryII"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2705,18 +2370,11 @@
             "type": "object",
             "description": "The wind code adopted by the authority having jurisdiction",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "ASCE716",
-              "ASCE710",
-              "ASCE705",
-              "SpecialWindZone"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "ASCE716"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2736,15 +2394,12 @@
             "type": "object",
             "description": "The rating of the main electrical service breaker",
             "x-ob-item-type": "num-us:electricCurrentItemType",
-            "x-ob-unit": [
-              "Ampere"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Ampere",
               "Value": "120"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2757,12 +2412,11 @@
             "type": "object",
             "description": "The notes about the wind code if there are special requirements",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "This area uses the wind code from the department of insurance rather than the ASCE codes."
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2775,14 +2429,11 @@
             "type": "object",
             "description": "The UUID of the task",
             "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": [
-              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2795,12 +2446,11 @@
             "type": "object",
             "description": "The year the structure was built",
             "x-ob-item-type": "xbrli:dateItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": null,
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "1969"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2841,12 +2491,11 @@
             "type": "object",
             "description": "The name of the homeowner's association",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Emerald Property Association"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2859,20 +2508,11 @@
             "type": "object",
             "description": "The type of foundation the structure has",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "Pier",
-              "Raft",
-              "Pile",
-              "Slab",
-              "ContinuousFooting",
-              "IndividualFooting"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Slab"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2885,19 +2525,11 @@
             "type": "object",
             "description": "The type of construction of the structure",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "Wood",
-              "Steel",
-              "ConcreteBlocks",
-              "Bricks",
-              "ConcretePoured"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Bricks"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2929,17 +2561,11 @@
             "type": "object",
             "description": "The exposure category of the RiskDesignCriteria as defined by the ASCE 7 Standard",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "enum": [
-              "B",
-              "C",
-              "D"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "B"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2952,18 +2578,12 @@
             "type": "object",
             "description": "The voltage of the utility being interconnected too",
             "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-unit": [
-              "Volt",
-              "Kilovolt",
-              "Megavolt",
-              "Gigavolt"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Volt",
               "Value": "14000"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -2976,17 +2596,11 @@
             "type": "object",
             "description": "The phase of the utility being interconnected too",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": null,
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Single"
             },
-            "enum": [
-              "Single",
-              "Double",
-              "Three"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3017,15 +2631,10 @@
             "type": "object",
             "description": "The type of fee period",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-sample-value": {
               "Value": "SystemSize"
             },
-            "enum": [
-              "Flat",
-              "SystemSize"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3038,11 +2647,10 @@
             "type": "object",
             "description": "The name of the fee payment",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-sample-value": {
               "Value": "Permit Application Fee Calhoun County"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3055,13 +2663,10 @@
             "type": "object",
             "description": "The ID of a particular fee",
             "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": [
-              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
-            ],
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3080,13 +2685,10 @@
             "type": "object",
             "description": "The uuid of the FeeStructure",
             "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": [
-              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
-            ],
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3120,11 +2722,10 @@
             "type": "object",
             "description": "The name of the FeeStructure",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-sample-value": {
               "Value": "Calhoun County Permit Fee Structure"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3143,14 +2744,13 @@
             "type": "object",
             "description": "The due date of a task",
             "x-ob-item-type": "xbrli:dateItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "Use the Value for the actual due date, start and end time can be used for the task start and completed dates",
             "x-ob-sample-value": {
               "EndTime": "2020-04-28",
               "StartTime": "2020-04-01",
               "Value": "2020-05-01"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3163,12 +2763,11 @@
             "type": "object",
             "description": "The state letters and GeoID as described by the Census FIPS code.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "AK-231"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3259,12 +2858,11 @@
             "type": "object",
             "description": "An ID for the Checklist question",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "12345"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3277,12 +2875,11 @@
             "type": "object",
             "description": "The statement of the Checklist Question",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "System Size (kW)?"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3295,13 +2892,12 @@
             "type": "object",
             "description": "The value of the Checklist Result",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "Add units from the QuestionUnits Item Type. For Example, for a question that has an answer in Kilowatts, select QuestionUnits num:powerItemType, then add unit \"Kilowatt\" to the AnswerValue.",
             "x-ob-sample-value": {
               "Unit": "Kilowatt",
               "Value": "10.01"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3314,12 +2910,11 @@
             "type": "object",
             "description": "The ID of the transaction line",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3332,18 +2927,11 @@
             "type": "object",
             "description": "The type of Checklist",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Site"
             },
-            "enum": [
-              "Site",
-              "PVSystem",
-              "Structure",
-              "ElectricalService"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3356,12 +2944,11 @@
             "type": "object",
             "description": "The ID of the transaction",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3374,12 +2961,11 @@
             "type": "object",
             "description": "The type of the Answer",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "xbrli:stringItemType"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3392,13 +2978,12 @@
             "type": "object",
             "description": "The date of the Checklist",
             "x-ob-item-type": "xbrli:dateItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "EndTime": "2011-10-05T16:48:00.000Z",
               "StartTime": "2011-10-05T14:48:00.000Z"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3411,20 +2996,11 @@
             "type": "object",
             "description": "The type of result expected by the question",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Text"
             },
-            "enum": [
-              "Text",
-              "EnumeratedSingle",
-              "EnumeratedMultiple",
-              "Numeric",
-              "Date",
-              "URL"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3449,12 +3025,11 @@
             "type": "object",
             "description": "A valid value for an enumeration in a list",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Single Phase"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3467,17 +3042,11 @@
             "type": "object",
             "description": "The phase of the interconnection",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "A"
             },
-            "enum": [
-              "A",
-              "B",
-              "C"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3514,12 +3083,11 @@
             "type": "object",
             "description": "The name of the Tariff",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Monthly electrical service"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3532,14 +3100,11 @@
             "type": "object",
             "description": "The ID of the Tariff",
             "x-ob-item-type": "solar-types:uuidXbrlItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": [
-              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3552,16 +3117,11 @@
             "type": "object",
             "description": "The type of Tariff",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Metered"
             },
-            "enum": [
-              "Metered",
-              "NetMetered"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3574,198 +3134,12 @@
             "type": "object",
             "description": "A currency amount",
             "x-ob-item-type": "xbrli:monetaryItemType",
-            "x-ob-unit": [
-              "U.A.E. dirham",
-              "Afghan afghani",
-              "Albanian lek",
-              "Armenian dram",
-              "Netherlands Antillean guilder",
-              "Angolan kwanza",
-              "Argentine peso",
-              "Australian dollar",
-              "Aruban florin",
-              "Azerbaijani manat",
-              "Bosnia and Herzegovina convertible mark",
-              "Barbados dollar",
-              "Bangladeshi taka",
-              "Bulgarian lev",
-              "Bahraini dinar",
-              "Burundian franc",
-              "Bermuda Dollar",
-              "Brunei dollar",
-              "Boliviano",
-              "Bolivian Mvdol",
-              "Brazilian real",
-              "Bahamian dollar",
-              "Bhutanese ngultrum",
-              "Botswana pula",
-              "Belarusian ruble",
-              "Belarusian ruble",
-              "Belize dollar",
-              "Canadian dollar",
-              "Congolese franc",
-              "WIR Bank",
-              "Swiss franc",
-              "WIR Bank",
-              "Unidad de Fomento",
-              "Chilean peso",
-              "Chinese yuan",
-              "Colombian peso",
-              "Unidad de Valor Real",
-              "Costa Rican colon",
-              "Cuban convertible peso",
-              "Cuban peso",
-              "Cape Verde escudo",
-              "Czech koruna",
-              "Djiboutian franc",
-              "Danish krone",
-              "Dominican peso",
-              "Algerian dinar",
-              "Estonian kroon",
-              "Egyptian pound",
-              "Eritrean nakfa",
-              "Ethiopian birr",
-              "Euro",
-              "Fiji dollar",
-              "Falkland Islands pound",
-              "Pound sterling",
-              "Georgian lari",
-              "Ghanaian cedi",
-              "Gibraltar pound",
-              "Gambian dalasi",
-              "Guinean franc",
-              "Guatemalan quetzal",
-              "Guyanese dollar",
-              "Hong Kong dollar",
-              "Honduran lempira",
-              "Croatian kuna",
-              "Haitian gourde",
-              "Hungarian forint",
-              "Indonesian rupiah",
-              "Israeli new sheqel",
-              "Indian rupee",
-              "Iraqi dinar",
-              "Iranian rial",
-              "Icelandic króna",
-              "Jamaican dollar",
-              "Jordanian dinar",
-              "Japanese yen",
-              "Kenyan shilling",
-              "Kyrgyzstani som",
-              "Cambodian riel",
-              "Comoro franc",
-              "North Korean won",
-              "South Korean won",
-              "Kuwaiti dinar",
-              "Cayman Islands dollar",
-              "Kazakhstani tenge",
-              "Lao kip",
-              "Lebanese pound",
-              "Sri Lanka rupee",
-              "Liberian dollar",
-              "Lesotho loti",
-              "Lithuanian litas",
-              "Latvian lats",
-              "Libyan dinar",
-              "Moroccan dirham",
-              "Moldovan leu",
-              "Malagasy ariary",
-              "Macedonian denar",
-              "Myanma kyat",
-              "Mongolian tugrik",
-              "Macanese pataca",
-              "Mauritanian ouguiya",
-              "Mauritian rupee",
-              "Maldivian rufiyaa",
-              "Malawian kwacha",
-              "Mexican peso",
-              "Mexican UDI",
-              "Malaysian ringgit",
-              "Mozambican metical",
-              "Namibian dollar",
-              "Nigerian naira",
-              "Cordoba oro",
-              "Norwegian krone",
-              "Nepalese rupee",
-              "New Zealand dollar",
-              "Omani rial",
-              "Panamanian balboa",
-              "Peruvian nuevo sol",
-              "Papua New Guinean kina",
-              "Philippine peso",
-              "Pakistani rupee",
-              "Polish złoty",
-              "Paraguayan guaraní",
-              "Qatari rial",
-              "Romanian new leu",
-              "Serbian dinar",
-              "Rouble",
-              "Rwandan franc",
-              "Riyal",
-              "Solomon Islands dollar",
-              "Seychelles rupee",
-              "Sudanese pound",
-              "Swedish krona",
-              "Singapore dollar",
-              "Saint Helena pound",
-              "Leone",
-              "Somali shilling",
-              "Surinamese dollar",
-              "South Sudanese pound",
-              "São Tomé and Príncipe dobra",
-              "Salvadoran colón",
-              "Syrian pound",
-              "Lilangeni",
-              "Baht",
-              "Tajikistani somoni",
-              "Turkmenistani manat",
-              "Tunisian dinar",
-              "Pa'anga",
-              "Turkish lira",
-              "Trinidad and Tobago dollar",
-              "New Taiwan dollar",
-              "Tanzanian shilling",
-              "Hryvnia",
-              "Ugandan shilling",
-              "US Dollar",
-              "Next Day US Dollar",
-              "Same Day US Dollar",
-              "Uruguay Peso en Unidades Indexadas",
-              "Uruguayan peso",
-              "Som",
-              "Venezualan Bolivar",
-              "Venezuelan Bolivar Fuerte",
-              "đồng",
-              "Vanuatu vatu",
-              "Samoan tala",
-              "CFA Franc BEAC",
-              "Silver",
-              "Gold",
-              "EURCO",
-              "E.M.U.-6",
-              "E.U.A.-9",
-              "E.U.A.-17",
-              "East Caribbean dollar",
-              "Special Drawing Rights",
-              "UIC Franc",
-              "CFA Franc BCEAO",
-              "Palladium",
-              "CFP Franc",
-              "Platinum",
-              "SUCRE",
-              "ADB Unit of Account",
-              "Yemeni rial",
-              "South African rand",
-              "Zambian kwacha",
-              "Zambian kwacha",
-              "Zimbabwe dollar"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
               "Value": "0.01"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3778,12 +3152,11 @@
             "type": "object",
             "description": "The units of the question",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "Select ONLY items from the OB Item Type list for the expected answer unit type",
             "x-ob-sample-value": {
               "Value": "num:powerItemType"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3820,32 +3193,11 @@
             "type": "object",
             "description": "The type of account",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Bank"
             },
-            "enum": [
-              "Bank",
-              "AccountsReceivable",
-              "AccountsPayable",
-              "OtherCurrentAsset",
-              "FixedAsset",
-              "OtherAsset",
-              "CreditCard",
-              "OtherCurrentLiability",
-              "LongTermLiability",
-              "Equity",
-              "Income",
-              "CostOfGoodsSold",
-              "Expense",
-              "OtherIncome",
-              "Nonposting",
-              "DeferredRevenue",
-              "DeferredExpense",
-              "UnbilledReceivable"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3858,12 +3210,11 @@
             "type": "object",
             "description": "The name of the account",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Main Checking Account"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3876,12 +3227,11 @@
             "type": "object",
             "description": "The account number",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "38748172-8723817231"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -3894,39 +3244,11 @@
             "type": "object",
             "description": "The role the account plays in the reporting systems",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Revenues"
             },
-            "enum": [
-              "CashAndCashEquivalentsAtCarryingValue",
-              "AccountsReceivableNet",
-              "PrepaidExpenseCurrentAndNoncurrent",
-              "AssetsSolarFacil",
-              "Assets",
-              "AccountsPayableAndAccruedLiabilitiesCurrentAndNoncurrent",
-              "DueToRelatedPartiesCurrentAndNoncurrent",
-              "DeferredRentCredit",
-              "AssetRetirementObligation",
-              "Liabilities",
-              "MembersEquity",
-              "LiabilitiesAndStockholdersEquity",
-              "Revenues",
-              "OperatingLeaseExpense",
-              "OtherCostAndExpenseOperating",
-              "GeneralAndAdministrativeExpense",
-              "Depreciation",
-              "AccretionExpense",
-              "NoninterestIncome",
-              "InterestIncomeExpenseNet",
-              "NetIncomeLoss",
-              "OperatingExpenses",
-              "ContractedRevenues",
-              "MerchantRevenues",
-              "PartnersCapitalAccountReturnOfCapital"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4011,16 +3333,11 @@
             "type": "object",
             "description": "The number of past due days that the transactions are to be included in this aging bucket",
             "x-ob-item-type": "xbrli:pureItemType",
-            "x-ob-unit": [
-              "Monetary/Monetary",
-              "pure",
-              "Rate"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "30"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4033,16 +3350,11 @@
             "type": "object",
             "description": "The number of past due days that the transactions are to be included in this aging bucket",
             "x-ob-item-type": "xbrli:pureItemType",
-            "x-ob-unit": [
-              "Monetary/Monetary",
-              "pure",
-              "Rate"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "31"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4055,19 +3367,11 @@
             "type": "object",
             "description": "The type of aging bucket",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "AccountsPayable"
             },
-            "enum": [
-              "AgingBalance1To30Days",
-              "AgingBalance31To60Days",
-              "AgingBalance61To90Days",
-              "AgingBalance91To120Days",
-              "AgingBalanceOver120Days"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4122,12 +3426,11 @@
             "type": "object",
             "description": "The datasheet for the product",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "This is for a URL leading to the Datasheet for a product.",
             "x-ob-sample-value": {
               "Value": "http://www.lg-solar.com/downloads/spec-sheet/DS_NeON2_60cells.pdf"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4140,12 +3443,11 @@
             "type": "object",
             "description": "A single document in a collection of the instructions for a product.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "This should be used for sending all of the instructions for installing and servicing the product. Each file can be placed in one member of the array of ProdInstructions",
             "x-ob-sample-value": {
               "Value": "https://unirac.com/wp-content/uploads/pdf/FLASHKIT-PRO_Brochure_20180831.pdf"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4164,12 +3466,11 @@
             "type": "object",
             "description": "Use this for describing an individual specification",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "Use this for custom units and details of the product",
             "x-ob-sample-value": {
               "Value": "Power factor (adjustable)"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4182,26 +3483,11 @@
             "type": "object",
             "description": "The enumerated list of the types of major specifications.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "If the specification does not have a type listed here, select \"None\" and then use the SpecificationName as an alternative.",
             "x-ob-sample-value": {
               "Value": "AcceptableAmbientTemperatureRange"
             },
-            "enum": [
-              "Weight",
-              "Height",
-              "Width",
-              "Length",
-              "OutputVoltage",
-              "OutputPower",
-              "InputVoltage",
-              "InputPower",
-              "OutputCurrent",
-              "InputCurrent",
-              "OperatingTemperatureHighLimit",
-              "OperatingTemperatureLowLimit"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4214,12 +3500,11 @@
             "type": "object",
             "description": "The specific unit of the specification",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "This needs to be the specific unit the SpecificationValue is given in",
             "x-ob-sample-value": {
               "Value": "mm"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4232,13 +3517,12 @@
             "type": "object",
             "description": "The value of the specific Specification.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "Note the unit always needs to be equal to the SpecificationUnit value",
             "x-ob-sample-value": {
               "Unit": "mm",
               "Value": "9"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4299,12 +3583,11 @@
             "type": "object",
             "description": "The name of the certification",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Quality Certification"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4317,12 +3600,11 @@
             "type": "object",
             "description": "The value of the certification",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "ISO 9001"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4353,12 +3635,11 @@
             "type": "object",
             "description": "The name of the certification name",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "ISO"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4377,198 +3658,12 @@
             "type": "object",
             "description": "The aging balance from 1 to 30 days",
             "x-ob-item-type": "xbrli:monetaryItemType",
-            "x-ob-unit": [
-              "U.A.E. dirham",
-              "Afghan afghani",
-              "Albanian lek",
-              "Armenian dram",
-              "Netherlands Antillean guilder",
-              "Angolan kwanza",
-              "Argentine peso",
-              "Australian dollar",
-              "Aruban florin",
-              "Azerbaijani manat",
-              "Bosnia and Herzegovina convertible mark",
-              "Barbados dollar",
-              "Bangladeshi taka",
-              "Bulgarian lev",
-              "Bahraini dinar",
-              "Burundian franc",
-              "Bermuda Dollar",
-              "Brunei dollar",
-              "Boliviano",
-              "Bolivian Mvdol",
-              "Brazilian real",
-              "Bahamian dollar",
-              "Bhutanese ngultrum",
-              "Botswana pula",
-              "Belarusian ruble",
-              "Belarusian ruble",
-              "Belize dollar",
-              "Canadian dollar",
-              "Congolese franc",
-              "WIR Bank",
-              "Swiss franc",
-              "WIR Bank",
-              "Unidad de Fomento",
-              "Chilean peso",
-              "Chinese yuan",
-              "Colombian peso",
-              "Unidad de Valor Real",
-              "Costa Rican colon",
-              "Cuban convertible peso",
-              "Cuban peso",
-              "Cape Verde escudo",
-              "Czech koruna",
-              "Djiboutian franc",
-              "Danish krone",
-              "Dominican peso",
-              "Algerian dinar",
-              "Estonian kroon",
-              "Egyptian pound",
-              "Eritrean nakfa",
-              "Ethiopian birr",
-              "Euro",
-              "Fiji dollar",
-              "Falkland Islands pound",
-              "Pound sterling",
-              "Georgian lari",
-              "Ghanaian cedi",
-              "Gibraltar pound",
-              "Gambian dalasi",
-              "Guinean franc",
-              "Guatemalan quetzal",
-              "Guyanese dollar",
-              "Hong Kong dollar",
-              "Honduran lempira",
-              "Croatian kuna",
-              "Haitian gourde",
-              "Hungarian forint",
-              "Indonesian rupiah",
-              "Israeli new sheqel",
-              "Indian rupee",
-              "Iraqi dinar",
-              "Iranian rial",
-              "Icelandic króna",
-              "Jamaican dollar",
-              "Jordanian dinar",
-              "Japanese yen",
-              "Kenyan shilling",
-              "Kyrgyzstani som",
-              "Cambodian riel",
-              "Comoro franc",
-              "North Korean won",
-              "South Korean won",
-              "Kuwaiti dinar",
-              "Cayman Islands dollar",
-              "Kazakhstani tenge",
-              "Lao kip",
-              "Lebanese pound",
-              "Sri Lanka rupee",
-              "Liberian dollar",
-              "Lesotho loti",
-              "Lithuanian litas",
-              "Latvian lats",
-              "Libyan dinar",
-              "Moroccan dirham",
-              "Moldovan leu",
-              "Malagasy ariary",
-              "Macedonian denar",
-              "Myanma kyat",
-              "Mongolian tugrik",
-              "Macanese pataca",
-              "Mauritanian ouguiya",
-              "Mauritian rupee",
-              "Maldivian rufiyaa",
-              "Malawian kwacha",
-              "Mexican peso",
-              "Mexican UDI",
-              "Malaysian ringgit",
-              "Mozambican metical",
-              "Namibian dollar",
-              "Nigerian naira",
-              "Cordoba oro",
-              "Norwegian krone",
-              "Nepalese rupee",
-              "New Zealand dollar",
-              "Omani rial",
-              "Panamanian balboa",
-              "Peruvian nuevo sol",
-              "Papua New Guinean kina",
-              "Philippine peso",
-              "Pakistani rupee",
-              "Polish złoty",
-              "Paraguayan guaraní",
-              "Qatari rial",
-              "Romanian new leu",
-              "Serbian dinar",
-              "Rouble",
-              "Rwandan franc",
-              "Riyal",
-              "Solomon Islands dollar",
-              "Seychelles rupee",
-              "Sudanese pound",
-              "Swedish krona",
-              "Singapore dollar",
-              "Saint Helena pound",
-              "Leone",
-              "Somali shilling",
-              "Surinamese dollar",
-              "South Sudanese pound",
-              "São Tomé and Príncipe dobra",
-              "Salvadoran colón",
-              "Syrian pound",
-              "Lilangeni",
-              "Baht",
-              "Tajikistani somoni",
-              "Turkmenistani manat",
-              "Tunisian dinar",
-              "Pa'anga",
-              "Turkish lira",
-              "Trinidad and Tobago dollar",
-              "New Taiwan dollar",
-              "Tanzanian shilling",
-              "Hryvnia",
-              "Ugandan shilling",
-              "US Dollar",
-              "Next Day US Dollar",
-              "Same Day US Dollar",
-              "Uruguay Peso en Unidades Indexadas",
-              "Uruguayan peso",
-              "Som",
-              "Venezualan Bolivar",
-              "Venezuelan Bolivar Fuerte",
-              "đồng",
-              "Vanuatu vatu",
-              "Samoan tala",
-              "CFA Franc BEAC",
-              "Silver",
-              "Gold",
-              "EURCO",
-              "E.M.U.-6",
-              "E.U.A.-9",
-              "E.U.A.-17",
-              "East Caribbean dollar",
-              "Special Drawing Rights",
-              "UIC Franc",
-              "CFA Franc BCEAO",
-              "Palladium",
-              "CFP Franc",
-              "Platinum",
-              "SUCRE",
-              "ADB Unit of Account",
-              "Yemeni rial",
-              "South African rand",
-              "Zambian kwacha",
-              "Zambian kwacha",
-              "Zimbabwe dollar"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
               "Value": "120"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4581,198 +3676,12 @@
             "type": "object",
             "description": "Aging balance from 31 to 60 days",
             "x-ob-item-type": "xbrli:monetaryItemType",
-            "x-ob-unit": [
-              "U.A.E. dirham",
-              "Afghan afghani",
-              "Albanian lek",
-              "Armenian dram",
-              "Netherlands Antillean guilder",
-              "Angolan kwanza",
-              "Argentine peso",
-              "Australian dollar",
-              "Aruban florin",
-              "Azerbaijani manat",
-              "Bosnia and Herzegovina convertible mark",
-              "Barbados dollar",
-              "Bangladeshi taka",
-              "Bulgarian lev",
-              "Bahraini dinar",
-              "Burundian franc",
-              "Bermuda Dollar",
-              "Brunei dollar",
-              "Boliviano",
-              "Bolivian Mvdol",
-              "Brazilian real",
-              "Bahamian dollar",
-              "Bhutanese ngultrum",
-              "Botswana pula",
-              "Belarusian ruble",
-              "Belarusian ruble",
-              "Belize dollar",
-              "Canadian dollar",
-              "Congolese franc",
-              "WIR Bank",
-              "Swiss franc",
-              "WIR Bank",
-              "Unidad de Fomento",
-              "Chilean peso",
-              "Chinese yuan",
-              "Colombian peso",
-              "Unidad de Valor Real",
-              "Costa Rican colon",
-              "Cuban convertible peso",
-              "Cuban peso",
-              "Cape Verde escudo",
-              "Czech koruna",
-              "Djiboutian franc",
-              "Danish krone",
-              "Dominican peso",
-              "Algerian dinar",
-              "Estonian kroon",
-              "Egyptian pound",
-              "Eritrean nakfa",
-              "Ethiopian birr",
-              "Euro",
-              "Fiji dollar",
-              "Falkland Islands pound",
-              "Pound sterling",
-              "Georgian lari",
-              "Ghanaian cedi",
-              "Gibraltar pound",
-              "Gambian dalasi",
-              "Guinean franc",
-              "Guatemalan quetzal",
-              "Guyanese dollar",
-              "Hong Kong dollar",
-              "Honduran lempira",
-              "Croatian kuna",
-              "Haitian gourde",
-              "Hungarian forint",
-              "Indonesian rupiah",
-              "Israeli new sheqel",
-              "Indian rupee",
-              "Iraqi dinar",
-              "Iranian rial",
-              "Icelandic króna",
-              "Jamaican dollar",
-              "Jordanian dinar",
-              "Japanese yen",
-              "Kenyan shilling",
-              "Kyrgyzstani som",
-              "Cambodian riel",
-              "Comoro franc",
-              "North Korean won",
-              "South Korean won",
-              "Kuwaiti dinar",
-              "Cayman Islands dollar",
-              "Kazakhstani tenge",
-              "Lao kip",
-              "Lebanese pound",
-              "Sri Lanka rupee",
-              "Liberian dollar",
-              "Lesotho loti",
-              "Lithuanian litas",
-              "Latvian lats",
-              "Libyan dinar",
-              "Moroccan dirham",
-              "Moldovan leu",
-              "Malagasy ariary",
-              "Macedonian denar",
-              "Myanma kyat",
-              "Mongolian tugrik",
-              "Macanese pataca",
-              "Mauritanian ouguiya",
-              "Mauritian rupee",
-              "Maldivian rufiyaa",
-              "Malawian kwacha",
-              "Mexican peso",
-              "Mexican UDI",
-              "Malaysian ringgit",
-              "Mozambican metical",
-              "Namibian dollar",
-              "Nigerian naira",
-              "Cordoba oro",
-              "Norwegian krone",
-              "Nepalese rupee",
-              "New Zealand dollar",
-              "Omani rial",
-              "Panamanian balboa",
-              "Peruvian nuevo sol",
-              "Papua New Guinean kina",
-              "Philippine peso",
-              "Pakistani rupee",
-              "Polish złoty",
-              "Paraguayan guaraní",
-              "Qatari rial",
-              "Romanian new leu",
-              "Serbian dinar",
-              "Rouble",
-              "Rwandan franc",
-              "Riyal",
-              "Solomon Islands dollar",
-              "Seychelles rupee",
-              "Sudanese pound",
-              "Swedish krona",
-              "Singapore dollar",
-              "Saint Helena pound",
-              "Leone",
-              "Somali shilling",
-              "Surinamese dollar",
-              "South Sudanese pound",
-              "São Tomé and Príncipe dobra",
-              "Salvadoran colón",
-              "Syrian pound",
-              "Lilangeni",
-              "Baht",
-              "Tajikistani somoni",
-              "Turkmenistani manat",
-              "Tunisian dinar",
-              "Pa'anga",
-              "Turkish lira",
-              "Trinidad and Tobago dollar",
-              "New Taiwan dollar",
-              "Tanzanian shilling",
-              "Hryvnia",
-              "Ugandan shilling",
-              "US Dollar",
-              "Next Day US Dollar",
-              "Same Day US Dollar",
-              "Uruguay Peso en Unidades Indexadas",
-              "Uruguayan peso",
-              "Som",
-              "Venezualan Bolivar",
-              "Venezuelan Bolivar Fuerte",
-              "đồng",
-              "Vanuatu vatu",
-              "Samoan tala",
-              "CFA Franc BEAC",
-              "Silver",
-              "Gold",
-              "EURCO",
-              "E.M.U.-6",
-              "E.U.A.-9",
-              "E.U.A.-17",
-              "East Caribbean dollar",
-              "Special Drawing Rights",
-              "UIC Franc",
-              "CFA Franc BCEAO",
-              "Palladium",
-              "CFP Franc",
-              "Platinum",
-              "SUCRE",
-              "ADB Unit of Account",
-              "Yemeni rial",
-              "South African rand",
-              "Zambian kwacha",
-              "Zambian kwacha",
-              "Zimbabwe dollar"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
               "Value": "125"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4785,198 +3694,12 @@
             "type": "object",
             "description": "Aging balance from 61 to 90 days",
             "x-ob-item-type": "xbrli:monetaryItemType",
-            "x-ob-unit": [
-              "U.A.E. dirham",
-              "Afghan afghani",
-              "Albanian lek",
-              "Armenian dram",
-              "Netherlands Antillean guilder",
-              "Angolan kwanza",
-              "Argentine peso",
-              "Australian dollar",
-              "Aruban florin",
-              "Azerbaijani manat",
-              "Bosnia and Herzegovina convertible mark",
-              "Barbados dollar",
-              "Bangladeshi taka",
-              "Bulgarian lev",
-              "Bahraini dinar",
-              "Burundian franc",
-              "Bermuda Dollar",
-              "Brunei dollar",
-              "Boliviano",
-              "Bolivian Mvdol",
-              "Brazilian real",
-              "Bahamian dollar",
-              "Bhutanese ngultrum",
-              "Botswana pula",
-              "Belarusian ruble",
-              "Belarusian ruble",
-              "Belize dollar",
-              "Canadian dollar",
-              "Congolese franc",
-              "WIR Bank",
-              "Swiss franc",
-              "WIR Bank",
-              "Unidad de Fomento",
-              "Chilean peso",
-              "Chinese yuan",
-              "Colombian peso",
-              "Unidad de Valor Real",
-              "Costa Rican colon",
-              "Cuban convertible peso",
-              "Cuban peso",
-              "Cape Verde escudo",
-              "Czech koruna",
-              "Djiboutian franc",
-              "Danish krone",
-              "Dominican peso",
-              "Algerian dinar",
-              "Estonian kroon",
-              "Egyptian pound",
-              "Eritrean nakfa",
-              "Ethiopian birr",
-              "Euro",
-              "Fiji dollar",
-              "Falkland Islands pound",
-              "Pound sterling",
-              "Georgian lari",
-              "Ghanaian cedi",
-              "Gibraltar pound",
-              "Gambian dalasi",
-              "Guinean franc",
-              "Guatemalan quetzal",
-              "Guyanese dollar",
-              "Hong Kong dollar",
-              "Honduran lempira",
-              "Croatian kuna",
-              "Haitian gourde",
-              "Hungarian forint",
-              "Indonesian rupiah",
-              "Israeli new sheqel",
-              "Indian rupee",
-              "Iraqi dinar",
-              "Iranian rial",
-              "Icelandic króna",
-              "Jamaican dollar",
-              "Jordanian dinar",
-              "Japanese yen",
-              "Kenyan shilling",
-              "Kyrgyzstani som",
-              "Cambodian riel",
-              "Comoro franc",
-              "North Korean won",
-              "South Korean won",
-              "Kuwaiti dinar",
-              "Cayman Islands dollar",
-              "Kazakhstani tenge",
-              "Lao kip",
-              "Lebanese pound",
-              "Sri Lanka rupee",
-              "Liberian dollar",
-              "Lesotho loti",
-              "Lithuanian litas",
-              "Latvian lats",
-              "Libyan dinar",
-              "Moroccan dirham",
-              "Moldovan leu",
-              "Malagasy ariary",
-              "Macedonian denar",
-              "Myanma kyat",
-              "Mongolian tugrik",
-              "Macanese pataca",
-              "Mauritanian ouguiya",
-              "Mauritian rupee",
-              "Maldivian rufiyaa",
-              "Malawian kwacha",
-              "Mexican peso",
-              "Mexican UDI",
-              "Malaysian ringgit",
-              "Mozambican metical",
-              "Namibian dollar",
-              "Nigerian naira",
-              "Cordoba oro",
-              "Norwegian krone",
-              "Nepalese rupee",
-              "New Zealand dollar",
-              "Omani rial",
-              "Panamanian balboa",
-              "Peruvian nuevo sol",
-              "Papua New Guinean kina",
-              "Philippine peso",
-              "Pakistani rupee",
-              "Polish złoty",
-              "Paraguayan guaraní",
-              "Qatari rial",
-              "Romanian new leu",
-              "Serbian dinar",
-              "Rouble",
-              "Rwandan franc",
-              "Riyal",
-              "Solomon Islands dollar",
-              "Seychelles rupee",
-              "Sudanese pound",
-              "Swedish krona",
-              "Singapore dollar",
-              "Saint Helena pound",
-              "Leone",
-              "Somali shilling",
-              "Surinamese dollar",
-              "South Sudanese pound",
-              "São Tomé and Príncipe dobra",
-              "Salvadoran colón",
-              "Syrian pound",
-              "Lilangeni",
-              "Baht",
-              "Tajikistani somoni",
-              "Turkmenistani manat",
-              "Tunisian dinar",
-              "Pa'anga",
-              "Turkish lira",
-              "Trinidad and Tobago dollar",
-              "New Taiwan dollar",
-              "Tanzanian shilling",
-              "Hryvnia",
-              "Ugandan shilling",
-              "US Dollar",
-              "Next Day US Dollar",
-              "Same Day US Dollar",
-              "Uruguay Peso en Unidades Indexadas",
-              "Uruguayan peso",
-              "Som",
-              "Venezualan Bolivar",
-              "Venezuelan Bolivar Fuerte",
-              "đồng",
-              "Vanuatu vatu",
-              "Samoan tala",
-              "CFA Franc BEAC",
-              "Silver",
-              "Gold",
-              "EURCO",
-              "E.M.U.-6",
-              "E.U.A.-9",
-              "E.U.A.-17",
-              "East Caribbean dollar",
-              "Special Drawing Rights",
-              "UIC Franc",
-              "CFA Franc BCEAO",
-              "Palladium",
-              "CFP Franc",
-              "Platinum",
-              "SUCRE",
-              "ADB Unit of Account",
-              "Yemeni rial",
-              "South African rand",
-              "Zambian kwacha",
-              "Zambian kwacha",
-              "Zimbabwe dollar"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
               "Value": "130"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4989,198 +3712,12 @@
             "type": "object",
             "description": "Aging balance from 91 to 120 days",
             "x-ob-item-type": "xbrli:monetaryItemType",
-            "x-ob-unit": [
-              "U.A.E. dirham",
-              "Afghan afghani",
-              "Albanian lek",
-              "Armenian dram",
-              "Netherlands Antillean guilder",
-              "Angolan kwanza",
-              "Argentine peso",
-              "Australian dollar",
-              "Aruban florin",
-              "Azerbaijani manat",
-              "Bosnia and Herzegovina convertible mark",
-              "Barbados dollar",
-              "Bangladeshi taka",
-              "Bulgarian lev",
-              "Bahraini dinar",
-              "Burundian franc",
-              "Bermuda Dollar",
-              "Brunei dollar",
-              "Boliviano",
-              "Bolivian Mvdol",
-              "Brazilian real",
-              "Bahamian dollar",
-              "Bhutanese ngultrum",
-              "Botswana pula",
-              "Belarusian ruble",
-              "Belarusian ruble",
-              "Belize dollar",
-              "Canadian dollar",
-              "Congolese franc",
-              "WIR Bank",
-              "Swiss franc",
-              "WIR Bank",
-              "Unidad de Fomento",
-              "Chilean peso",
-              "Chinese yuan",
-              "Colombian peso",
-              "Unidad de Valor Real",
-              "Costa Rican colon",
-              "Cuban convertible peso",
-              "Cuban peso",
-              "Cape Verde escudo",
-              "Czech koruna",
-              "Djiboutian franc",
-              "Danish krone",
-              "Dominican peso",
-              "Algerian dinar",
-              "Estonian kroon",
-              "Egyptian pound",
-              "Eritrean nakfa",
-              "Ethiopian birr",
-              "Euro",
-              "Fiji dollar",
-              "Falkland Islands pound",
-              "Pound sterling",
-              "Georgian lari",
-              "Ghanaian cedi",
-              "Gibraltar pound",
-              "Gambian dalasi",
-              "Guinean franc",
-              "Guatemalan quetzal",
-              "Guyanese dollar",
-              "Hong Kong dollar",
-              "Honduran lempira",
-              "Croatian kuna",
-              "Haitian gourde",
-              "Hungarian forint",
-              "Indonesian rupiah",
-              "Israeli new sheqel",
-              "Indian rupee",
-              "Iraqi dinar",
-              "Iranian rial",
-              "Icelandic króna",
-              "Jamaican dollar",
-              "Jordanian dinar",
-              "Japanese yen",
-              "Kenyan shilling",
-              "Kyrgyzstani som",
-              "Cambodian riel",
-              "Comoro franc",
-              "North Korean won",
-              "South Korean won",
-              "Kuwaiti dinar",
-              "Cayman Islands dollar",
-              "Kazakhstani tenge",
-              "Lao kip",
-              "Lebanese pound",
-              "Sri Lanka rupee",
-              "Liberian dollar",
-              "Lesotho loti",
-              "Lithuanian litas",
-              "Latvian lats",
-              "Libyan dinar",
-              "Moroccan dirham",
-              "Moldovan leu",
-              "Malagasy ariary",
-              "Macedonian denar",
-              "Myanma kyat",
-              "Mongolian tugrik",
-              "Macanese pataca",
-              "Mauritanian ouguiya",
-              "Mauritian rupee",
-              "Maldivian rufiyaa",
-              "Malawian kwacha",
-              "Mexican peso",
-              "Mexican UDI",
-              "Malaysian ringgit",
-              "Mozambican metical",
-              "Namibian dollar",
-              "Nigerian naira",
-              "Cordoba oro",
-              "Norwegian krone",
-              "Nepalese rupee",
-              "New Zealand dollar",
-              "Omani rial",
-              "Panamanian balboa",
-              "Peruvian nuevo sol",
-              "Papua New Guinean kina",
-              "Philippine peso",
-              "Pakistani rupee",
-              "Polish złoty",
-              "Paraguayan guaraní",
-              "Qatari rial",
-              "Romanian new leu",
-              "Serbian dinar",
-              "Rouble",
-              "Rwandan franc",
-              "Riyal",
-              "Solomon Islands dollar",
-              "Seychelles rupee",
-              "Sudanese pound",
-              "Swedish krona",
-              "Singapore dollar",
-              "Saint Helena pound",
-              "Leone",
-              "Somali shilling",
-              "Surinamese dollar",
-              "South Sudanese pound",
-              "São Tomé and Príncipe dobra",
-              "Salvadoran colón",
-              "Syrian pound",
-              "Lilangeni",
-              "Baht",
-              "Tajikistani somoni",
-              "Turkmenistani manat",
-              "Tunisian dinar",
-              "Pa'anga",
-              "Turkish lira",
-              "Trinidad and Tobago dollar",
-              "New Taiwan dollar",
-              "Tanzanian shilling",
-              "Hryvnia",
-              "Ugandan shilling",
-              "US Dollar",
-              "Next Day US Dollar",
-              "Same Day US Dollar",
-              "Uruguay Peso en Unidades Indexadas",
-              "Uruguayan peso",
-              "Som",
-              "Venezualan Bolivar",
-              "Venezuelan Bolivar Fuerte",
-              "đồng",
-              "Vanuatu vatu",
-              "Samoan tala",
-              "CFA Franc BEAC",
-              "Silver",
-              "Gold",
-              "EURCO",
-              "E.M.U.-6",
-              "E.U.A.-9",
-              "E.U.A.-17",
-              "East Caribbean dollar",
-              "Special Drawing Rights",
-              "UIC Franc",
-              "CFA Franc BCEAO",
-              "Palladium",
-              "CFP Franc",
-              "Platinum",
-              "SUCRE",
-              "ADB Unit of Account",
-              "Yemeni rial",
-              "South African rand",
-              "Zambian kwacha",
-              "Zambian kwacha",
-              "Zimbabwe dollar"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
               "Value": "135"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5193,198 +3730,12 @@
             "type": "object",
             "description": "The aging balance over 120 days",
             "x-ob-item-type": "xbrli:monetaryItemType",
-            "x-ob-unit": [
-              "U.A.E. dirham",
-              "Afghan afghani",
-              "Albanian lek",
-              "Armenian dram",
-              "Netherlands Antillean guilder",
-              "Angolan kwanza",
-              "Argentine peso",
-              "Australian dollar",
-              "Aruban florin",
-              "Azerbaijani manat",
-              "Bosnia and Herzegovina convertible mark",
-              "Barbados dollar",
-              "Bangladeshi taka",
-              "Bulgarian lev",
-              "Bahraini dinar",
-              "Burundian franc",
-              "Bermuda Dollar",
-              "Brunei dollar",
-              "Boliviano",
-              "Bolivian Mvdol",
-              "Brazilian real",
-              "Bahamian dollar",
-              "Bhutanese ngultrum",
-              "Botswana pula",
-              "Belarusian ruble",
-              "Belarusian ruble",
-              "Belize dollar",
-              "Canadian dollar",
-              "Congolese franc",
-              "WIR Bank",
-              "Swiss franc",
-              "WIR Bank",
-              "Unidad de Fomento",
-              "Chilean peso",
-              "Chinese yuan",
-              "Colombian peso",
-              "Unidad de Valor Real",
-              "Costa Rican colon",
-              "Cuban convertible peso",
-              "Cuban peso",
-              "Cape Verde escudo",
-              "Czech koruna",
-              "Djiboutian franc",
-              "Danish krone",
-              "Dominican peso",
-              "Algerian dinar",
-              "Estonian kroon",
-              "Egyptian pound",
-              "Eritrean nakfa",
-              "Ethiopian birr",
-              "Euro",
-              "Fiji dollar",
-              "Falkland Islands pound",
-              "Pound sterling",
-              "Georgian lari",
-              "Ghanaian cedi",
-              "Gibraltar pound",
-              "Gambian dalasi",
-              "Guinean franc",
-              "Guatemalan quetzal",
-              "Guyanese dollar",
-              "Hong Kong dollar",
-              "Honduran lempira",
-              "Croatian kuna",
-              "Haitian gourde",
-              "Hungarian forint",
-              "Indonesian rupiah",
-              "Israeli new sheqel",
-              "Indian rupee",
-              "Iraqi dinar",
-              "Iranian rial",
-              "Icelandic króna",
-              "Jamaican dollar",
-              "Jordanian dinar",
-              "Japanese yen",
-              "Kenyan shilling",
-              "Kyrgyzstani som",
-              "Cambodian riel",
-              "Comoro franc",
-              "North Korean won",
-              "South Korean won",
-              "Kuwaiti dinar",
-              "Cayman Islands dollar",
-              "Kazakhstani tenge",
-              "Lao kip",
-              "Lebanese pound",
-              "Sri Lanka rupee",
-              "Liberian dollar",
-              "Lesotho loti",
-              "Lithuanian litas",
-              "Latvian lats",
-              "Libyan dinar",
-              "Moroccan dirham",
-              "Moldovan leu",
-              "Malagasy ariary",
-              "Macedonian denar",
-              "Myanma kyat",
-              "Mongolian tugrik",
-              "Macanese pataca",
-              "Mauritanian ouguiya",
-              "Mauritian rupee",
-              "Maldivian rufiyaa",
-              "Malawian kwacha",
-              "Mexican peso",
-              "Mexican UDI",
-              "Malaysian ringgit",
-              "Mozambican metical",
-              "Namibian dollar",
-              "Nigerian naira",
-              "Cordoba oro",
-              "Norwegian krone",
-              "Nepalese rupee",
-              "New Zealand dollar",
-              "Omani rial",
-              "Panamanian balboa",
-              "Peruvian nuevo sol",
-              "Papua New Guinean kina",
-              "Philippine peso",
-              "Pakistani rupee",
-              "Polish złoty",
-              "Paraguayan guaraní",
-              "Qatari rial",
-              "Romanian new leu",
-              "Serbian dinar",
-              "Rouble",
-              "Rwandan franc",
-              "Riyal",
-              "Solomon Islands dollar",
-              "Seychelles rupee",
-              "Sudanese pound",
-              "Swedish krona",
-              "Singapore dollar",
-              "Saint Helena pound",
-              "Leone",
-              "Somali shilling",
-              "Surinamese dollar",
-              "South Sudanese pound",
-              "São Tomé and Príncipe dobra",
-              "Salvadoran colón",
-              "Syrian pound",
-              "Lilangeni",
-              "Baht",
-              "Tajikistani somoni",
-              "Turkmenistani manat",
-              "Tunisian dinar",
-              "Pa'anga",
-              "Turkish lira",
-              "Trinidad and Tobago dollar",
-              "New Taiwan dollar",
-              "Tanzanian shilling",
-              "Hryvnia",
-              "Ugandan shilling",
-              "US Dollar",
-              "Next Day US Dollar",
-              "Same Day US Dollar",
-              "Uruguay Peso en Unidades Indexadas",
-              "Uruguayan peso",
-              "Som",
-              "Venezualan Bolivar",
-              "Venezuelan Bolivar Fuerte",
-              "đồng",
-              "Vanuatu vatu",
-              "Samoan tala",
-              "CFA Franc BEAC",
-              "Silver",
-              "Gold",
-              "EURCO",
-              "E.M.U.-6",
-              "E.U.A.-9",
-              "E.U.A.-17",
-              "East Caribbean dollar",
-              "Special Drawing Rights",
-              "UIC Franc",
-              "CFA Franc BCEAO",
-              "Palladium",
-              "CFP Franc",
-              "Platinum",
-              "SUCRE",
-              "ADB Unit of Account",
-              "Yemeni rial",
-              "South African rand",
-              "Zambian kwacha",
-              "Zambian kwacha",
-              "Zimbabwe dollar"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
               "Value": "145"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5397,14 +3748,11 @@
             "type": "object",
             "description": "The UUID of the task type",
             "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": [
-              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5441,13 +3789,12 @@
             "type": "object",
             "description": "A wind speed",
             "x-ob-item-type": "num-us:speedItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "mph",
               "Value": "147"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5460,18 +3807,12 @@
             "type": "object",
             "description": "The design pressure to be applied to a structure for snow loading",
             "x-ob-item-type": "num-us:pressureItemType",
-            "x-ob-unit": [
-              "Pascal",
-              "Bar",
-              "Pounds Per Square Inch",
-              "Standard Atmosphere"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Pounds Per Square Foot",
               "Value": "20"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5490,18 +3831,11 @@
             "type": "object",
             "description": "The code for the local snow loading design",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "ASCE716"
             },
-            "enum": [
-              "ASCE716",
-              "ASCE710",
-              "ASCE705",
-              "SpecialSnowZone"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5514,12 +3848,11 @@
             "type": "object",
             "description": "The message of the error",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Attempt to set field Site.PVSystems[0].EnergyPredictions[0].EnergyAC.StartTime to invalid date format. ISO date format expected. ( YYYY-MM-DD )"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5532,12 +3865,11 @@
             "type": "object",
             "description": "The name of the error",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "ISO_DATE_FORMAT"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5550,12 +3882,11 @@
             "type": "object",
             "description": "The code of an error",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "412"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5568,12 +3899,11 @@
             "type": "object",
             "description": "The number of days the jurisdiction on average takes to complete a permit",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "10"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5613,12 +3943,11 @@
             "type": "object",
             "description": "The name of the inspection",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Rough-In Inspection"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5631,12 +3960,11 @@
             "type": "object",
             "description": "The notes about the inspection",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "Used for instructions for carrying out the inspection",
             "x-ob-sample-value": {
               "Value": "Plan for Rough-In once racking is installed, call the morning of installation to schedule."
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5655,18 +3983,11 @@
             "type": "object",
             "description": "The method by which the permit is issued",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Email"
             },
-            "enum": [
-              "Email",
-              "Epermitting",
-              "InPerson",
-              "SolarApp"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5679,12 +4000,11 @@
             "type": "object",
             "description": "The notes about the method of issuing permits the AHJ uses",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "Used for instructions on receiving completed permits",
             "x-ob-sample-value": {
               "Value": "The permits are emailed to us with stamps and signatures. Print out the pdf and then send with the installation crew for the inspector."
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5697,19 +4017,11 @@
             "type": "object",
             "description": "The type of inspection",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "Select from either the available common types, or choose other and attach the type in the description.",
             "x-ob-sample-value": {
               "Value": "RoughIn"
             },
-            "enum": [
-              "RoughIn",
-              "Final",
-              "Windstorm",
-              "Electrical",
-              "Structural"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5734,12 +4046,11 @@
             "type": "object",
             "description": "An option for the answer to a question",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "Used for enumerated list values for selectable dropdown lists or multi-select questions",
             "x-ob-sample-value": {
               "Value": "Customer Selection 1"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5806,14 +4117,11 @@
             "type": "object",
             "description": "The UUID of the battery system",
             "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": [
-              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -5826,198 +4134,12 @@
             "type": "object",
             "description": "The price of the battery system as indicated on the contract",
             "x-ob-item-type": "xbrli:monetaryItemType",
-            "x-ob-unit": [
-              "U.A.E. dirham",
-              "Afghan afghani",
-              "Albanian lek",
-              "Armenian dram",
-              "Netherlands Antillean guilder",
-              "Angolan kwanza",
-              "Argentine peso",
-              "Australian dollar",
-              "Aruban florin",
-              "Azerbaijani manat",
-              "Bosnia and Herzegovina convertible mark",
-              "Barbados dollar",
-              "Bangladeshi taka",
-              "Bulgarian lev",
-              "Bahraini dinar",
-              "Burundian franc",
-              "Bermuda Dollar",
-              "Brunei dollar",
-              "Boliviano",
-              "Bolivian Mvdol",
-              "Brazilian real",
-              "Bahamian dollar",
-              "Bhutanese ngultrum",
-              "Botswana pula",
-              "Belarusian ruble",
-              "Belarusian ruble",
-              "Belize dollar",
-              "Canadian dollar",
-              "Congolese franc",
-              "WIR Bank",
-              "Swiss franc",
-              "WIR Bank",
-              "Unidad de Fomento",
-              "Chilean peso",
-              "Chinese yuan",
-              "Colombian peso",
-              "Unidad de Valor Real",
-              "Costa Rican colon",
-              "Cuban convertible peso",
-              "Cuban peso",
-              "Cape Verde escudo",
-              "Czech koruna",
-              "Djiboutian franc",
-              "Danish krone",
-              "Dominican peso",
-              "Algerian dinar",
-              "Estonian kroon",
-              "Egyptian pound",
-              "Eritrean nakfa",
-              "Ethiopian birr",
-              "Euro",
-              "Fiji dollar",
-              "Falkland Islands pound",
-              "Pound sterling",
-              "Georgian lari",
-              "Ghanaian cedi",
-              "Gibraltar pound",
-              "Gambian dalasi",
-              "Guinean franc",
-              "Guatemalan quetzal",
-              "Guyanese dollar",
-              "Hong Kong dollar",
-              "Honduran lempira",
-              "Croatian kuna",
-              "Haitian gourde",
-              "Hungarian forint",
-              "Indonesian rupiah",
-              "Israeli new sheqel",
-              "Indian rupee",
-              "Iraqi dinar",
-              "Iranian rial",
-              "Icelandic króna",
-              "Jamaican dollar",
-              "Jordanian dinar",
-              "Japanese yen",
-              "Kenyan shilling",
-              "Kyrgyzstani som",
-              "Cambodian riel",
-              "Comoro franc",
-              "North Korean won",
-              "South Korean won",
-              "Kuwaiti dinar",
-              "Cayman Islands dollar",
-              "Kazakhstani tenge",
-              "Lao kip",
-              "Lebanese pound",
-              "Sri Lanka rupee",
-              "Liberian dollar",
-              "Lesotho loti",
-              "Lithuanian litas",
-              "Latvian lats",
-              "Libyan dinar",
-              "Moroccan dirham",
-              "Moldovan leu",
-              "Malagasy ariary",
-              "Macedonian denar",
-              "Myanma kyat",
-              "Mongolian tugrik",
-              "Macanese pataca",
-              "Mauritanian ouguiya",
-              "Mauritian rupee",
-              "Maldivian rufiyaa",
-              "Malawian kwacha",
-              "Mexican peso",
-              "Mexican UDI",
-              "Malaysian ringgit",
-              "Mozambican metical",
-              "Namibian dollar",
-              "Nigerian naira",
-              "Cordoba oro",
-              "Norwegian krone",
-              "Nepalese rupee",
-              "New Zealand dollar",
-              "Omani rial",
-              "Panamanian balboa",
-              "Peruvian nuevo sol",
-              "Papua New Guinean kina",
-              "Philippine peso",
-              "Pakistani rupee",
-              "Polish złoty",
-              "Paraguayan guaraní",
-              "Qatari rial",
-              "Romanian new leu",
-              "Serbian dinar",
-              "Rouble",
-              "Rwandan franc",
-              "Riyal",
-              "Solomon Islands dollar",
-              "Seychelles rupee",
-              "Sudanese pound",
-              "Swedish krona",
-              "Singapore dollar",
-              "Saint Helena pound",
-              "Leone",
-              "Somali shilling",
-              "Surinamese dollar",
-              "South Sudanese pound",
-              "São Tomé and Príncipe dobra",
-              "Salvadoran colón",
-              "Syrian pound",
-              "Lilangeni",
-              "Baht",
-              "Tajikistani somoni",
-              "Turkmenistani manat",
-              "Tunisian dinar",
-              "Pa'anga",
-              "Turkish lira",
-              "Trinidad and Tobago dollar",
-              "New Taiwan dollar",
-              "Tanzanian shilling",
-              "Hryvnia",
-              "Ugandan shilling",
-              "US Dollar",
-              "Next Day US Dollar",
-              "Same Day US Dollar",
-              "Uruguay Peso en Unidades Indexadas",
-              "Uruguayan peso",
-              "Som",
-              "Venezualan Bolivar",
-              "Venezuelan Bolivar Fuerte",
-              "đồng",
-              "Vanuatu vatu",
-              "Samoan tala",
-              "CFA Franc BEAC",
-              "Silver",
-              "Gold",
-              "EURCO",
-              "E.M.U.-6",
-              "E.U.A.-9",
-              "E.U.A.-17",
-              "East Caribbean dollar",
-              "Special Drawing Rights",
-              "UIC Franc",
-              "CFA Franc BCEAO",
-              "Palladium",
-              "CFP Franc",
-              "Platinum",
-              "SUCRE",
-              "ADB Unit of Account",
-              "Yemeni rial",
-              "South African rand",
-              "Zambian kwacha",
-              "Zambian kwacha",
-              "Zimbabwe dollar"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
               "Value": "12000"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6066,13 +4188,12 @@
             "type": "object",
             "description": "The length of the loan",
             "x-ob-item-type": "xbrli:dateItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "Use StartTime and EndTime in this object rather than Value for additional clarity. Use Value only if the Loan has no specific start or end time period",
             "x-ob-sample-value": {
               "EndTime": "2025-05-01",
               "StartTime": "2020-05-01"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6085,12 +4206,11 @@
             "type": "object",
             "description": "The percentage rate of the loan",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "2.99"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6103,14 +4223,11 @@
             "type": "object",
             "description": "The UUID of an object",
             "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": [
-              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
-            ],
             "x-ob-usage-tips": "Always place this UUID at the top level of an object to which it refers. UUIDs are to be used for uniquely identifying objects that need to be repeatedly tracked across multiple softwares",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6144,12 +4261,11 @@
             "type": "object",
             "description": "The name of a TaskType",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Site Survey"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6162,14 +4278,11 @@
             "type": "object",
             "description": "The UUID of the task category",
             "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": [
-              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6182,27 +4295,11 @@
             "type": "object",
             "description": "The name of the task category which is used to normalize task types when searching across multiple companies.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "SiteSurvey"
             },
-            "enum": [
-              "Contract",
-              "SiteSurvey",
-              "Design",
-              "HOAApplication",
-              "PermitApplication",
-              "EquipmentOrder",
-              "EquipmentReceipt",
-              "Installation",
-              "InspectionElectrical",
-              "InspectionStructural",
-              "Interconnection",
-              "FinalReceipt",
-              "Other"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6227,12 +4324,11 @@
             "type": "object",
             "description": "The name of a FeeType",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "Used to describe a general category of fees. This is a specific name for a fee. Whereas FeeGroup represents the normalized category of fee across multiple companies.",
             "x-ob-sample-value": {
               "Value": "Payment to Jorgenson Installation Services"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6245,22 +4341,11 @@
             "type": "object",
             "description": "A optional normalized list of FeeTypes that allow for searching across multiple company datasets",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "Use for a normalized list of possible Fees",
             "x-ob-sample-value": {
               "Value": "PermitApplication"
             },
-            "enum": [
-              "PermitApplication",
-              "HOAApplication",
-              "LoanPayment",
-              "EngineeringService",
-              "InspectionFee",
-              "Other",
-              "InterconnectionFee",
-              "UtilityService"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6273,12 +4358,11 @@
             "type": "object",
             "description": "If a on-site Technician from the AHJ is required to complete the AHJInspection",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "True"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6324,12 +4408,6 @@
             "type": "object",
             "description": "A quantity",
             "x-ob-item-type": "xbrli:pureItemType",
-            "x-ob-unit": [
-              "Monetary/Monetary",
-              "pure",
-              "Rate"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6338,7 +4416,8 @@
               "StartTime": "",
               "Unit": "",
               "Value": ""
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6384,12 +4463,11 @@
             "type": "object",
             "description": "The name of the service",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Trenching"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6402,12 +4480,11 @@
             "type": "object",
             "description": "The name of the person or organization providing the service",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Hampton's Trenching"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6444,18 +4521,11 @@
             "type": "object",
             "description": "The status of the overall scope of work",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "NotStarted"
             },
-            "enum": [
-              "NotStarted",
-              "InProgress",
-              "Complete",
-              "Cancelled"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6468,14 +4538,11 @@
             "type": "object",
             "description": "The UUID of the service",
             "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": [
-              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6488,19 +4555,11 @@
             "type": "object",
             "description": "The method by which the cost of a service is evaluated.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "Used in combination with the Quantity field. This provides the information required to calculate the cost of a given service.",
             "x-ob-sample-value": {
               "Value": "Foot"
             },
-            "enum": [
-              "Fixed",
-              "Foot",
-              "Watt",
-              "Module",
-              "Inverter"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6528,12 +4587,11 @@
             "type": "object",
             "description": "The name of the service type",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Trenching"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6546,14 +4604,11 @@
             "type": "object",
             "description": "The UUID of the ServiceType",
             "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-unit": "",
-            "x-ob-enum": [
-              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
-            ],
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6566,38 +4621,11 @@
             "type": "object",
             "description": "The optional list of normalized services that allow for cross-platform comparison of service data.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Trenching"
             },
-            "enum": [
-              "AdditionalStructural",
-              "AtticRunAdder",
-              "BallastedSystem",
-              "BirdNetting",
-              "BoomLift",
-              "Carport",
-              "Derate",
-              "ElectricalEngineeringStamp",
-              "FlatRoof",
-              "FoundationCertification",
-              "GroundMount",
-              "HomeEfficiency",
-              "LineSideTap",
-              "LoadController",
-              "MainPanelUpgrade",
-              "Other",
-              "RoofRepair",
-              "SmallSystem",
-              "SolarWaterHeater",
-              "SteepRoof",
-              "StructuralEngineeringStamp",
-              "SubpanelUpgrade",
-              "TrencherRental",
-              "Trenching"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6610,19 +4638,11 @@
             "type": "object",
             "description": "Information on who or what is performing the payment responsibility of the service",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "PaidByInstaller"
             },
-            "enum": [
-              "PaidByInstaller",
-              "PaidByOriginator",
-              "PaidByOriginatorToInstaller",
-              "PaidToInstaller",
-              "PaidToOriginator"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6635,17 +4655,11 @@
             "type": "object",
             "description": "The Service Payment Responsibility for the Payee of the Service",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Originator"
             },
-            "enum": [
-              "Originator",
-              "Installer",
-              "GeneralContractor"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6658,17 +4672,11 @@
             "type": "object",
             "description": "The Service Payment Responsibility for the Payer of the Service",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "GeneralContractor"
             },
-            "enum": [
-              "Originator",
-              "Installer",
-              "GeneralContractor"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6681,198 +4689,12 @@
             "type": "object",
             "description": "Amount Per ServiceQuantityUnit",
             "x-ob-item-type": "xbrli:monetaryItemType",
-            "x-ob-unit": [
-              "U.A.E. dirham",
-              "Afghan afghani",
-              "Albanian lek",
-              "Armenian dram",
-              "Netherlands Antillean guilder",
-              "Angolan kwanza",
-              "Argentine peso",
-              "Australian dollar",
-              "Aruban florin",
-              "Azerbaijani manat",
-              "Bosnia and Herzegovina convertible mark",
-              "Barbados dollar",
-              "Bangladeshi taka",
-              "Bulgarian lev",
-              "Bahraini dinar",
-              "Burundian franc",
-              "Bermuda Dollar",
-              "Brunei dollar",
-              "Boliviano",
-              "Bolivian Mvdol",
-              "Brazilian real",
-              "Bahamian dollar",
-              "Bhutanese ngultrum",
-              "Botswana pula",
-              "Belarusian ruble",
-              "Belarusian ruble",
-              "Belize dollar",
-              "Canadian dollar",
-              "Congolese franc",
-              "WIR Bank",
-              "Swiss franc",
-              "WIR Bank",
-              "Unidad de Fomento",
-              "Chilean peso",
-              "Chinese yuan",
-              "Colombian peso",
-              "Unidad de Valor Real",
-              "Costa Rican colon",
-              "Cuban convertible peso",
-              "Cuban peso",
-              "Cape Verde escudo",
-              "Czech koruna",
-              "Djiboutian franc",
-              "Danish krone",
-              "Dominican peso",
-              "Algerian dinar",
-              "Estonian kroon",
-              "Egyptian pound",
-              "Eritrean nakfa",
-              "Ethiopian birr",
-              "Euro",
-              "Fiji dollar",
-              "Falkland Islands pound",
-              "Pound sterling",
-              "Georgian lari",
-              "Ghanaian cedi",
-              "Gibraltar pound",
-              "Gambian dalasi",
-              "Guinean franc",
-              "Guatemalan quetzal",
-              "Guyanese dollar",
-              "Hong Kong dollar",
-              "Honduran lempira",
-              "Croatian kuna",
-              "Haitian gourde",
-              "Hungarian forint",
-              "Indonesian rupiah",
-              "Israeli new sheqel",
-              "Indian rupee",
-              "Iraqi dinar",
-              "Iranian rial",
-              "Icelandic króna",
-              "Jamaican dollar",
-              "Jordanian dinar",
-              "Japanese yen",
-              "Kenyan shilling",
-              "Kyrgyzstani som",
-              "Cambodian riel",
-              "Comoro franc",
-              "North Korean won",
-              "South Korean won",
-              "Kuwaiti dinar",
-              "Cayman Islands dollar",
-              "Kazakhstani tenge",
-              "Lao kip",
-              "Lebanese pound",
-              "Sri Lanka rupee",
-              "Liberian dollar",
-              "Lesotho loti",
-              "Lithuanian litas",
-              "Latvian lats",
-              "Libyan dinar",
-              "Moroccan dirham",
-              "Moldovan leu",
-              "Malagasy ariary",
-              "Macedonian denar",
-              "Myanma kyat",
-              "Mongolian tugrik",
-              "Macanese pataca",
-              "Mauritanian ouguiya",
-              "Mauritian rupee",
-              "Maldivian rufiyaa",
-              "Malawian kwacha",
-              "Mexican peso",
-              "Mexican UDI",
-              "Malaysian ringgit",
-              "Mozambican metical",
-              "Namibian dollar",
-              "Nigerian naira",
-              "Cordoba oro",
-              "Norwegian krone",
-              "Nepalese rupee",
-              "New Zealand dollar",
-              "Omani rial",
-              "Panamanian balboa",
-              "Peruvian nuevo sol",
-              "Papua New Guinean kina",
-              "Philippine peso",
-              "Pakistani rupee",
-              "Polish złoty",
-              "Paraguayan guaraní",
-              "Qatari rial",
-              "Romanian new leu",
-              "Serbian dinar",
-              "Rouble",
-              "Rwandan franc",
-              "Riyal",
-              "Solomon Islands dollar",
-              "Seychelles rupee",
-              "Sudanese pound",
-              "Swedish krona",
-              "Singapore dollar",
-              "Saint Helena pound",
-              "Leone",
-              "Somali shilling",
-              "Surinamese dollar",
-              "South Sudanese pound",
-              "São Tomé and Príncipe dobra",
-              "Salvadoran colón",
-              "Syrian pound",
-              "Lilangeni",
-              "Baht",
-              "Tajikistani somoni",
-              "Turkmenistani manat",
-              "Tunisian dinar",
-              "Pa'anga",
-              "Turkish lira",
-              "Trinidad and Tobago dollar",
-              "New Taiwan dollar",
-              "Tanzanian shilling",
-              "Hryvnia",
-              "Ugandan shilling",
-              "US Dollar",
-              "Next Day US Dollar",
-              "Same Day US Dollar",
-              "Uruguay Peso en Unidades Indexadas",
-              "Uruguayan peso",
-              "Som",
-              "Venezualan Bolivar",
-              "Venezuelan Bolivar Fuerte",
-              "đồng",
-              "Vanuatu vatu",
-              "Samoan tala",
-              "CFA Franc BEAC",
-              "Silver",
-              "Gold",
-              "EURCO",
-              "E.M.U.-6",
-              "E.U.A.-9",
-              "E.U.A.-17",
-              "East Caribbean dollar",
-              "Special Drawing Rights",
-              "UIC Franc",
-              "CFA Franc BCEAO",
-              "Palladium",
-              "CFP Franc",
-              "Platinum",
-              "SUCRE",
-              "ADB Unit of Account",
-              "Yemeni rial",
-              "South African rand",
-              "Zambian kwacha",
-              "Zambian kwacha",
-              "Zimbabwe dollar"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
               "Value": "10.00"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -6885,206 +4707,14 @@
             "type": "object",
             "description": "The total amount of the individual line item calculated by multiplying Quantity by UnitPrice",
             "x-ob-item-type": "xbrli:monetaryItemType",
-            "x-ob-unit": [
-              "U.A.E. dirham",
-              "Afghan afghani",
-              "Albanian lek",
-              "Armenian dram",
-              "Netherlands Antillean guilder",
-              "Angolan kwanza",
-              "Argentine peso",
-              "Australian dollar",
-              "Aruban florin",
-              "Azerbaijani manat",
-              "Bosnia and Herzegovina convertible mark",
-              "Barbados dollar",
-              "Bangladeshi taka",
-              "Bulgarian lev",
-              "Bahraini dinar",
-              "Burundian franc",
-              "Bermuda Dollar",
-              "Brunei dollar",
-              "Boliviano",
-              "Bolivian Mvdol",
-              "Brazilian real",
-              "Bahamian dollar",
-              "Bhutanese ngultrum",
-              "Botswana pula",
-              "Belarusian ruble",
-              "Belarusian ruble",
-              "Belize dollar",
-              "Canadian dollar",
-              "Congolese franc",
-              "WIR Bank",
-              "Swiss franc",
-              "WIR Bank",
-              "Unidad de Fomento",
-              "Chilean peso",
-              "Chinese yuan",
-              "Colombian peso",
-              "Unidad de Valor Real",
-              "Costa Rican colon",
-              "Cuban convertible peso",
-              "Cuban peso",
-              "Cape Verde escudo",
-              "Czech koruna",
-              "Djiboutian franc",
-              "Danish krone",
-              "Dominican peso",
-              "Algerian dinar",
-              "Estonian kroon",
-              "Egyptian pound",
-              "Eritrean nakfa",
-              "Ethiopian birr",
-              "Euro",
-              "Fiji dollar",
-              "Falkland Islands pound",
-              "Pound sterling",
-              "Georgian lari",
-              "Ghanaian cedi",
-              "Gibraltar pound",
-              "Gambian dalasi",
-              "Guinean franc",
-              "Guatemalan quetzal",
-              "Guyanese dollar",
-              "Hong Kong dollar",
-              "Honduran lempira",
-              "Croatian kuna",
-              "Haitian gourde",
-              "Hungarian forint",
-              "Indonesian rupiah",
-              "Israeli new sheqel",
-              "Indian rupee",
-              "Iraqi dinar",
-              "Iranian rial",
-              "Icelandic króna",
-              "Jamaican dollar",
-              "Jordanian dinar",
-              "Japanese yen",
-              "Kenyan shilling",
-              "Kyrgyzstani som",
-              "Cambodian riel",
-              "Comoro franc",
-              "North Korean won",
-              "South Korean won",
-              "Kuwaiti dinar",
-              "Cayman Islands dollar",
-              "Kazakhstani tenge",
-              "Lao kip",
-              "Lebanese pound",
-              "Sri Lanka rupee",
-              "Liberian dollar",
-              "Lesotho loti",
-              "Lithuanian litas",
-              "Latvian lats",
-              "Libyan dinar",
-              "Moroccan dirham",
-              "Moldovan leu",
-              "Malagasy ariary",
-              "Macedonian denar",
-              "Myanma kyat",
-              "Mongolian tugrik",
-              "Macanese pataca",
-              "Mauritanian ouguiya",
-              "Mauritian rupee",
-              "Maldivian rufiyaa",
-              "Malawian kwacha",
-              "Mexican peso",
-              "Mexican UDI",
-              "Malaysian ringgit",
-              "Mozambican metical",
-              "Namibian dollar",
-              "Nigerian naira",
-              "Cordoba oro",
-              "Norwegian krone",
-              "Nepalese rupee",
-              "New Zealand dollar",
-              "Omani rial",
-              "Panamanian balboa",
-              "Peruvian nuevo sol",
-              "Papua New Guinean kina",
-              "Philippine peso",
-              "Pakistani rupee",
-              "Polish złoty",
-              "Paraguayan guaraní",
-              "Qatari rial",
-              "Romanian new leu",
-              "Serbian dinar",
-              "Rouble",
-              "Rwandan franc",
-              "Riyal",
-              "Solomon Islands dollar",
-              "Seychelles rupee",
-              "Sudanese pound",
-              "Swedish krona",
-              "Singapore dollar",
-              "Saint Helena pound",
-              "Leone",
-              "Somali shilling",
-              "Surinamese dollar",
-              "South Sudanese pound",
-              "São Tomé and Príncipe dobra",
-              "Salvadoran colón",
-              "Syrian pound",
-              "Lilangeni",
-              "Baht",
-              "Tajikistani somoni",
-              "Turkmenistani manat",
-              "Tunisian dinar",
-              "Pa'anga",
-              "Turkish lira",
-              "Trinidad and Tobago dollar",
-              "New Taiwan dollar",
-              "Tanzanian shilling",
-              "Hryvnia",
-              "Ugandan shilling",
-              "US Dollar",
-              "Next Day US Dollar",
-              "Same Day US Dollar",
-              "Uruguay Peso en Unidades Indexadas",
-              "Uruguayan peso",
-              "Som",
-              "Venezualan Bolivar",
-              "Venezuelan Bolivar Fuerte",
-              "đồng",
-              "Vanuatu vatu",
-              "Samoan tala",
-              "CFA Franc BEAC",
-              "Silver",
-              "Gold",
-              "EURCO",
-              "E.M.U.-6",
-              "E.U.A.-9",
-              "E.U.A.-17",
-              "East Caribbean dollar",
-              "Special Drawing Rights",
-              "UIC Franc",
-              "CFA Franc BCEAO",
-              "Palladium",
-              "CFP Franc",
-              "Platinum",
-              "SUCRE",
-              "ADB Unit of Account",
-              "Yemeni rial",
-              "South African rand",
-              "Zambian kwacha",
-              "Zambian kwacha",
-              "Zimbabwe dollar"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
               "Value": "1000"
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
-      },
-      "Tasks": {
-        "type": "array",
-        "items": {
-          "$ref": "Master-OB-OpenAPI.json#/components/schemas/Task"
-        }
       },
       "ProdCertificationType": {
         "allOf": [
@@ -7095,31 +4725,11 @@
             "type": "object",
             "description": "An enumerated list of the possible certifications that a product can have.",
             "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "UL1741"
             },
-            "enum": [
-              "IEC61215",
-              "IEC61646",
-              "IEC61701",
-              "IEC61730",
-              "IEC60364-4-41",
-              "IEC62108",
-              "UL1703",
-              "Other",
-              "UL1741SA",
-              "IEC61683",
-              "IEC62109-1",
-              "IEC62109-2",
-              "EN61000",
-              "IEC61010",
-              "UL1741",
-              "UL2703",
-              "UL3741"
-            ]
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -7132,36 +4742,12 @@
             "type": "object",
             "description": "Maximum AC Capacity or Load that the busbar is rated to handle.",
             "x-ob-item-type": "num:energyItemType",
-            "x-ob-unit": [
-              "Barrel of Oil Equivalent",
-              "British Thermal Unit",
-              "Foot-Pound",
-              "Thousand Barrels of Oil Equivalent",
-              "Thousand Cubic Foot Equivalent",
-              "Millions of Barrels of Oil Equivalent",
-              "Millions of BTU",
-              "Calorie",
-              "Joule",
-              "Kilojoule",
-              "Kilowatt-Hours",
-              "mJ",
-              "Megawatt-Hour",
-              "Gigawatt-Hour",
-              "Terawatt-Hour",
-              "Million Cubic Foot Equivalent",
-              "Billion Cubic Foot Equivalent",
-              "Trillion Cubic Foot Equivalent",
-              "Megawatt-Month",
-              "Gigawatt-Month",
-              "Watt-Hours",
-              "Volt-ampere-hours"
-            ],
-            "x-ob-enum": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "",
               "Value": ""
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -7177,7 +4763,8 @@
               "BusbarCapacityAC": {
                 "$ref": "#/components/schemas/BusbarCapacityAC"
               }
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       }
