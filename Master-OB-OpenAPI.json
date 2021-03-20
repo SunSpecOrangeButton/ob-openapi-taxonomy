@@ -96,6 +96,9 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
           }
         },
         "x-ob-usage-tips": ""
@@ -126,6 +129,9 @@
           },
           "Location": {
             "$ref": "#/components/schemas/Location"
+          },
+          "Orientation": {
+            "$ref": "#/components/schemas/Orientation"
           }
         },
         "x-ob-usage-tips": ""
@@ -181,8 +187,8 @@
           "DeviceWarranty": {
             "$ref": "#/components/schemas/DeviceWarranty"
           },
-          "OrientationInformation": {
-            "$ref": "#/components/schemas/OrientationInformation"
+          "Orientation": {
+            "$ref": "#/components/schemas/Orientation"
           }
         },
         "x-ob-usage-tips": ""
@@ -247,20 +253,20 @@
         },
         "x-ob-usage-tips": ""
       },
-      "OrientationInformation": {
-        "type": "object",
+      "Orientation": {
+        "description": "Azimuth is also called Yaw. Tilt is also called Pitch, and Roll is called Roll.",
         "properties": {
-          "OrientationAzimuth": {
-            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/OrientationAzimuth"
+          "Azimuth": {
+            "$ref": "#/components/schemas/Azimuth"
           },
-          "OrientationTilt": {
-            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/OrientationTilt"
+          "Tilt": {
+            "$ref": "#/components/schemas/Tilt"
           },
-          "HeightAboveGround": {
-            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/HeightAboveGround"
+          "Roll": {
+            "$ref": "#/components/schemas/Roll"
           }
         },
-        "x-ob-usage-tips": ""
+        "type": "object"
       },
       "WeatherDataRecord": {
         "type": "object",
@@ -370,11 +376,11 @@
           "SoilingInstrumentType": {
             "$ref": "Master-Solar-Taxonomy.json#/components/schemas/SoilingInstrumentType"
           },
-          "OrientationAzimuth": {
-            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/OrientationAzimuth"
+          "Azimuth": {
+            "$ref": "#/components/schemas/Azimuth"
           },
-          "OrientationTilt": {
-            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/OrientationTilt"
+          "Tilt": {
+            "$ref": "#/components/schemas/Tilt"
           },
           "CalibrationDateLast": {
             "$ref": "Master-Solar-Taxonomy.json#/components/schemas/CalibrationDateLast"
@@ -1874,7 +1880,7 @@
       "Tasks": {
         "type": "array",
         "items": {
-          "$ref": "Master-OB-OpenAPI.json#/components/schemas/Task"
+          "$ref": "#/components/schemas/Task"
         }
       },
       "TaskStatus": {
@@ -1964,8 +1970,8 @@
           "Tasks": {
             "$ref": "#/components/schemas/Tasks"
           },
-          "BillOfServices": {
-            "$ref": "#/components/schemas/BillOfServices"
+          "PVSystemArrays": {
+            "$ref": "#/components/schemas/PVSystemArrays"
           }
         },
         "x-ob-usage-tips": ""
@@ -2087,7 +2093,7 @@
           }
         ]
       },
-      "ProdLineItem": {
+      "ProductLineItem": {
         "type": "object",
         "description": "A product used within a PVSystem and the quantity of that product",
         "properties": {
@@ -2229,7 +2235,7 @@
           },
           {
             "type": "object",
-            "description": "The type of product.  Clarifying Notes:  A Combiner Box takes DC and moves to AC while a CombinerPanel combines AC Loads.",
+            "description": "The type of product",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-unit": [],
             "x-ob-enum": [
@@ -2252,25 +2258,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Module"
-            },
-            "enum": [
-              "Module",
-              "Optimizer",
-              "DCDisconnectSwitch",
-              "ACDisconnectSwitch",
-              "Inverter",
-              "Tracker",
-              "CombinerPanel",
-              "CombinerBox",
-              "MetStation",
-              "Transformer",
-              "Battery",
-              "BatteryManagementSystem",
-              "Logger",
-              "Meter",
-              "String",
-              "Mounting"
-            ]
+            }
           }
         ]
       },
@@ -2278,8 +2266,8 @@
         "type": "object",
         "description": "Bill of Materials for a System",
         "properties": {
-          "ProdLineItems": {
-            "$ref": "#/components/schemas/ProdLineItems"
+          "ProductLineItems": {
+            "$ref": "#/components/schemas/ProductLineItems"
           },
           "BillOfMaterialsStatus": {
             "$ref": "#/components/schemas/BillOfMaterialsStatus"
@@ -2293,10 +2281,10 @@
         },
         "x-ob-usage-tips": ""
       },
-      "ProdLineItems": {
+      "ProductLineItems": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/ProdLineItem"
+          "$ref": "#/components/schemas/ProductLineItem"
         },
         "x-ob-usage-tips": ""
       },
@@ -2415,6 +2403,9 @@
           },
           "RiskCategory": {
             "$ref": "#/components/schemas/RiskCategory"
+          },
+          "RoofPlanes": {
+            "$ref": "#/components/schemas/RoofPlanes"
           }
         },
         "x-ob-usage-tips": ""
@@ -4273,6 +4264,9 @@
         "type": "object",
         "description": "A certification for a product",
         "properties": {
+          "ProdCertificationName": {
+            "$ref": "#/components/schemas/ProdCertificationName"
+          },
           "ProdCertificationValue": {
             "$ref": "#/components/schemas/ProdCertificationValue"
           },
@@ -4284,9 +4278,6 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
-          },
-          "ProdCertificationType": {
-            "$ref": "#/components/schemas/ProdCertificationType"
           }
         }
       },
@@ -6285,13 +6276,13 @@
       "PermitIssueMethods": {
         "type": "array",
         "items": {
-          "$ref": "Master-OB-OpenAPI.json#/components/schemas/PermitIssueMethod"
+          "$ref": "#/components/schemas/PermitIssueMethod"
         }
       },
       "DocumentSubmissionMethods": {
         "type": "array",
         "items": {
-          "$ref": "Master-OB-OpenAPI.json#/components/schemas/DocumentSubmissionMethod"
+          "$ref": "#/components/schemas/DocumentSubmissionMethod"
         }
       },
       "Service": {
@@ -6414,7 +6405,7 @@
       "ServiceLineItems": {
         "type": "array",
         "items": {
-          "$ref": "Master-OB-OpenAPI.json#/components/schemas/ServiceLineItem"
+          "$ref": "#/components/schemas/ServiceLineItem"
         }
       },
       "BillOfServices": {
@@ -6573,30 +6564,9 @@
               "Value": "Trenching"
             },
             "enum": [
-              "AdditionalStructural",
-              "AtticRunAdder",
-              "BallastedSystem",
-              "BirdNetting",
-              "BoomLift",
-              "Carport",
-              "Derate",
-              "ElectricalEngineeringStamp",
-              "FlatRoof",
-              "FoundationCertification",
-              "GroundMount",
-              "HomeEfficiency",
-              "LineSideTap",
-              "LoadController",
-              "MainPanelUpgrade",
-              "Other",
-              "RoofRepair",
-              "SmallSystem",
-              "SolarWaterHeater",
-              "SteepRoof",
-              "StructuralEngineeringStamp",
-              "SubpanelUpgrade",
-              "TrencherRental",
-              "Trenching"
+              "Trenching",
+              "EquipmentRental",
+              "TreeRemoval"
             ]
           }
         ]
@@ -7080,103 +7050,1128 @@
           }
         ]
       },
-      "Tasks": {
-        "type": "array",
-        "items": {
-          "$ref": "Master-OB-OpenAPI.json#/components/schemas/Task"
+      "PVSystemArray": {
+        "type": "object",
+        "description": "An array of modules within a PVSystem",
+        "properties": {
+          "PVSystemStrings": {
+            "$ref": "#/components/schemas/PVSystemStrings"
+          },
+          "Orientation": {
+            "$ref": "#/components/schemas/Orientation"
+          },
+          "Area": {
+            "$ref": "#/components/schemas/Area"
+          },
+          "RoofPlaneID": {
+            "$ref": "#/components/schemas/RoofPlaneID"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "CapacityDC": {
+            "$ref": "#/components/schemas/CapacityDC"
+          },
+          "ProductLineItems": {
+            "$ref": "#/components/schemas/ProductLineItems"
+          },
+          "Devices": {
+            "$ref": "#/components/schemas/Devices"
+          }
         }
       },
-      "ProdCertificationType": {
+      "PVSystemString": {
+        "type": "object",
+        "description": "A string of Modules within a PVSystem",
+        "properties": {
+          "Devices": {
+            "$ref": "#/components/schemas/Devices"
+          },
+          "Orientation": {
+            "$ref": "#/components/schemas/Orientation"
+          },
+          "ProductLineItems": {
+            "$ref": "#/components/schemas/ProductLineItems"
+          },
+          "CapacityDC": {
+            "$ref": "#/components/schemas/CapacityDC"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "PVSystemStringID": {
+            "$ref": "#/components/schemas/PVSystemStringID"
+          }
+        }
+      },
+      "PVSystemArrays": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PVSystemArray"
+        }
+      },
+      "PVSystemStrings": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PVSystemString"
+        }
+      },
+      "Roll": {
         "allOf": [
           {
             "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
           },
           {
             "type": "object",
-            "description": "An enumerated list of the possible certifications that a product can have.",
-            "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-unit": [],
-            "x-ob-enum": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "UL1741"
-            },
-            "enum": [
-              "IEC61215",
-              "IEC61646",
-              "IEC61701",
-              "IEC61730",
-              "IEC60364-4-41",
-              "IEC62108",
-              "UL1703",
-              "Other",
-              "UL1741SA",
-              "IEC61683",
-              "IEC62109-1",
-              "IEC62109-2",
-              "EN61000",
-              "IEC61010",
-              "UL1741",
-              "UL2703",
-              "UL3741"
-            ]
-          }
-        ]
-      },
-      "BusbarCapacityAC": {
-        "allOf": [
-          {
-            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Maximum AC Capacity or Load that the busbar is rated to handle.",
-            "x-ob-item-type": "num:energyItemType",
+            "description": "Rotation relative to an axis perpendicular to both the axis of Azimuth and the axis of Tilt.",
+            "x-ob-item-type": "num-us:planeAngleItemType",
             "x-ob-unit": [
-              "Barrel of Oil Equivalent",
-              "British Thermal Unit",
-              "Foot-Pound",
-              "Thousand Barrels of Oil Equivalent",
-              "Thousand Cubic Foot Equivalent",
-              "Millions of Barrels of Oil Equivalent",
-              "Millions of BTU",
-              "Calorie",
-              "Joule",
-              "Kilojoule",
-              "Kilowatt-Hours",
-              "mJ",
-              "Megawatt-Hour",
-              "Gigawatt-Hour",
-              "Terawatt-Hour",
-              "Million Cubic Foot Equivalent",
-              "Billion Cubic Foot Equivalent",
-              "Trillion Cubic Foot Equivalent",
-              "Megawatt-Month",
-              "Gigawatt-Month",
-              "Watt-Hours",
-              "Volt-ampere-hours"
+              "Degree",
+              "Radian"
             ],
             "x-ob-enum": "",
-            "x-ob-usage-tips": "",
+            "x-ob-usage-tips": "This is a rarely used Orientation for solar modules installed at a slant. it is included for completeness.\nTilt is equal to Pitch\nAzimuth is equal to Yaw\nRoll is equal to Roll",
             "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
               "Unit": "",
               "Value": ""
             }
           }
         ]
       },
-      "ProdCombinerPanel": {
+      "Azimuth": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Product"
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
           },
           {
             "type": "object",
-            "description": "Specific Details for a Combiner Panel product",
-            "properties": {
-              "BusbarCapacityAC": {
-                "$ref": "#/components/schemas/BusbarCapacityAC"
-              }
+            "description": "The azimuth of a plane relative to North where North is 0 degreses and East is 90 degrees",
+            "x-ob-item-type": "num-us:planeAngleItemType",
+            "x-ob-unit": [
+              "Degree",
+              "Radian"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
+          }
+        ]
+      },
+      "Tilt": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The tilt of a plane relative to horizontal",
+            "x-ob-item-type": "num-us:planeAngleItemType",
+            "x-ob-unit": [
+              "Degree",
+              "Radian"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
+          }
+        ]
+      },
+      "RoofPlane": {
+        "type": "object",
+        "description": "A single plane of a roof surface",
+        "properties": {
+          "RoofMaterial": {
+            "$ref": "#/components/schemas/RoofMaterial"
+          },
+          "Orientation": {
+            "$ref": "#/components/schemas/Orientation"
+          },
+          "Area": {
+            "$ref": "#/components/schemas/Area"
+          },
+          "RoofPlaneID": {
+            "$ref": "#/components/schemas/RoofPlaneID"
+          }
+        }
+      },
+      "Area": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The area of the parent object",
+            "x-ob-item-type": "num:areaItemType",
+            "x-ob-unit": [
+              "Acre",
+              "Square Foot",
+              "Square Mile",
+              "Square Yard",
+              "Hectare",
+              "Square km",
+              "Square metre"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
+          }
+        ]
+      },
+      "RoofPlanes": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/RoofPlane"
+        }
+      },
+      "RoofPlaneID": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The uuid of the roofplane",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-unit": "",
+            "x-ob-enum": [
+              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
+            ],
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
+          }
+        ]
+      },
+      "PVSystemStringID": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A UUID for identifying a specific string",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-unit": "",
+            "x-ob-enum": [
+              "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})"
+            ],
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
+          }
+        ]
+      },
+      "ProdModule": {
+        "type": "object",
+        "description": "A solar module product",
+        "properties": {
+          "ProductWarranty": {
+            "$ref": "#/components/schemas/ProductWarranty"
+          },
+          "PowerWarranty": {
+            "$ref": "#/components/schemas/PowerWarranty"
+          },
+          "MaximumPower": {
+            "$ref": "#/components/schemas/MaximumPower"
+          },
+          "VoltageAtMaximumPower": {
+            "$ref": "#/components/schemas/VoltageAtMaximumPower"
+          },
+          "CurrentAtMaximumPower": {
+            "$ref": "#/components/schemas/CurrentAtMaximumPower"
+          },
+          "OpenCircuitVoltage ": {
+            "$ref": "#/components/schemas/OpenCircuitVoltage "
+          },
+          "ShortCircuitCurrent": {
+            "$ref": "#/components/schemas/ShortCircuitCurrent"
+          },
+          "PanelEfficiency": {
+            "$ref": "#/components/schemas/PanelEfficiency"
+          },
+          "PositivePowerTolerance": {
+            "$ref": "#/components/schemas/PositivePowerTolerance"
+          },
+          "NOCTTemperature": {
+            "$ref": "#/components/schemas/NOCTTemperature"
+          },
+          "MaximumOperatingTemperature": {
+            "$ref": "#/components/schemas/MaximumOperatingTemperature"
+          },
+          "MinimumOperatingTemperature": {
+            "$ref": "#/components/schemas/MinimumOperatingTemperature"
+          },
+          "MaximumPowerTemperatureCoefficient": {
+            "$ref": "#/components/schemas/MaximumPowerTemperatureCoefficient"
+          },
+          "OpenCircutVoltageTemperatureCoefficient": {
+            "$ref": "#/components/schemas/OpenCircutVoltageTemperatureCoefficient"
+          },
+          "ShortCircuitCurrentTemperatureCoefficient": {
+            "$ref": "#/components/schemas/ShortCircuitCurrentTemperatureCoefficient"
+          },
+          "MaximumSystemVoltage": {
+            "$ref": "#/components/schemas/MaximumSystemVoltage"
+          },
+          "SeriesFuseRating": {
+            "$ref": "#/components/schemas/SeriesFuseRating"
+          },
+          "Width": {
+            "$ref": "#/components/schemas/Width"
+          },
+          "Length": {
+            "$ref": "#/components/schemas/Length"
+          },
+          "Height": {
+            "$ref": "#/components/schemas/Height"
+          },
+          "Mass": {
+            "$ref": "#/components/schemas/Mass"
+          },
+          "ProdSolarCell": {
+            "$ref": "#/components/schemas/ProdSolarCell"
+          },
+          "ProdCode": {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/ProdCode"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "ProdDatasheet": {
+            "$ref": "#/components/schemas/ProdDatasheet"
+          },
+          "ProdGlazing": {
+            "$ref": "#/components/schemas/ProdGlazing"
+          },
+          "ModuleFrameMaterial": {
+            "$ref": "#/components/schemas/ModuleFrameMaterial"
+          },
+          "SolarCellQuantity": {
+            "$ref": "#/components/schemas/SolarCellQuantity"
+          },
+          "JunctionBoxDiodeQuantity": {
+            "$ref": "#/components/schemas/JunctionBoxDiodeQuantity"
+          },
+          "JunctionBoxProtectionCertification": {
+            "$ref": "#/components/schemas/JunctionBoxProtectionCertification"
+          },
+          "CableCrossSectionArea": {
+            "$ref": "#/components/schemas/CableCrossSectionArea"
+          },
+          "CableLength": {
+            "$ref": "#/components/schemas/CableLength"
+          },
+          "CableConnector": {
+            "$ref": "#/components/schemas/CableConnector"
+          }
+        }
+      },
+      "ProductWarranty": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The length of a product Warranty in Years",
+            "x-ob-item-type": "xbrli:dateItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
+          }
+        ]
+      },
+      "PowerWarranty": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A description of the warranty for power output if applicable",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "12 Years of 90.2% Output Power, 30 Years of 80.7% Output Power"
+            }
+          }
+        ]
+      },
+      "MaximumPower": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "(Pmax) at STC",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-unit": [
+              "Horsepower",
+              "Gigawatt",
+              "Kilowatt",
+              "Megawatt",
+              "Terawatt",
+              "Watt",
+              "Volt-ampere reactive",
+              "Volt-ampere"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Watt",
+              "Value": "300"
+            }
+          }
+        ]
+      },
+      "VoltageAtMaximumPower": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "(Vmpp)",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-unit": [
+              "Volt",
+              "Kilovolt",
+              "Megavolt",
+              "Gigavolt"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Volt",
+              "Value": "32.26"
+            }
+          }
+        ]
+      },
+      "CurrentAtMaximumPower": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "(Impp)",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-unit": [
+              "Ampere"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Ampere",
+              "Value": "9.31"
+            }
+          }
+        ]
+      },
+      "OpenCircuitVoltage ": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "(Voc)",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-unit": [
+              "Volt",
+              "Kilovolt",
+              "Megavolt",
+              "Gigavolt"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Volt",
+              "Value": "39.83"
+            }
+          }
+        ]
+      },
+      "ShortCircuitCurrent": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "(Isc)",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-unit": [
+              "Ampere"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Ampere",
+              "Value": "9.76"
+            }
+          }
+        ]
+      },
+      "PanelEfficiency": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The efficiency of the solar module",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "18.3%"
+            }
+          }
+        ]
+      },
+      "PositivePowerTolerance": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "(Positive)",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "+ 1.5 %"
+            }
+          }
+        ]
+      },
+      "NOCTTemperature": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The nominal NOCT Temperature of a solar module",
+            "x-ob-item-type": "num-us:temperatureItemType",
+            "x-ob-unit": [
+              "Celsius",
+              "Kelvin",
+              "Fahrenheit"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Celsius",
+              "Value": "45"
+            }
+          }
+        ]
+      },
+      "MinimumOperatingTemperature": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The coldest temperature in which a product can operate",
+            "x-ob-item-type": "num-us:temperatureItemType",
+            "x-ob-unit": [
+              "Celsius",
+              "Kelvin",
+              "Fahrenheit"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Celsius",
+              "Value": "-40"
+            }
+          }
+        ]
+      },
+      "MaximumOperatingTemperature": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The highest temperature in which a product can operate",
+            "x-ob-item-type": "num-us:temperatureItemType",
+            "x-ob-unit": [
+              "Celsius",
+              "Kelvin",
+              "Fahrenheit"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Celsius",
+              "Value": "85"
+            }
+          }
+        ]
+      },
+      "MaximumPowerTemperatureCoefficient": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The temperature coefficient of Pmax. Units are %/°C for standardization.",
+            "x-ob-item-type": "xbrli:pureItemType",
+            "x-ob-unit": [
+              "Monetary/Monetary",
+              "pure",
+              "Rate"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "%/°C is not a currently available OB Unit. Please verify that data is converted and entered correctly.",
+            "x-ob-sample-value": {
+              "Value": "-0.37"
+            }
+          }
+        ]
+      },
+      "OpenCircutVoltageTemperatureCoefficient": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The temperature coefficient of Voc. Units are %/°C for standardization.",
+            "x-ob-item-type": "xbrli:pureItemType",
+            "x-ob-unit": [
+              "Monetary/Monetary",
+              "pure",
+              "Rate"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "%/°C is not a currently available OB Unit. Please verify that data is converted and entered correctly.",
+            "x-ob-sample-value": {
+              "Value": "-0.304"
+            }
+          }
+        ]
+      },
+      "ShortCircuitCurrentTemperatureCoefficient": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The temperature coefficient of Isc. Units are %/°C for standardization.",
+            "x-ob-item-type": "xbrli:pureItemType",
+            "x-ob-unit": [
+              "Monetary/Monetary",
+              "pure",
+              "Rate"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "%/°C is not a currently available OB Unit. Please verify that data is converted and entered correctly.",
+            "x-ob-sample-value": {
+              "Value": "0.05"
+            }
+          }
+        ]
+      },
+      "MaximumSystemVoltage": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The maximum voltage that a string of modules can support",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-unit": [
+              "Volt",
+              "Kilovolt",
+              "Megavolt",
+              "Gigavolt"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Volt",
+              "Value": "1500"
+            }
+          }
+        ]
+      },
+      "SeriesFuseRating": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The series fuse rating (need better description)",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-unit": [
+              "Ampere"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Ampere",
+              "Value": "20"
+            }
+          }
+        ]
+      },
+      "Width": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The width of the parent object",
+            "x-ob-item-type": "num:lengthItemType",
+            "x-ob-unit": [
+              "Foot",
+              "Inch",
+              "Mile",
+              "Nautical Mile",
+              "Yard",
+              "Centimetre",
+              "Decimetre",
+              "Kilometre",
+              "Metre",
+              "Millimetre"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension.",
+            "x-ob-sample-value": {
+              "Unit": "Millimetre",
+              "Value": "1765"
+            }
+          }
+        ]
+      },
+      "Length": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The length of the parent object",
+            "x-ob-item-type": "num:lengthItemType",
+            "x-ob-unit": [
+              "Foot",
+              "Inch",
+              "Mile",
+              "Nautical Mile",
+              "Yard",
+              "Centimetre",
+              "Decimetre",
+              "Kilometre",
+              "Metre",
+              "Millimetre"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension.",
+            "x-ob-sample-value": {
+              "Unit": "Millimetre",
+              "Value": "1048"
+            }
+          }
+        ]
+      },
+      "Height": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The height of the parent object",
+            "x-ob-item-type": "num:lengthItemType",
+            "x-ob-unit": [
+              "Foot",
+              "Inch",
+              "Mile",
+              "Nautical Mile",
+              "Yard",
+              "Centimetre",
+              "Decimetre",
+              "Kilometre",
+              "Metre",
+              "Millimetre"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension",
+            "x-ob-sample-value": {
+              "Unit": "Millimetre",
+              "Value": "35"
+            }
+          }
+        ]
+      },
+      "Mass": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The mass of the parent object. ",
+            "x-ob-item-type": "num:massItemType",
+            "x-ob-unit": [
+              "Pound",
+              "Ounce",
+              "Troy Ounce",
+              "Ton",
+              "Tonne",
+              "Gram",
+              "Kilogram",
+              "Thousand Tons",
+              "Million Tons",
+              "Billion Tons",
+              "Kilotonne",
+              "Megatonne",
+              "Gigatonne"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "Apply appropriate engineering consistency with related object Weight.",
+            "x-ob-sample-value": {
+              "Unit": "Kilogram",
+              "Value": "20"
+            }
+          }
+        ]
+      },
+      "Weight": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The weight of the parent object",
+            "x-ob-item-type": "forceItemType",
+            "x-ob-unit": [
+              "Newton"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "Use appropriate engineering consistency with related object Mass",
+            "x-ob-sample-value": {
+              "Unit": "Newton",
+              "Value": "9.81"
+            }
+          }
+        ]
+      },
+      "CellType": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The cell type for a solar module",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "Used for large group categorizations",
+            "x-ob-sample-value": {
+              "Value": "MonocrystallineSilicon"
+            }
+          }
+        ]
+      },
+      "ProdSolarCell": {
+        "type": "object",
+        "description": "A subcomponent of a ProdModule",
+        "properties": {
+          "CellType": {
+            "$ref": "#/components/schemas/CellType"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Mass": {
+            "$ref": "#/components/schemas/Mass"
+          },
+          "Width": {
+            "$ref": "#/components/schemas/Width"
+          },
+          "Length": {
+            "$ref": "#/components/schemas/Length"
+          },
+          "Height": {
+            "$ref": "#/components/schemas/Height"
+          },
+          "ProdCode": {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/ProdCode"
+          }
+        }
+      },
+      "ProdGlazing": {
+        "type": "object",
+        "description": "The collection of glass, plastic or other solar cell transparent covers used in crafting a solar module",
+        "properties": {
+          "Height": {
+            "$ref": "#/components/schemas/Height"
+          },
+          "GlazingMaterial": {
+            "$ref": "#/components/schemas/GlazingMaterial"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        }
+      },
+      "GlazingMaterial": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The material used in the glazing of a solar module",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "GlassTempered"
+            },
+            "enum": [
+              "GlassTempered",
+              "Polycarbonate",
+              "Glass"
+            ]
+          }
+        ]
+      },
+      "ModuleFrameMaterial": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The material used for a module frame",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "AnodizedAluminiumAlloy"
+            }
+          }
+        ]
+      },
+      "SolarCellQuantity": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The number of ProdSolarCell in a module",
+            "x-ob-item-type": "xbrli:pureItemType",
+            "x-ob-unit": [
+              "Monetary/Monetary",
+              "pure",
+              "Rate"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "120"
+            }
+          }
+        ]
+      },
+      "JunctionBoxDiodeQuantity": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The number of Junction Box Diodes in a solar module",
+            "x-ob-item-type": "xbrli:pureItemType",
+            "x-ob-unit": [
+              "Monetary/Monetary",
+              "pure",
+              "Rate"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "3"
+            }
+          }
+        ]
+      },
+      "JunctionBoxProtectionCertification": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The maximum certification that the Junction Box has been tested for.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "IP 68"
+            }
+          }
+        ]
+      },
+      "CableCrossSectionArea": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The cross sectional area of the cable connecting from the solar module",
+            "x-ob-item-type": "num:areaItemType",
+            "x-ob-unit": [
+              "Acre",
+              "Square Foot",
+              "Square Mile",
+              "Square Yard",
+              "Hectare",
+              "Square km",
+              "Square metre"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Square Millimeter",
+              "Value": "4"
+            }
+          }
+        ]
+      },
+      "CableLength": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The length of the connection cable to the solar module",
+            "x-ob-item-type": "num:lengthItemType",
+            "x-ob-unit": [
+              "Foot",
+              "Inch",
+              "Mile",
+              "Nautical Mile",
+              "Yard",
+              "Centimetre",
+              "Decimetre",
+              "Kilometre",
+              "Metre",
+              "Millimetre"
+            ],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Millimetre",
+              "Value": "1200"
+            }
+          }
+        ]
+      },
+      "CableConnector": {
+        "allOf": [
+          {
+            "$ref": "Master-Solar-Taxonomy.json#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of cable connector used on the solar module",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "MC4"
             }
           }
         ]
