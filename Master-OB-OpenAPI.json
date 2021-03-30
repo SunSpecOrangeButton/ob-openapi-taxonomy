@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "1.1.0",
-    "title": "OB OpenAPI Taxonomy 2021-03-06",
+    "version": "1.1.1",
+    "title": "OB OpenAPI Taxonomy",
     "description": "OB OpenAPI Definitions For Orange Button."
   },
   "paths": {},
@@ -1222,7 +1222,7 @@
           {
             "type": "object",
             "description": "The applicable building code the AHJ enforces.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "BuildingCodeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "2018IBC"
@@ -1256,7 +1256,7 @@
           {
             "type": "object",
             "description": "The applicable residential code the AHJ enforces.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ResidentialCodeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "2018IRC"
@@ -1273,7 +1273,7 @@
           {
             "type": "object",
             "description": "The applicable fire code the AHJ enforces.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "FireCodeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "2018IFC"
@@ -1290,7 +1290,7 @@
           {
             "type": "object",
             "description": "The applicable electric code the AHJ enforces.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ElectricCodeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "2017NEC"
@@ -1358,7 +1358,7 @@
           {
             "type": "object",
             "description": "The method for submitting AHJ documents.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "DocumentSubmissionMethodItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Email"
@@ -1392,7 +1392,7 @@
           {
             "type": "object",
             "description": "The type of engineering or professional review",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "EngineeringReviewTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "StructuralEngineer"
@@ -1409,7 +1409,7 @@
           {
             "type": "object",
             "description": "The type of certifying stamp that is applied to the design or drawing set",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "StampTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Digital"
@@ -1443,7 +1443,7 @@
           {
             "type": "object",
             "description": "This field indicates if this instance of an object is required or optional. Conditionally optional the conditions can be described in RequirementNotes.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "RequirementLevelItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Required"
@@ -1460,7 +1460,7 @@
           {
             "type": "object",
             "description": "Method of the determining the location",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "LocationDeterminationMethodItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "AddressGeocoding"
@@ -1477,7 +1477,7 @@
           {
             "type": "object",
             "description": "The type of contact being specified",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ContactTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Homeowner"
@@ -1494,7 +1494,7 @@
           {
             "type": "object",
             "description": "The method of contact the contact prefers",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "PreferredContactMethodItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Email"
@@ -1579,7 +1579,7 @@
           {
             "type": "object",
             "description": "The type of location being specified",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "LocationTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "GeneralProximity"
@@ -1630,7 +1630,7 @@
           {
             "type": "object",
             "description": "The type of address being specified",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "AddressTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Installation"
@@ -1707,7 +1707,7 @@
           {
             "type": "object",
             "description": "The status of a task",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "TaskStatusItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "NotStarted"
@@ -1798,7 +1798,7 @@
               "Unit": "US Dollar",
               "Value": "43095"
             },
-            "x-ob-item-type-group": ""
+            "x-ob-item-type-group": "OBMonetary"
           }
         ]
       },
@@ -1856,7 +1856,7 @@
               "Unit": "Kilowatt",
               "Value": "11.5"
             },
-            "x-ob-item-type-group": ""
+            "x-ob-item-type-group": "OBElectricalPower"
           }
         ]
       },
@@ -1953,7 +1953,7 @@
               "Unit": "US Dollar",
               "Value": "120"
             },
-            "x-ob-item-type-group": ""
+            "x-ob-item-type-group": "OBMonetary"
           }
         ]
       },
@@ -1965,7 +1965,7 @@
           {
             "type": "object",
             "description": "The status of the operation of the PVSystem",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "OperationalStatusItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Online"
@@ -1982,7 +1982,7 @@
           {
             "type": "object",
             "description": "The status of the operation of the PVSystem",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "OperationalPhaseItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Proposed"
@@ -1999,7 +1999,7 @@
           {
             "type": "object",
             "description": "The type of product.  Clarifying Notes:  A Combiner Box takes DC and moves to AC while a CombinerPanel combines AC Loads.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ProdTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Module"
@@ -2042,7 +2042,7 @@
           {
             "type": "object",
             "description": "The status of the BillOfMaterials",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "BillOfMaterialsStatusItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "NotStarted"
@@ -2151,7 +2151,7 @@
           {
             "type": "object",
             "description": "The type of Structure",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "StructureTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "DetachedGarage"
@@ -2352,7 +2352,7 @@
           {
             "type": "object",
             "description": "The risk category from ASCE7",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "RiskCategoryItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "RiskCategoryII"
@@ -2369,7 +2369,7 @@
           {
             "type": "object",
             "description": "The wind code adopted by the authority having jurisdiction",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "WindCodeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "ASCE716"
@@ -2507,7 +2507,7 @@
           {
             "type": "object",
             "description": "The type of foundation the structure has",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "FoundationTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Slab"
@@ -2524,7 +2524,7 @@
           {
             "type": "object",
             "description": "The type of construction of the structure",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ConstructionMaterialItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Bricks"
@@ -2560,7 +2560,7 @@
           {
             "type": "object",
             "description": "The exposure category of the RiskDesignCriteria as defined by the ASCE 7 Standard",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ExposureCategoryItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "B"
@@ -2595,7 +2595,7 @@
           {
             "type": "object",
             "description": "The phase of the utility being interconnected too",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "InterconnectionPhaseTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Single"
@@ -2630,7 +2630,7 @@
           {
             "type": "object",
             "description": "The type of fee period",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "FeeStructureTypeItemType",
             "x-ob-sample-value": {
               "Value": "SystemSize"
             },
@@ -2926,7 +2926,7 @@
           {
             "type": "object",
             "description": "The type of Checklist",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ChecklistTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Site"
@@ -2995,7 +2995,7 @@
           {
             "type": "object",
             "description": "The type of result expected by the question",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "QuestionTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Text"
@@ -3041,7 +3041,7 @@
           {
             "type": "object",
             "description": "The phase of the interconnection",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "InterconnectionPhaseItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "A"
@@ -3116,7 +3116,7 @@
           {
             "type": "object",
             "description": "The type of Tariff",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "TariffStructureTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Metered"
@@ -3192,7 +3192,7 @@
           {
             "type": "object",
             "description": "The type of account",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "AccountTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Bank"
@@ -3243,7 +3243,7 @@
           {
             "type": "object",
             "description": "The role the account plays in the reporting systems",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "AccountRoleItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Revenues"
@@ -3366,7 +3366,7 @@
           {
             "type": "object",
             "description": "The type of aging bucket",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "AgingBucketTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "AccountsPayable"
@@ -3482,7 +3482,7 @@
           {
             "type": "object",
             "description": "The enumerated list of the types of major specifications.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "SpecificationTypeItemType",
             "x-ob-usage-tips": "If the specification does not have a type listed here, select \"None\" and then use the SpecificationName as an alternative.",
             "x-ob-sample-value": {
               "Value": "AcceptableAmbientTemperatureRange"
@@ -3830,7 +3830,7 @@
           {
             "type": "object",
             "description": "The code for the local snow loading design",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "SnowCodeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "ASCE716"
@@ -3982,7 +3982,7 @@
           {
             "type": "object",
             "description": "The method by which the permit is issued",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "PermitIssueMethodItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Email"
@@ -4016,7 +4016,7 @@
           {
             "type": "object",
             "description": "The type of inspection",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "InspectionTypeItemType",
             "x-ob-usage-tips": "Select from either the available common types, or choose other and attach the type in the description.",
             "x-ob-sample-value": {
               "Value": "RoughIn"
@@ -4294,7 +4294,7 @@
           {
             "type": "object",
             "description": "The name of the task category which is used to normalize task types when searching across multiple companies.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "TaskGroupItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "SiteSurvey"
@@ -4340,7 +4340,7 @@
           {
             "type": "object",
             "description": "A optional normalized list of FeeTypes that allow for searching across multiple company datasets",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "FeeGroupItemType",
             "x-ob-usage-tips": "Use for a normalized list of possible Fees",
             "x-ob-sample-value": {
               "Value": "PermitApplication"
@@ -4520,7 +4520,7 @@
           {
             "type": "object",
             "description": "The status of the overall scope of work",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "BillOfServicesStatusItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "NotStarted"
@@ -4554,7 +4554,7 @@
           {
             "type": "object",
             "description": "The method by which the cost of a service is evaluated.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ServiceQuantityUnitItemType",
             "x-ob-usage-tips": "Used in combination with the Quantity field. This provides the information required to calculate the cost of a given service.",
             "x-ob-sample-value": {
               "Value": "Foot"
@@ -4620,7 +4620,7 @@
           {
             "type": "object",
             "description": "The optional list of normalized services that allow for cross-platform comparison of service data.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ServiceGroupItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Trenching"
@@ -4637,7 +4637,7 @@
           {
             "type": "object",
             "description": "Information on who or what is performing the payment responsibility of the service",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ServicePaymentResponsibilityItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "PaidByInstaller"
@@ -4654,7 +4654,7 @@
           {
             "type": "object",
             "description": "The Service Payment Responsibility for the Payee of the Service",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ServicePaidToItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Originator"
@@ -4671,7 +4671,7 @@
           {
             "type": "object",
             "description": "The Service Payment Responsibility for the Payer of the Service",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ServicePaidByItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "GeneralContractor"
@@ -4724,7 +4724,7 @@
           {
             "type": "object",
             "description": "An enumerated list of the possible certifications that a product can have.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ProdCertificationTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "UL1741"
@@ -4777,7 +4777,7 @@
     "xs:token": {
       "description": ""
     },
-    "dei:legalEntityIdentifierItemType":{
+    "dei:legalEntityIdentifierItemType": {
       "description": ""
     },
     "xbrli:decimalItemType": {
@@ -8161,7 +8161,1546 @@
           "description": ""
         }
       }
+    },
+    "BuildingCodeItemType": {
+      "description": "",
+      "enums": {
+        "2021IBC": {
+          "label": "2021IBC",
+          "description": ""
+        },
+        "2018IBC": {
+          "label": "2018IBC",
+          "description": ""
+        },
+        "2015IBC": {
+          "label": "2015IBC",
+          "description": ""
+        },
+        "2012IBC": {
+          "label": "2012IBC",
+          "description": ""
+        },
+        "2009IBC": {
+          "label": "2009IBC",
+          "description": ""
+        },
+        "NoSolarRegulations": {
+          "label": "NoSolarRegulations",
+          "description": ""
+        }
+      }
+    },
+    "ResidentialCodeItemType": {
+      "description": "",
+      "enums": {
+        "2021IRC": {
+          "label": "2021IRC",
+          "description": ""
+        },
+        "2018IRC": {
+          "label": "2018IRC",
+          "description": ""
+        },
+        "2015IRC": {
+          "label": "2015IRC",
+          "description": ""
+        },
+        "2012IRC": {
+          "label": "2012IRC",
+          "description": ""
+        },
+        "2009IRC": {
+          "label": "2009IRC",
+          "description": ""
+        },
+        "NoSolarRegulations": {
+          "label": "NoSolarRegulations",
+          "description": ""
+        }
+      }
+    },
+    "FireCodeItemType": {
+      "description": "",
+      "enums": {
+        "2021IFC": {
+          "label": "2021IFC",
+          "description": ""
+        },
+        "2018IFC": {
+          "label": "2018IFC",
+          "description": ""
+        },
+        "2015IFC": {
+          "label": "2015IFC",
+          "description": ""
+        },
+        "2012IFC": {
+          "label": "2012IFC",
+          "description": ""
+        },
+        "2009IFC": {
+          "label": "2009IFC",
+          "description": ""
+        },
+        "NoSolarRegulations": {
+          "label": "NoSolarRegulations",
+          "description": ""
+        }
+      }
+    },
+    "ElectricCodeItemType": {
+      "description": "",
+      "enums": {
+        "2020NEC": {
+          "label": "2020NEC",
+          "description": ""
+        },
+        "2017NEC": {
+          "label": "2017NEC",
+          "description": ""
+        },
+        "2014NEC": {
+          "label": "2014NEC",
+          "description": ""
+        },
+        "2011NEC": {
+          "label": "2011NEC",
+          "description": ""
+        },
+        "NoSolarRegulations": {
+          "label": "NoSolarRegulations",
+          "description": ""
+        }
+      }
+    },
+    "DocumentSubmissionMethodItemType": {
+      "description": "",
+      "enums": {
+        "Epermitting": {
+          "label": "Epermitting",
+          "description": ""
+        },
+        "Email": {
+          "label": "Email",
+          "description": ""
+        },
+        "InPerson": {
+          "label": "InPerson",
+          "description": ""
+        },
+        "SolarApp": {
+          "label": "SolarApp",
+          "description": ""
+        }
+      }
+    },
+    "EngineeringReviewTypeItemType": {
+      "description": "",
+      "enums": {
+        "StructuralEngineer": {
+          "label": "StructuralEngineer",
+          "description": ""
+        },
+        "ElectricalEngineer": {
+          "label": "ElectricalEngineer",
+          "description": ""
+        },
+        "PVEngineer": {
+          "label": "PVEngineer",
+          "description": ""
+        },
+        "MasterElectrician": {
+          "label": "MasterElectrician",
+          "description": ""
+        },
+        "FireMarshal": {
+          "label": "FireMarshal",
+          "description": ""
+        },
+        "EnvironmentalEngineer": {
+          "label": "EnvironmentalEngineer",
+          "description": ""
+        }
+      }
+    },
+    "StampTypeItemType": {
+      "description": "",
+      "enums": {
+        "Wet": {
+          "label": "Wet",
+          "description": ""
+        },
+        "Digital": {
+          "label": "Digital",
+          "description": ""
+        },
+        "Notary": {
+          "label": "Notary",
+          "description": ""
+        },
+        "None": {
+          "label": "None",
+          "description": ""
+        }
+      }
+    },
+    "RequirementLevelItemType": {
+      "description": "",
+      "enums": {
+        "Required": {
+          "label": "Required",
+          "description": ""
+        },
+        "Optional": {
+          "label": "Optional",
+          "description": ""
+        },
+        "ConditionallyRequired": {
+          "label": "ConditionallyRequired",
+          "description": ""
+        }
+      }
+    },
+    "LocationDeterminationMethodItemType": {
+      "description": "",
+      "enums": {
+        "GPS": {
+          "label": "GPS",
+          "description": ""
+        },
+        "Survey": {
+          "label": "Survey",
+          "description": ""
+        },
+        "AerialImage": {
+          "label": "AerialImage",
+          "description": ""
+        },
+        "EngineeringReport": {
+          "label": "EngineeringReport",
+          "description": ""
+        },
+        "AddressGeocoding": {
+          "label": "AddressGeocoding",
+          "description": ""
+        },
+        "Unknown": {
+          "label": "Unknown",
+          "description": ""
+        }
+      }
+    },
+    "ContactTypeItemType": {
+      "description": "",
+      "enums": {
+        "Homeowner": {
+          "label": "Homeowner",
+          "description": ""
+        },
+        "OffTaker": {
+          "label": "OffTaker",
+          "description": ""
+        },
+        "Inspector": {
+          "label": "Inspector",
+          "description": ""
+        },
+        "Engineer": {
+          "label": "Engineer",
+          "description": ""
+        },
+        "Originator": {
+          "label": "Originator",
+          "description": ""
+        },
+        "Installer": {
+          "label": "Installer",
+          "description": ""
+        },
+        "Investor": {
+          "label": "Investor",
+          "description": ""
+        },
+        "PermittingOfficial": {
+          "label": "PermittingOfficial",
+          "description": ""
+        },
+        "FireMarshal": {
+          "label": "FireMarshal",
+          "description": ""
+        },
+        "ProjectManager": {
+          "label": "ProjectManager",
+          "description": ""
+        },
+        "Salesperson": {
+          "label": "Salesperson",
+          "description": ""
+        },
+        "ReportPreparer": {
+          "label": "ReportPreparer",
+          "description": ""
+        },
+        "Referrer": {
+          "label": "Referrer",
+          "description": ""
+        }
+      }
+    },
+    "PreferredContactMethodItemType": {
+      "description": "",
+      "enums": {
+        "Email": {
+          "label": "Email",
+          "description": ""
+        },
+        "WorkPhone": {
+          "label": "WorkPhone",
+          "description": ""
+        },
+        "CellPhone": {
+          "label": "CellPhone",
+          "description": ""
+        },
+        "HomePhone": {
+          "label": "HomePhone",
+          "description": ""
+        },
+        "CellTextMessage": {
+          "label": "CellTextMessage",
+          "description": ""
+        }
+      }
+    },
+    "LocationTypeItemType": {
+      "description": "",
+      "enums": {
+        "DeviceSpecific": {
+          "label": "DeviceSpecific",
+          "description": ""
+        },
+        "SiteEntrance": {
+          "label": "SiteEntrance",
+          "description": ""
+        },
+        "GeneralProximity": {
+          "label": "GeneralProximity",
+          "description": ""
+        },
+        "Warehouse": {
+          "label": "Warehouse",
+          "description": ""
+        }
+      }
+    },
+    "AddressTypeItemType": {
+      "description": "",
+      "enums": {
+        "Mailing": {
+          "label": "Mailing",
+          "description": ""
+        },
+        "Billing": {
+          "label": "Billing",
+          "description": ""
+        },
+        "Installation": {
+          "label": "Installation",
+          "description": ""
+        },
+        "Shipping": {
+          "label": "Shipping",
+          "description": ""
+        }
+      }
+    },
+    "TaskStatusItemType": {
+      "description": "",
+      "enums": {
+        "NotStarted": {
+          "label": "NotStarted",
+          "description": ""
+        },
+        "Ready": {
+          "label": "Ready",
+          "description": ""
+        },
+        "Submitted": {
+          "label": "Submitted",
+          "description": ""
+        },
+        "InProgress": {
+          "label": "InProgress",
+          "description": ""
+        },
+        "Completed": {
+          "label": "Completed",
+          "description": ""
+        }
+      }
+    },
+    "OperationalStatusItemType": {
+      "description": "",
+      "enums": {
+        "Online": {
+          "label": "Online",
+          "description": ""
+        },
+        "Offline": {
+          "label": "Offline",
+          "description": ""
+        },
+        "Curtailed": {
+          "label": "Curtailed",
+          "description": ""
+        }
+      }
+    },
+    "OperationalPhaseItemType": {
+      "description": "",
+      "enums": {
+        "Proposed": {
+          "label": "Proposed",
+          "description": ""
+        },
+        "UnderConstruction": {
+          "label": "UnderConstruction",
+          "description": ""
+        },
+        "Commissioned": {
+          "label": "Commissioned",
+          "description": ""
+        },
+        "Decommissioned": {
+          "label": "Decommissioned",
+          "description": ""
+        }
+      }
+    },
+    "ProdTypeItemType": {
+      "description": "",
+      "enums": {
+        "Module": {
+          "label": "Module",
+          "description": ""
+        },
+        "Optimizer": {
+          "label": "Optimizer",
+          "description": ""
+        },
+        "DCDisconnectSwitch": {
+          "label": "DCDisconnectSwitch",
+          "description": ""
+        },
+        "ACDisconnectSwitch": {
+          "label": "ACDisconnectSwitch",
+          "description": ""
+        },
+        "Inverter": {
+          "label": "Inverter",
+          "description": ""
+        },
+        "Tracker": {
+          "label": "Tracker",
+          "description": ""
+        },
+        "CombinerPanel": {
+          "label": "CombinerPanel",
+          "description": ""
+        },
+        "CombinerBox": {
+          "label": "CombinerBox",
+          "description": ""
+        },
+        "MetStation": {
+          "label": "MetStation",
+          "description": ""
+        },
+        "Transformer": {
+          "label": "Transformer",
+          "description": ""
+        },
+        "Battery": {
+          "label": "Battery",
+          "description": ""
+        },
+        "BatteryManagementSystem": {
+          "label": "BatteryManagementSystem",
+          "description": ""
+        },
+        "Logger": {
+          "label": "Logger",
+          "description": ""
+        },
+        "Meter": {
+          "label": "Meter",
+          "description": ""
+        },
+        "String": {
+          "label": "String",
+          "description": ""
+        },
+        "Mounting": {
+          "label": "Mounting",
+          "description": ""
+        }
+      }
+    },
+    "BillOfMaterialsStatusItemType": {
+      "description": "",
+      "enums": {
+        "NotStarted": {
+          "label": "NotStarted",
+          "description": ""
+        },
+        "InProgress": {
+          "label": "InProgress",
+          "description": ""
+        },
+        "Complete": {
+          "label": "Complete",
+          "description": ""
+        },
+        "Cancelled": {
+          "label": "Cancelled",
+          "description": ""
+        }
+      }
+    },
+    "StructureTypeItemType": {
+      "description": "",
+      "enums": {
+        "DetachedGarage": {
+          "label": "DetachedGarage",
+          "description": ""
+        },
+        "Barn": {
+          "label": "Barn",
+          "description": ""
+        },
+        "Shed": {
+          "label": "Shed",
+          "description": ""
+        },
+        "HouseFoundationBuilt": {
+          "label": "HouseFoundationBuilt",
+          "description": ""
+        },
+        "HouseManufactured": {
+          "label": "HouseManufactured",
+          "description": ""
+        },
+        "HouseMobile": {
+          "label": "HouseMobile",
+          "description": ""
+        },
+        "Hospital": {
+          "label": "Hospital",
+          "description": ""
+        },
+        "ParkingGarage": {
+          "label": "ParkingGarage",
+          "description": ""
+        },
+        "Warehouse": {
+          "label": "Warehouse",
+          "description": ""
+        },
+        "Retail": {
+          "label": "Retail",
+          "description": ""
+        },
+        "Industrial": {
+          "label": "Industrial",
+          "description": ""
+        },
+        "Hotel": {
+          "label": "Hotel",
+          "description": ""
+        },
+        "School": {
+          "label": "School",
+          "description": ""
+        },
+        "Carport": {
+          "label": "Carport",
+          "description": ""
+        },
+        "Office": {
+          "label": "Office",
+          "description": ""
+        }
+      }
+    },
+    "RiskCategoryItemType": {
+      "description": "",
+      "enums": {
+        "MRI10Year": {
+          "label": "MRI10Year",
+          "description": ""
+        },
+        "MRI25Year": {
+          "label": "MRI25Year",
+          "description": ""
+        },
+        "MRI50Year": {
+          "label": "MRI50Year",
+          "description": ""
+        },
+        "MRI100Year": {
+          "label": "MRI100Year",
+          "description": ""
+        },
+        "RiskCategoryI": {
+          "label": "RiskCategoryI",
+          "description": ""
+        },
+        "RiskCategoryII": {
+          "label": "RiskCategoryII",
+          "description": ""
+        },
+        "RiskCategoryIII": {
+          "label": "RiskCategoryIII",
+          "description": ""
+        },
+        "RiskCategoryIV": {
+          "label": "RiskCategoryIV",
+          "description": ""
+        }
+      }
+    },
+    "WindCodeItemType": {
+      "description": "",
+      "enums": {
+        "ASCE716": {
+          "label": "ASCE716",
+          "description": ""
+        },
+        "ASCE710": {
+          "label": "ASCE710",
+          "description": ""
+        },
+        "ASCE705": {
+          "label": "ASCE705",
+          "description": ""
+        },
+        "SpecialWindZone": {
+          "label": "SpecialWindZone",
+          "description": ""
+        }
+      }
+    },
+    "FoundationTypeItemType": {
+      "description": "",
+      "enums": {
+        "Pier": {
+          "label": "Pier",
+          "description": ""
+        },
+        "Raft": {
+          "label": "Raft",
+          "description": ""
+        },
+        "Pile": {
+          "label": "Pile",
+          "description": ""
+        },
+        "Slab": {
+          "label": "Slab",
+          "description": ""
+        },
+        "ContinuousFooting": {
+          "label": "ContinuousFooting",
+          "description": ""
+        },
+        "IndividualFooting": {
+          "label": "IndividualFooting",
+          "description": ""
+        }
+      }
+    },
+    "ConstructionMaterialItemType": {
+      "description": "",
+      "enums": {
+        "Wood": {
+          "label": "Wood",
+          "description": ""
+        },
+        "Steel": {
+          "label": "Steel",
+          "description": ""
+        },
+        "ConcreteBlocks": {
+          "label": "ConcreteBlocks",
+          "description": ""
+        },
+        "Bricks": {
+          "label": "Bricks",
+          "description": ""
+        },
+        "ConcretePoured": {
+          "label": "ConcretePoured",
+          "description": ""
+        }
+      }
+    },
+    "ExposureCategoryItemType": {
+      "description": "",
+      "enums": {
+        "B": {
+          "label": "B",
+          "description": ""
+        },
+        "C": {
+          "label": "C",
+          "description": ""
+        },
+        "D": {
+          "label": "D",
+          "description": ""
+        }
+      }
+    },
+    "InterconnectionPhaseTypeItemType": {
+      "description": "",
+      "enums": {
+        "Single": {
+          "label": "Single",
+          "description": ""
+        },
+        "Double": {
+          "label": "Double",
+          "description": ""
+        },
+        "Three": {
+          "label": "Three",
+          "description": ""
+        }
+      }
+    },
+    "FeeStructureTypeItemType": {
+      "description": "",
+      "enums": {
+        "Flat": {
+          "label": "Flat",
+          "description": ""
+        },
+        "SystemSize": {
+          "label": "SystemSize",
+          "description": ""
+        }
+      }
+    },
+    "ChecklistTypeItemType": {
+      "description": "",
+      "enums": {
+        "Site": {
+          "label": "Site",
+          "description": ""
+        },
+        "PVSystem": {
+          "label": "PVSystem",
+          "description": ""
+        },
+        "Structure": {
+          "label": "Structure",
+          "description": ""
+        },
+        "ElectricalService": {
+          "label": "ElectricalService",
+          "description": ""
+        }
+      }
+    },
+    "QuestionTypeItemType": {
+      "description": "",
+      "enums": {
+        "Text": {
+          "label": "Text",
+          "description": ""
+        },
+        "EnumeratedSingle": {
+          "label": "EnumeratedSingle",
+          "description": ""
+        },
+        "EnumeratedMultiple": {
+          "label": "EnumeratedMultiple",
+          "description": ""
+        },
+        "Numeric": {
+          "label": "Numeric",
+          "description": ""
+        },
+        "Date": {
+          "label": "Date",
+          "description": ""
+        },
+        "URL": {
+          "label": "URL",
+          "description": ""
+        }
+      }
+    },
+    "InterconnectionPhaseItemType": {
+      "description": "",
+      "enums": {
+        "A": {
+          "label": "A",
+          "description": ""
+        },
+        "B": {
+          "label": "B",
+          "description": ""
+        },
+        "C": {
+          "label": "C",
+          "description": ""
+        }
+      }
+    },
+    "TariffStructureTypeItemType": {
+      "description": "",
+      "enums": {
+        "Metered": {
+          "label": "Metered",
+          "description": ""
+        },
+        "NetMetered": {
+          "label": "NetMetered",
+          "description": ""
+        }
+      }
+    },
+    "AccountTypeItemType": {
+      "description": "",
+      "enums": {
+        "Bank": {
+          "label": "Bank",
+          "description": ""
+        },
+        "AccountsReceivable": {
+          "label": "AccountsReceivable",
+          "description": ""
+        },
+        "AccountsPayable": {
+          "label": "AccountsPayable",
+          "description": ""
+        },
+        "OtherCurrentAsset": {
+          "label": "OtherCurrentAsset",
+          "description": ""
+        },
+        "FixedAsset": {
+          "label": "FixedAsset",
+          "description": ""
+        },
+        "OtherAsset": {
+          "label": "OtherAsset",
+          "description": ""
+        },
+        "CreditCard": {
+          "label": "CreditCard",
+          "description": ""
+        },
+        "OtherCurrentLiability": {
+          "label": "OtherCurrentLiability",
+          "description": ""
+        },
+        "LongTermLiability": {
+          "label": "LongTermLiability",
+          "description": ""
+        },
+        "Equity": {
+          "label": "Equity",
+          "description": ""
+        },
+        "Income": {
+          "label": "Income",
+          "description": ""
+        },
+        "CostOfGoodsSold": {
+          "label": "CostOfGoodsSold",
+          "description": ""
+        },
+        "Expense": {
+          "label": "Expense",
+          "description": ""
+        },
+        "OtherIncome": {
+          "label": "OtherIncome",
+          "description": ""
+        },
+        "Nonposting": {
+          "label": "Nonposting",
+          "description": ""
+        },
+        "DeferredRevenue": {
+          "label": "DeferredRevenue",
+          "description": ""
+        },
+        "DeferredExpense": {
+          "label": "DeferredExpense",
+          "description": ""
+        },
+        "UnbilledReceivable": {
+          "label": "UnbilledReceivable",
+          "description": ""
+        }
+      }
+    },
+    "AccountRoleItemType": {
+      "description": "",
+      "enums": {
+        "CashAndCashEquivalentsAtCarryingValue": {
+          "label": "CashAndCashEquivalentsAtCarryingValue",
+          "description": ""
+        },
+        "AccountsReceivableNet": {
+          "label": "AccountsReceivableNet",
+          "description": ""
+        },
+        "PrepaidExpenseCurrentAndNoncurrent": {
+          "label": "PrepaidExpenseCurrentAndNoncurrent",
+          "description": ""
+        },
+        "AssetsSolarFacil": {
+          "label": "AssetsSolarFacil",
+          "description": ""
+        },
+        "Assets": {
+          "label": "Assets",
+          "description": ""
+        },
+        "AccountsPayableAndAccruedLiabilitiesCurrentAndNoncurrent": {
+          "label": "AccountsPayableAndAccruedLiabilitiesCurrentAndNoncurrent",
+          "description": ""
+        },
+        "DueToRelatedPartiesCurrentAndNoncurrent": {
+          "label": "DueToRelatedPartiesCurrentAndNoncurrent",
+          "description": ""
+        },
+        "DeferredRentCredit": {
+          "label": "DeferredRentCredit",
+          "description": ""
+        },
+        "AssetRetirementObligation": {
+          "label": "AssetRetirementObligation",
+          "description": ""
+        },
+        "Liabilities": {
+          "label": "Liabilities",
+          "description": ""
+        },
+        "MembersEquity": {
+          "label": "MembersEquity",
+          "description": ""
+        },
+        "LiabilitiesAndStockholdersEquity": {
+          "label": "LiabilitiesAndStockholdersEquity",
+          "description": ""
+        },
+        "Revenues": {
+          "label": "Revenues",
+          "description": ""
+        },
+        "OperatingLeaseExpense": {
+          "label": "OperatingLeaseExpense",
+          "description": ""
+        },
+        "OtherCostAndExpenseOperating": {
+          "label": "OtherCostAndExpenseOperating",
+          "description": ""
+        },
+        "GeneralAndAdministrativeExpense": {
+          "label": "GeneralAndAdministrativeExpense",
+          "description": ""
+        },
+        "Depreciation": {
+          "label": "Depreciation",
+          "description": ""
+        },
+        "AccretionExpense": {
+          "label": "AccretionExpense",
+          "description": ""
+        },
+        "NoninterestIncome": {
+          "label": "NoninterestIncome",
+          "description": ""
+        },
+        "InterestIncomeExpenseNet": {
+          "label": "InterestIncomeExpenseNet",
+          "description": ""
+        },
+        "NetIncomeLoss": {
+          "label": "NetIncomeLoss",
+          "description": ""
+        },
+        "OperatingExpenses": {
+          "label": "OperatingExpenses",
+          "description": ""
+        },
+        "ContractedRevenues": {
+          "label": "ContractedRevenues",
+          "description": ""
+        },
+        "MerchantRevenues": {
+          "label": "MerchantRevenues",
+          "description": ""
+        },
+        "PartnersCapitalAccountReturnOfCapital": {
+          "label": "PartnersCapitalAccountReturnOfCapital",
+          "description": ""
+        }
+      }
+    },
+    "AgingBucketTypeItemType": {
+      "description": "",
+      "enums": {
+        "AgingBalance1To30Days": {
+          "label": "AgingBalance1To30Days",
+          "description": ""
+        },
+        "AgingBalance31To60Days": {
+          "label": "AgingBalance31To60Days",
+          "description": ""
+        },
+        "AgingBalance61To90Days": {
+          "label": "AgingBalance61To90Days",
+          "description": ""
+        },
+        "AgingBalance91To120Days": {
+          "label": "AgingBalance91To120Days",
+          "description": ""
+        },
+        "AgingBalanceOver120Days": {
+          "label": "AgingBalanceOver120Days",
+          "description": ""
+        }
+      }
+    },
+    "SpecificationTypeItemType": {
+      "description": "",
+      "enums": {
+        "Weight": {
+          "label": "Weight",
+          "description": ""
+        },
+        "Height": {
+          "label": "Height",
+          "description": ""
+        },
+        "Width": {
+          "label": "Width",
+          "description": ""
+        },
+        "Length": {
+          "label": "Length",
+          "description": ""
+        },
+        "OutputVoltage": {
+          "label": "OutputVoltage",
+          "description": ""
+        },
+        "OutputPower": {
+          "label": "OutputPower",
+          "description": ""
+        },
+        "InputVoltage": {
+          "label": "InputVoltage",
+          "description": ""
+        },
+        "InputPower": {
+          "label": "InputPower",
+          "description": ""
+        },
+        "OutputCurrent": {
+          "label": "OutputCurrent",
+          "description": ""
+        },
+        "InputCurrent": {
+          "label": "InputCurrent",
+          "description": ""
+        },
+        "OperatingTemperatureHighLimit": {
+          "label": "OperatingTemperatureHighLimit",
+          "description": ""
+        },
+        "OperatingTemperatureLowLimit": {
+          "label": "OperatingTemperatureLowLimit",
+          "description": ""
+        }
+      }
+    },
+    "SnowCodeItemType": {
+      "description": "",
+      "enums": {
+        "ASCE716": {
+          "label": "ASCE716",
+          "description": ""
+        },
+        "ASCE710": {
+          "label": "ASCE710",
+          "description": ""
+        },
+        "ASCE705": {
+          "label": "ASCE705",
+          "description": ""
+        },
+        "SpecialSnowZone": {
+          "label": "SpecialSnowZone",
+          "description": ""
+        }
+      }
+    },
+    "PermitIssueMethodItemType": {
+      "description": "",
+      "enums": {
+        "Email": {
+          "label": "Email",
+          "description": ""
+        },
+        "Epermitting": {
+          "label": "Epermitting",
+          "description": ""
+        },
+        "InPerson": {
+          "label": "InPerson",
+          "description": ""
+        },
+        "SolarApp": {
+          "label": "SolarApp",
+          "description": ""
+        }
+      }
+    },
+    "InspectionTypeItemType": {
+      "description": "",
+      "enums": {
+        "RoughIn": {
+          "label": "RoughIn",
+          "description": ""
+        },
+        "Final": {
+          "label": "Final",
+          "description": ""
+        },
+        "Windstorm": {
+          "label": "Windstorm",
+          "description": ""
+        },
+        "Electrical": {
+          "label": "Electrical",
+          "description": ""
+        },
+        "Structural": {
+          "label": "Structural",
+          "description": ""
+        }
+      }
+    },
+    "TaskGroupItemType": {
+      "description": "",
+      "enums": {
+        "Contract": {
+          "label": "Contract",
+          "description": ""
+        },
+        "SiteSurvey": {
+          "label": "SiteSurvey",
+          "description": ""
+        },
+        "Design": {
+          "label": "Design",
+          "description": ""
+        },
+        "HOAApplication": {
+          "label": "HOAApplication",
+          "description": ""
+        },
+        "PermitApplication": {
+          "label": "PermitApplication",
+          "description": ""
+        },
+        "EquipmentOrder": {
+          "label": "EquipmentOrder",
+          "description": ""
+        },
+        "EquipmentReceipt": {
+          "label": "EquipmentReceipt",
+          "description": ""
+        },
+        "Installation": {
+          "label": "Installation",
+          "description": ""
+        },
+        "InspectionElectrical": {
+          "label": "InspectionElectrical",
+          "description": ""
+        },
+        "InspectionStructural": {
+          "label": "InspectionStructural",
+          "description": ""
+        },
+        "Interconnection": {
+          "label": "Interconnection",
+          "description": ""
+        },
+        "FinalReceipt": {
+          "label": "FinalReceipt",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        }
+      }
+    },
+    "FeeGroupItemType": {
+      "description": "",
+      "enums": {
+        "PermitApplication": {
+          "label": "PermitApplication",
+          "description": ""
+        },
+        "HOAApplication": {
+          "label": "HOAApplication",
+          "description": ""
+        },
+        "LoanPayment": {
+          "label": "LoanPayment",
+          "description": ""
+        },
+        "EngineeringService": {
+          "label": "EngineeringService",
+          "description": ""
+        },
+        "InspectionFee": {
+          "label": "InspectionFee",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        },
+        "InterconnectionFee": {
+          "label": "InterconnectionFee",
+          "description": ""
+        },
+        "UtilityService": {
+          "label": "UtilityService",
+          "description": ""
+        }
+      }
+    },
+    "BillOfServicesStatusItemType": {
+      "description": "",
+      "enums": {
+        "NotStarted": {
+          "label": "NotStarted",
+          "description": ""
+        },
+        "InProgress": {
+          "label": "InProgress",
+          "description": ""
+        },
+        "Complete": {
+          "label": "Complete",
+          "description": ""
+        },
+        "Cancelled": {
+          "label": "Cancelled",
+          "description": ""
+        }
+      }
+    },
+    "ServiceQuantityUnitItemType": {
+      "description": "",
+      "enums": {
+        "Fixed": {
+          "label": "Fixed",
+          "description": ""
+        },
+        "Foot": {
+          "label": "Foot",
+          "description": ""
+        },
+        "Watt": {
+          "label": "Watt",
+          "description": ""
+        },
+        "Module": {
+          "label": "Module",
+          "description": ""
+        },
+        "Inverter": {
+          "label": "Inverter",
+          "description": ""
+        }
+      }
+    },
+    "ServiceGroupItemType": {
+      "description": "",
+      "enums": {
+        "AdditionalStructural": {
+          "label": "AdditionalStructural",
+          "description": ""
+        },
+        "AtticRunAdder": {
+          "label": "AtticRunAdder",
+          "description": ""
+        },
+        "BallastedSystem": {
+          "label": "BallastedSystem",
+          "description": ""
+        },
+        "BirdNetting": {
+          "label": "BirdNetting",
+          "description": ""
+        },
+        "BoomLift": {
+          "label": "BoomLift",
+          "description": ""
+        },
+        "Carport": {
+          "label": "Carport",
+          "description": ""
+        },
+        "Derate": {
+          "label": "Derate",
+          "description": ""
+        },
+        "ElectricalEngineeringStamp": {
+          "label": "ElectricalEngineeringStamp",
+          "description": ""
+        },
+        "FlatRoof": {
+          "label": "FlatRoof",
+          "description": ""
+        },
+        "FoundationCertification": {
+          "label": "FoundationCertification",
+          "description": ""
+        },
+        "GroundMount": {
+          "label": "GroundMount",
+          "description": ""
+        },
+        "HomeEfficiency": {
+          "label": "HomeEfficiency",
+          "description": ""
+        },
+        "LineSideTap": {
+          "label": "LineSideTap",
+          "description": ""
+        },
+        "LoadController": {
+          "label": "LoadController",
+          "description": ""
+        },
+        "MainPanelUpgrade": {
+          "label": "MainPanelUpgrade",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        },
+        "RoofRepair": {
+          "label": "RoofRepair",
+          "description": ""
+        },
+        "SmallSystem": {
+          "label": "SmallSystem",
+          "description": ""
+        },
+        "SolarWaterHeater": {
+          "label": "SolarWaterHeater",
+          "description": ""
+        },
+        "SteepRoof": {
+          "label": "SteepRoof",
+          "description": ""
+        },
+        "StructuralEngineeringStamp": {
+          "label": "StructuralEngineeringStamp",
+          "description": ""
+        },
+        "SubpanelUpgrade": {
+          "label": "SubpanelUpgrade",
+          "description": ""
+        },
+        "TrencherRental": {
+          "label": "TrencherRental",
+          "description": ""
+        },
+        "Trenching": {
+          "label": "Trenching",
+          "description": ""
+        }
+      }
+    },
+    "ServicePaymentResponsibilityItemType": {
+      "description": "",
+      "enums": {
+        "PaidByInstaller": {
+          "label": "PaidByInstaller",
+          "description": ""
+        },
+        "PaidByOriginator": {
+          "label": "PaidByOriginator",
+          "description": ""
+        },
+        "PaidByOriginatorToInstaller": {
+          "label": "PaidByOriginatorToInstaller",
+          "description": ""
+        },
+        "PaidToInstaller": {
+          "label": "PaidToInstaller",
+          "description": ""
+        },
+        "PaidToOriginator": {
+          "label": "PaidToOriginator",
+          "description": ""
+        }
+      }
+    },
+    "ServicePaidToItemType": {
+      "description": "",
+      "enums": {
+        "Originator": {
+          "label": "Originator",
+          "description": ""
+        },
+        "Installer": {
+          "label": "Installer",
+          "description": ""
+        },
+        "GeneralContractor": {
+          "label": "GeneralContractor",
+          "description": ""
+        }
+      }
+    },
+    "ServicePaidByItemType": {
+      "description": "",
+      "enums": {
+        "Originator": {
+          "label": "Originator",
+          "description": ""
+        },
+        "Installer": {
+          "label": "Installer",
+          "description": ""
+        },
+        "GeneralContractor": {
+          "label": "GeneralContractor",
+          "description": ""
+        }
+      }
+    },
+    "ProdCertificationTypeItemType": {
+      "description": "",
+      "enums": {
+        "IEC61215": {
+          "label": "IEC61215",
+          "description": ""
+        },
+        "IEC61646": {
+          "label": "IEC61646",
+          "description": ""
+        },
+        "IEC61701": {
+          "label": "IEC61701",
+          "description": ""
+        },
+        "IEC61730": {
+          "label": "IEC61730",
+          "description": ""
+        },
+        "IEC60364-4-41": {
+          "label": "IEC60364-4-41",
+          "description": ""
+        },
+        "IEC62108": {
+          "label": "IEC62108",
+          "description": ""
+        },
+        "UL1703": {
+          "label": "UL1703",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        },
+        "UL1741SA": {
+          "label": "UL1741SA",
+          "description": ""
+        },
+        "IEC61683": {
+          "label": "IEC61683",
+          "description": ""
+        },
+        "IEC62109-1": {
+          "label": "IEC62109-1",
+          "description": ""
+        },
+        "IEC62109-2": {
+          "label": "IEC62109-2",
+          "description": ""
+        },
+        "EN61000": {
+          "label": "EN61000",
+          "description": ""
+        },
+        "IEC61010": {
+          "label": "IEC61010",
+          "description": ""
+        },
+        "UL1741": {
+          "label": "UL1741",
+          "description": ""
+        },
+        "UL2703": {
+          "label": "UL2703",
+          "description": ""
+        },
+        "UL3741": {
+          "label": "UL3741",
+          "description": ""
+        }
+      }
     }
   },
-  "x-ob-item-type-groups": {}
+  "x-ob-item-type-groups": {
+    "OBMonetary": {
+      "type": "#/components/x-ob-units/xbrli:monetaryItemType",
+      "description": "",
+      "group": [
+        "CAD",
+        "EUR",
+        "USD"
+      ]
+    },
+    "OBElectricalEnergy": {
+      "type": "#/components/x-ob-units/num:energyItemType",
+      "description": "",
+      "group": [
+        "kWh",
+        "MWh",
+        "Wh"
+      ]
+    },
+    "OBElectricalPower": {
+      "type": "#/components/x-ob-units/num:powerItemType",
+      "description": "",
+      "group": [
+        "GW",
+        "kW",
+        "MW",
+        "W"
+      ]
+    }
+  }
 }
