@@ -690,6 +690,9 @@
           },
           "DocumentSubmissionMethods": {
             "$ref": "#/components/schemas/DocumentSubmissionMethods"
+          },
+          "Checklists": {
+            "$ref": "#/components/schemas/Checklists"
           }
         },
         "x-ob-usage-tips": ""
@@ -2819,6 +2822,12 @@
           },
           "Answers": {
             "$ref": "#/components/schemas/Answers"
+          },
+          "ChecklistID": {
+            "$ref": "#/components/schemas/ChecklistID"
+          },
+          "ChecklistName": {
+            "$ref": "#/components/schemas/ChecklistName"
           }
         }
       },
@@ -2955,7 +2964,12 @@
             "x-ob-sample-value": {
               "Value": "Site"
             },
-            "x-ob-item-type-group": ""
+            "enum": [
+              "Site",
+              "PVSystem",
+              "Structure",
+              "ElectricalService"
+            ]
           }
         ]
       },
@@ -4744,6 +4758,58 @@
           }
         ]
       },
+      "ChecklistID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "UUID for a Checklist object",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
+          }
+        ]
+      },
+      "ChecklistName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Human-readable name for this checklist.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-unit": [],
+            "x-ob-enum": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            }
+          }
+        ]
+      },
+      "Checklists": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Checklist"
+        }
+      },
       "ProdCertificationType": {
         "allOf": [
           {
@@ -4803,7 +4869,7 @@
           },
           {
             "type": "object",
-            "description": "Height above ground level",
+            "description": "UUID for a Checklist object",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
