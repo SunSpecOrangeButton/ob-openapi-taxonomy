@@ -1696,7 +1696,7 @@
       "Tasks": {
         "type": "array",
         "items": {
-          "$ref": "Master-OB-OpenAPI.json#/components/schemas/Task"
+          "$ref": "#/components/schemas/Task"
         }
       },
       "TaskStatus": {
@@ -4397,13 +4397,13 @@
       "PermitIssueMethods": {
         "type": "array",
         "items": {
-          "$ref": "Master-OB-OpenAPI.json#/components/schemas/PermitIssueMethod"
+          "$ref": "#/components/schemas/PermitIssueMethod"
         }
       },
       "DocumentSubmissionMethods": {
         "type": "array",
         "items": {
-          "$ref": "Master-OB-OpenAPI.json#/components/schemas/DocumentSubmissionMethod"
+          "$ref": "#/components/schemas/DocumentSubmissionMethod"
         }
       },
       "Service": {
@@ -4519,7 +4519,7 @@
       "ServiceLineItems": {
         "type": "array",
         "items": {
-          "$ref": "Master-OB-OpenAPI.json#/components/schemas/ServiceLineItem"
+          "$ref": "#/components/schemas/ServiceLineItem"
         }
       },
       "BillOfServices": {
