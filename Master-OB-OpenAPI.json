@@ -6910,10 +6910,10 @@
             "$ref": "#/components/schemas/Precision"
           },
           "StartTime": {
-            "$ref": "#/components/schemas/Precision"
+            "$ref": "#/components/schemas/StartTime"
           },
           "EndTime": {
-            "$ref": "#/components/schemas/Precision"
+            "$ref": "#/components/schemas/EndTime"
           }
         },
         "x-ob-usage-tips": ""
@@ -6934,10 +6934,10 @@
             "$ref": "#/components/schemas/Precision"
           },
           "StartTime": {
-            "$ref": "#/components/schemas/Precision"
+            "$ref": "#/components/schemas/StartTime"
           },
           "EndTime": {
-            "$ref": "#/components/schemas/Precision"
+            "$ref": "#/components/schemas/EndTime"
           }
         },
         "x-ob-usage-tips": ""
@@ -6958,10 +6958,10 @@
             "$ref": "#/components/schemas/Precision"
           },
           "StartTime": {
-            "$ref": "#/components/schemas/Precision"
+            "$ref": "#/components/schemas/StartTime"
           },
           "EndTime": {
-            "$ref": "#/components/schemas/Precision"
+            "$ref": "#/components/schemas/EndTime"
           }
         },
         "x-ob-usage-tips": ""
@@ -6982,10 +6982,10 @@
             "$ref": "#/components/schemas/Precision"
           },
           "StartTime": {
-            "$ref": "#/components/schemas/Precision"
+            "$ref": "#/components/schemas/StartTime"
           },
           "EndTime": {
-            "$ref": "#/components/schemas/Precision"
+            "$ref": "#/components/schemas/EndTime"
           }
         },
         "x-ob-usage-tips": ""
