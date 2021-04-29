@@ -7080,8 +7080,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Degree",
+              "Value": "30"
             },
             "x-ob-item-type-group": ""
           }
