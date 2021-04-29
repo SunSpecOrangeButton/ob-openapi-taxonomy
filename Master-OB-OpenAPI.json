@@ -7014,8 +7014,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Degree",
+              "Value": "180"
             },
             "x-ob-item-type-group": ""
           }
