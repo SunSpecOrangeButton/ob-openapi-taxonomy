@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "1.1.2",
+    "version": "1.1.3",
     "title": "OB OpenAPI Taxonomy",
     "description": "OB OpenAPI Definitions For Orange Button."
   },
@@ -96,6 +96,9 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
           }
         },
         "x-ob-usage-tips": ""
@@ -126,6 +129,9 @@
           },
           "Location": {
             "$ref": "#/components/schemas/Location"
+          },
+          "Orientation": {
+            "$ref": "#/components/schemas/Orientation"
           }
         },
         "x-ob-usage-tips": ""
@@ -3581,6 +3587,9 @@
         "type": "object",
         "description": "A certification for a product",
         "properties": {
+          "ProdCertificationName": {
+            "$ref": "#/components/schemas/ProdCertificationName"
+          },
           "ProdCertificationValue": {
             "$ref": "#/components/schemas/ProdCertificationValue"
           },
@@ -6989,6 +6998,254 @@
           }
         },
         "x-ob-usage-tips": ""
+      },
+      "Azimuth": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Azimuth relative to North where North is 0 degrees and East is 90 degrees",
+            "x-ob-item-type": "num-us:planeAngleItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "Degree",
+              "Value": "180"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "PVSystemStringID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A UUID for identifying a specific string",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": "7a00622c6bb04a3fc6da73090958db3a1bf6c791"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "Area": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Area",
+            "x-ob-item-type": "num:areaItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "Square Foot",
+              "Value": "10"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "Tilt": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Tilt is the angle relative to horizontal. Horizontal is defined as the x,y plane of a right-hand coordinate system where the the x-axis is East, y-axis is North, and the z-axis is vertical.",
+            "x-ob-item-type": "num-us:planeAngleItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "Degree",
+              "Value": "30"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "Roll": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Roll is a right-hand rotation about an oriented axis, with a positive value being a counter-clockwise rotation. In the context of a solar module, Roll is the rotation of the module about the vector normal to the module's plane that is oriented towards the sky.",
+            "x-ob-item-type": "num-us:planeAngleItemType",
+            "x-ob-usage-tips": "The Roll element of Orientation is used when solar modules are installed on a slant.",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "Degree",
+              "Value": "20"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "RoofPlaneID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The UUID of the roofplane",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": "7a00622c6bb04a3fc6da73090958db3a1bf6c791"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "PVSystemArray": {
+        "type": "object",
+        "description": "An array of modules within a PVSystem that have a common orientation.",
+        "properties": {
+          "PVSystemStrings": {
+            "$ref": "#/components/schemas/PVSystemStrings"
+          },
+          "Orientation": {
+            "$ref": "#/components/schemas/Orientation"
+          },
+          "Area": {
+            "$ref": "#/components/schemas/Area"
+          },
+          "RoofPlaneID": {
+            "$ref": "#/components/schemas/RoofPlaneID"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "CapacityDC": {
+            "$ref": "#/components/schemas/CapacityDC"
+          },
+          "ProductLineItems": {
+            "$ref": "#/components/schemas/ProductLineItems"
+          },
+          "Devices": {
+            "$ref": "#/components/schemas/Devices"
+          }
+        }
+      },
+      "PVSystemStrings": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PVSystemString"
+        }
+      },
+      "PVSystemString": {
+        "type": "object",
+        "description": "A string of Modules within a PVSystem",
+        "properties": {
+          "Devices": {
+            "$ref": "#/components/schemas/Devices"
+          },
+          "Orientation": {
+            "$ref": "#/components/schemas/Orientation"
+          },
+          "ProductLineItems": {
+            "$ref": "#/components/schemas/ProductLineItems"
+          },
+          "CapacityDC": {
+            "$ref": "#/components/schemas/CapacityDC"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "PVSystemStringID": {
+            "$ref": "#/components/schemas/PVSystemStringID"
+          }
+        }
+      },
+      "Orientation": {
+        "description": "Orientation is defined by Azimuth, Tilt and Roll. Azimuth and Tilt are defined in the context of a right-hand coordinate system where the the x-axis is East, y-axis is North, and the z-axis is vertical.",
+        "properties": {
+          "Azimuth": {
+            "$ref": "#/components/schemas/Azimuth"
+          },
+          "Tilt": {
+            "$ref": "#/components/schemas/Tilt"
+          },
+          "Roll": {
+            "$ref": "#/components/schemas/Roll"
+          }
+        },
+        "type": "object"
+      },
+      "ProductLineItems": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProductLineItem"
+        },
+        "x-ob-usage-tips": ""
+      },
+      "ProductLineItem": {
+        "type": "object",
+        "description": "A product used within a PVSystem and the quantity of that product",
+        "properties": {
+          "Product": {
+            "$ref": "#/components/schemas/Product"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Quantity": {
+            "$ref": "#/components/schemas/Quantity"
+          },
+          "AmountExtended": {
+            "$ref": "#/components/schemas/AmountExtended"
+          }
+        },
+        "x-ob-usage-tips": ""
+      },
+      "PVSystemArrays": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PVSystemArray"
+        }
       }
     }
   },
