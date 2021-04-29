@@ -7072,7 +7072,7 @@
           },
           {
             "type": "object",
-            "description": "The tilt of a plane relative to horizontal",
+            "description": "Tilt is the angle relative to horizontal. Horizontal is defined as the x,y plane of a right-hand coordinate system where the the x-axis is East, y-axis is North, and the z-axis is vertical.",
             "x-ob-item-type": "num-us:planeAngleItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
