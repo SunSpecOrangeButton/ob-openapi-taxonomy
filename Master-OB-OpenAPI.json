@@ -7050,7 +7050,7 @@
           },
           {
             "type": "object",
-            "description": "The area of the parent object",
+            "description": "Area",
             "x-ob-item-type": "num:areaItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
