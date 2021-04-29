@@ -7102,8 +7102,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Degree",
+              "Value": "20"
             },
             "x-ob-item-type-group": ""
           }
