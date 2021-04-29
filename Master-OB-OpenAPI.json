@@ -7116,7 +7116,7 @@
           },
           {
             "type": "object",
-            "description": "The uuid of the roofplane",
+            "description": "The UUID of the roofplane",
             "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
