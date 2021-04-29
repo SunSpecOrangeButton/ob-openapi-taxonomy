@@ -7096,7 +7096,7 @@
             "type": "object",
             "description": "Rotation relative to an axis perpendicular to both the axis of Azimuth and the axis of Tilt.",
             "x-ob-item-type": "num-us:planeAngleItemType",
-            "x-ob-usage-tips": "This is a rarely used Orientation for solar modules installed at a slant. it is included for completeness.\nTilt is equal to Pitch\nAzimuth is equal to Yaw\nRoll is equal to Roll",
+            "x-ob-usage-tips": "The Roll element of Orientation is used when solar modules are installed on a slant.",
             "x-ob-sample-value": {
               "Decimals": "",
               "EndTime": "",
