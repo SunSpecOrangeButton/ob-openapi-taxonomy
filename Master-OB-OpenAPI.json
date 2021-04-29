@@ -7198,7 +7198,7 @@
         }
       },
       "Orientation": {
-        "description": "Orientation is defined by Azimuth, Tilt and Roll. Azimuth and Tilt are defined in the context of a right-hand coordinate system where the the x-axis is East, y-axis is North, and the z-axis is vertical."
+        "description": "Orientation is defined by Azimuth, Tilt and Roll. Azimuth and Tilt are defined in the context of a right-hand coordinate system where the the x-axis is East, y-axis is North, and the z-axis is vertical.",
         "properties": {
           "Azimuth": {
             "$ref": "#/components/schemas/Azimuth"
