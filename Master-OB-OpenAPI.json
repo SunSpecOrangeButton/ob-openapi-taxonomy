@@ -7006,7 +7006,7 @@
           },
           {
             "type": "object",
-            "description": "The azimuth of a plane relative to North where North is 0 degreses and East is 90 degrees",
+            "description": "Azimuth relative to North where North is 0 degrees and East is 90 degrees",
             "x-ob-item-type": "num-us:planeAngleItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
