@@ -7094,7 +7094,7 @@
           },
           {
             "type": "object",
-            "description": "Rotation relative to an axis perpendicular to both the axis of Azimuth and the axis of Tilt.",
+            "description": "Roll is a right-hand rotation about an oriented axis, with a positive value being a counter-clockwise rotation. In the context of a solar module, Roll is the rotation of the module about the vector normal to the module's plane that is oriented towards the sky.",
             "x-ob-item-type": "num-us:planeAngleItemType",
             "x-ob-usage-tips": "The Roll element of Orientation is used when solar modules are installed on a slant.",
             "x-ob-sample-value": {
