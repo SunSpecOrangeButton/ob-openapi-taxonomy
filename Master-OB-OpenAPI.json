@@ -96,9 +96,6 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
           }
         },
         "x-ob-usage-tips": ""
@@ -129,9 +126,6 @@
           },
           "Location": {
             "$ref": "#/components/schemas/Location"
-          },
-          "Orientation": {
-            "$ref": "#/components/schemas/Orientation"
           }
         },
         "x-ob-usage-tips": ""
@@ -1466,7 +1460,7 @@
           {
             "type": "object",
             "description": "Method of the determining the location",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "LocationDeterminationMethodItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "AddressGeocoding"
@@ -1483,7 +1477,7 @@
           {
             "type": "object",
             "description": "The type of contact being specified",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ContactTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Homeowner"
@@ -1500,7 +1494,7 @@
           {
             "type": "object",
             "description": "The method of contact the contact prefers",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "PreferredContactMethodItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Email"
@@ -1585,7 +1579,7 @@
           {
             "type": "object",
             "description": "The type of location being specified",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "LocationTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "GeneralProximity"
@@ -1636,7 +1630,7 @@
           {
             "type": "object",
             "description": "The type of address being specified",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "AddressTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Installation"
@@ -1886,6 +1880,7 @@
               "Unit": "Kilowatt",
               "Value": "11.5"
             },
+            "x-ob-item-type-group": "OBElectricalPower"
           }
         ]
       },
@@ -2027,6 +2022,8 @@
           },
           {
             "type": "object",
+            "description": "The type of product.  Clarifying Notes:  A Combiner Box takes DC and moves to AC while a CombinerPanel combines AC Loads.",
+            "x-ob-item-type": "ProdTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Module"
@@ -3509,7 +3506,7 @@
           {
             "type": "object",
             "description": "The enumerated list of the types of major specifications.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "SpecificationTypeItemType",
             "x-ob-usage-tips": "If the specification does not have a type listed here, select \"None\" and then use the SpecificationName as an alternative.",
             "x-ob-sample-value": {
               "Value": "AcceptableAmbientTemperatureRange"
@@ -3584,9 +3581,6 @@
         "type": "object",
         "description": "A certification for a product",
         "properties": {
-          "ProdCertificationName": {
-            "$ref": "#/components/schemas/ProdCertificationName"
-          },
           "ProdCertificationValue": {
             "$ref": "#/components/schemas/ProdCertificationValue"
           },
@@ -3598,6 +3592,9 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "ProdCertificationType": {
+            "$ref": "#/components/schemas/ProdCertificationType"
           }
         }
       },
@@ -6992,254 +6989,6 @@
           }
         },
         "x-ob-usage-tips": ""
-      },
-      "Azimuth": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The azimuth of a plane relative to North where North is 0 degreses and East is 90 degrees",
-            "x-ob-item-type": "num-us:planeAngleItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "Tilt": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The tilt of a plane relative to horizontal",
-            "x-ob-item-type": "num-us:planeAngleItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "Roll": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Rotation relative to an axis perpendicular to both the axis of Azimuth and the axis of Tilt.",
-            "x-ob-item-type": "num-us:planeAngleItemType",
-            "x-ob-usage-tips": "This is a rarely used Orientation for solar modules installed at a slant. it is included for completeness.\nTilt is equal to Pitch\nAzimuth is equal to Yaw\nRoll is equal to Roll",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "PVSystemStringID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A UUID for identifying a specific string",
-            "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "Area": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The area of the parent object",
-            "x-ob-item-type": "num:areaItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "RoofPlaneID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The uuid of the roofplane",
-            "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "PVSystemArray": {
-        "type": "object",
-        "description": "An array of modules within a PVSystem",
-        "properties": {
-          "PVSystemStrings": {
-            "$ref": "#/components/schemas/PVSystemStrings"
-          },
-          "Orientation": {
-            "$ref": "#/components/schemas/Orientation"
-          },
-          "Area": {
-            "$ref": "#/components/schemas/Area"
-          },
-          "RoofPlaneID": {
-            "$ref": "#/components/schemas/RoofPlaneID"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "CapacityDC": {
-            "$ref": "#/components/schemas/CapacityDC"
-          },
-          "ProductLineItems": {
-            "$ref": "#/components/schemas/ProductLineItems"
-          },
-          "Devices": {
-            "$ref": "#/components/schemas/Devices"
-          }
-        }
-      },
-      "PVSystemStrings": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/PVSystemString"
-        }
-      },
-      "PVSystemString": {
-        "type": "object",
-        "description": "A string of Modules within a PVSystem",
-        "properties": {
-          "Devices": {
-            "$ref": "#/components/schemas/Devices"
-          },
-          "Orientation": {
-            "$ref": "#/components/schemas/Orientation"
-          },
-          "ProductLineItems": {
-            "$ref": "#/components/schemas/ProductLineItems"
-          },
-          "CapacityDC": {
-            "$ref": "#/components/schemas/CapacityDC"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "PVSystemStringID": {
-            "$ref": "#/components/schemas/PVSystemStringID"
-          }
-        }
-      },
-      "Orientation": {
-        "description": "Azimuth is also called Yaw. Tilt is also called Pitch, and Roll is called Roll.",
-        "properties": {
-          "Azimuth": {
-            "$ref": "#/components/schemas/Azimuth"
-          },
-          "Tilt": {
-            "$ref": "#/components/schemas/Tilt"
-          },
-          "Roll": {
-            "$ref": "#/components/schemas/Roll"
-          }
-        },
-        "type": "object"
-      },
-      "ProductLineItems": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ProductLineItem"
-        },
-        "x-ob-usage-tips": ""
-      },
-      "ProductLineItem": {
-        "type": "object",
-        "description": "A product used within a PVSystem and the quantity of that product",
-        "properties": {
-          "Product": {
-            "$ref": "#/components/schemas/Product"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Quantity": {
-            "$ref": "#/components/schemas/Quantity"
-          },
-          "AmountExtended": {
-            "$ref": "#/components/schemas/AmountExtended"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
-      "PVSystemArrays": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/PVSystemArray"
-        }
       }
     }
   },
