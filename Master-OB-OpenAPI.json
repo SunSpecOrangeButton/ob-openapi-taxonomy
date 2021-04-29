@@ -7133,7 +7133,7 @@
       },
       "PVSystemArray": {
         "type": "object",
-        "description": "An array of modules within a PVSystem",
+        "description": "An array of modules within a PVSystem that have a common orientation.",
         "properties": {
           "PVSystemStrings": {
             "$ref": "#/components/schemas/PVSystemStrings"
