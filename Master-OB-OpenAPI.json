@@ -7058,8 +7058,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Square Foot",
+              "Value": "10"
             },
             "x-ob-item-type-group": ""
           }
