@@ -748,9 +748,6 @@
           "Addresses": {
             "$ref": "#/components/schemas/Addresses"
           },
-          "Locations": {
-            "$ref": "#/components/schemas/Locations"
-          },
           "PVSystems": {
             "$ref": "#/components/schemas/PVSystems"
           },
@@ -786,6 +783,9 @@
           },
           "BatterySystems": {
             "$ref": "#/components/schemas/BatterySystems"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
           }
         },
         "x-ob-usage-tips": ""
@@ -794,13 +794,6 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/Address"
-        },
-        "x-ob-usage-tips": ""
-      },
-      "Locations": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Location"
         },
         "x-ob-usage-tips": ""
       },
@@ -1678,6 +1671,9 @@
           },
           "TaskType": {
             "$ref": "#/components/schemas/TaskType"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
           }
         },
         "x-ob-usage-tips": ""
@@ -1805,6 +1801,15 @@
           },
           "BillOfServices": {
             "$ref": "#/components/schemas/BillOfServices"
+          },
+          "PVArrays": {
+            "$ref": "#/components/schemas/PVArrays"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "CapacityAC": {
+            "$ref": "#/components/schemas/CapacityAC"
           }
         },
         "x-ob-usage-tips": ""
@@ -2028,7 +2033,7 @@
           },
           {
             "type": "object",
-            "description": "The type of product.  Clarifying Notes:  A Combiner Box takes DC and moves to AC while a CombinerPanel combines AC Loads.",
+            "description": "The type of product.",
             "x-ob-item-type": "ProdTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -2140,12 +2145,6 @@
           "StructureType": {
             "$ref": "#/components/schemas/StructureType"
           },
-          "RoofMaterial": {
-            "$ref": "#/components/schemas/RoofMaterial"
-          },
-          "Locations": {
-            "$ref": "#/components/schemas/Locations"
-          },
           "StructureID": {
             "$ref": "#/components/schemas/StructureID"
           },
@@ -2169,6 +2168,9 @@
           },
           "RiskCategory": {
             "$ref": "#/components/schemas/RiskCategory"
+          },
+          "RoofPlanes": {
+            "$ref": "#/components/schemas/RoofPlanes"
           }
         },
         "x-ob-usage-tips": ""
@@ -2345,7 +2347,7 @@
           },
           {
             "type": "object",
-            "description": "The extreme low temperature for the wire sizing calculations",
+            "description": "The ambient dry bulb extreme low temperature for the wire sizing calculations.",
             "x-ob-item-type": "num-us:temperatureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -2363,7 +2365,7 @@
           },
           {
             "type": "object",
-            "description": "The 2% high temperature for the wire sizing calculations",
+            "description": "The ambient dry bulb high temperature for the wire sizing calculations.",
             "x-ob-item-type": "num-us:temperatureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -2862,8 +2864,8 @@
           "QuestionLabel": {
             "$ref": "#/components/schemas/QuestionLabel"
           },
-          "QuestionType": {
-            "$ref": "#/components/schemas/QuestionType"
+          "AnswerType": {
+            "$ref": "#/components/schemas/AnswerType"
           },
           "QuestionUnits": {
             "$ref": "#/components/schemas/QuestionUnits"
@@ -2989,11 +2991,11 @@
           },
           {
             "type": "object",
-            "description": "The type of the Answer",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "description": "The type of result expected by the question",
+            "x-ob-item-type": "AnswerTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "xbrli:stringItemType"
+              "Value": "Text"
             },
             "x-ob-item-type-group": ""
           }
@@ -3012,23 +3014,6 @@
             "x-ob-sample-value": {
               "EndTime": "2011-10-05T16:48:00.000Z",
               "StartTime": "2011-10-05T14:48:00.000Z"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "QuestionType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The type of result expected by the question",
-            "x-ob-item-type": "QuestionTypeItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Text"
             },
             "x-ob-item-type-group": ""
           }
@@ -4777,25 +4762,25 @@
           },
           {
             "type": "object",
-            "description": "Maximum AC Capacity or Load that the busbar is rated to handle.",
-            "x-ob-item-type": "num:energyItemType",
+            "description": "Maximum AC capacity or load that the busbar is rated to handle.",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "",
               "Value": ""
             },
-            "x-ob-item-type-group": ""
+            "x-ob-item-type-group": "OBElectricalPower"
           }
         ]
       },
-      "ProdCombinerPanel": {
+      "ProdCombiner": {
         "allOf": [
           {
             "$ref": "#/components/schemas/Product"
           },
           {
             "type": "object",
-            "description": "Specific Details for a Combiner Panel product",
+            "description": "A combiner joins several DC circuits.",
             "properties": {
               "BusbarCapacityAC": {
                 "$ref": "#/components/schemas/BusbarCapacityAC"
@@ -7021,7 +7006,7 @@
           }
         ]
       },
-      "PVSystemStringID": {
+      "PVStringID": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
@@ -7131,12 +7116,12 @@
           }
         ]
       },
-      "PVSystemArray": {
+      "PVArray": {
         "type": "object",
         "description": "An array of modules within a PVSystem that have a common orientation.",
         "properties": {
-          "PVSystemStrings": {
-            "$ref": "#/components/schemas/PVSystemStrings"
+          "PVStrings": {
+            "$ref": "#/components/schemas/PVStrings"
           },
           "Orientation": {
             "$ref": "#/components/schemas/Orientation"
@@ -7161,16 +7146,22 @@
           },
           "Devices": {
             "$ref": "#/components/schemas/Devices"
+          },
+          "PVArrayID": {
+            "$ref": "#/components/schemas/PVArrayID"
+          },
+          "ModuleOrientation": {
+            "$ref": "#/components/schemas/ModuleOrientation"
           }
         }
       },
-      "PVSystemStrings": {
+      "PVStrings": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/PVSystemString"
+          "$ref": "#/components/schemas/PVString"
         }
       },
-      "PVSystemString": {
+      "PVString": {
         "type": "object",
         "description": "A string of Modules within a PVSystem",
         "properties": {
@@ -7192,8 +7183,11 @@
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
-          "PVSystemStringID": {
-            "$ref": "#/components/schemas/PVSystemStringID"
+          "PVStringID": {
+            "$ref": "#/components/schemas/PVStringID"
+          },
+          "ModuleOrientation": {
+            "$ref": "#/components/schemas/ModuleOrientation"
           }
         }
       },
@@ -7241,11 +7235,324 @@
         },
         "x-ob-usage-tips": ""
       },
-      "PVSystemArrays": {
+      "PVArrays": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/PVSystemArray"
+          "$ref": "#/components/schemas/PVArray"
         }
+      },
+      "ProdInverter": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
+          },
+          {
+            "type": "object",
+            "description": "Equipment that converts electricity from DC to AC",
+            "properties": {
+              "InverterStyle": {
+                "$ref": "#/components/schemas/InverterStyle"
+              },
+              "Grounding": {
+                "$ref": "#/components/schemas/Grounding"
+              }
+            }
+          }
+        ]
+      },
+      "InverterStyle": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of the style of the inverter which can be Central, String, or MicroInverter.",
+            "x-ob-item-type": "inverterStyleItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": "Central"
+          }
+        ]
+      },
+      "ProdWire": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
+          },
+          {
+            "type": "object",
+            "description": "Wire in a PV system",
+            "properties": {
+              "WireType": {
+                "$ref": "#/components/schemas/WireType"
+              },
+              "WireGauge": {
+                "$ref": "#/components/schemas/WireGauge"
+              }
+            }
+          }
+        ]
+      },
+      "WireType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of wire or cable.",
+            "x-ob-item-type": "WireTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": "ClassB"
+          }
+        ]
+      },
+      "Grounding": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Describes the grounding of the inverter, can be Grounded or Transformerless",
+            "x-ob-item-type": "GroundingItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": "Grounded"
+          }
+        ]
+      },
+      "PVArrayID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A UUID for identifying a specific array",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": "7a00622c6bb04a3fc6da73090958db3a1bf6c791"
+            }
+          }
+        ]
+      },
+      "RoofPlane": {
+        "type": "object",
+        "description": "A surface of a roof at a single orientation",
+        "properties": {
+          "RoofPlaneID": {
+            "$ref": "#/components/schemas/RoofPlaneID"
+          },
+          "RoofMaterial": {
+            "$ref": "#/components/schemas/RoofMaterial"
+          },
+          "Orientation": {
+            "$ref": "#/components/schemas/Orientation"
+          }
+        }
+      },
+      "RoofPlanes": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/RoofPlane"
+        }
+      },
+      "CapacityAC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Capacity in AC at nominal conditions. Equal to rated capacity for a single inverter, or sum of inverter rated capacities for a PV system. Nominal conditions for an inverter are continuous output at unity power factor.",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "CurrentOutputMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum output electric current of a device",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "VoltageOutputMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum output voltage of a device",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "Comment": {
+        "type": "object",
+        "description": "Date, source and content of a comment",
+        "properties": {
+          "CommentID": {
+            "$ref": "#/components/schemas/CommentID"
+          },
+          "CommentDate": {
+            "$ref": "#/components/schemas/CommentDate"
+          },
+          "CommentText": {
+            "$ref": "#/components/schemas/CommentText"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "CommentTags": {
+            "$ref": "#/components/schemas/CommentTags"
+          }
+        }
+      },
+      "CommentID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The UUID of a comment",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "CommentDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date of a comment",
+            "x-ob-item-type": "xbrli:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "CommentText": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Content text of a comment",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "Comments": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Comment"
+        }
+      },
+      "ProdOptimizer": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
+          },
+          {
+            "type": "object",
+            "description": "A DC-DC power optimizer",
+            "properties": {
+              "CurrentOutputMax": {
+                "$ref": "#/components/schemas/CurrentOutputMax"
+              },
+              "VoltageOutputMax": {
+                "$ref": "#/components/schemas/VoltageOutputMax"
+              }
+            }
+          }
+        ]
+      },
+      "WireGauge": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The gauge of a wire or cable.",
+            "x-ob-item-type": "wireGaugeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": 10
+          }
+        ]
+      },
+      "CommentTag": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A tag, keyword or label associated with a comment.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": "system"
+          }
+        ]
+      },
+      "CommentTags": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CommentTag"
+        }
+      },
+      "ModuleOrientation": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The orientation of a module, can be Landscape or Portrait",
+            "x-ob-item-type": "moduleOrientationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
       }
     }
   },
@@ -11084,14 +11391,6 @@
           "label": "Tracker",
           "description": ""
         },
-        "CombinerPanel": {
-          "label": "CombinerPanel",
-          "description": ""
-        },
-        "CombinerBox": {
-          "label": "CombinerBox",
-          "description": ""
-        },
         "MetStation": {
           "label": "MetStation",
           "description": ""
@@ -11122,6 +11421,18 @@
         },
         "Mounting": {
           "label": "Mounting",
+          "description": ""
+        },
+        "Combiner": {
+          "label": "Combiner",
+          "description": ""
+        },
+        "Racking": {
+          "label": "Racking",
+          "description": ""
+        },
+        "Wire": {
+          "label": "Wire",
           "description": ""
         }
       }
@@ -11392,7 +11703,7 @@
         }
       }
     },
-    "QuestionTypeItemType": {
+    "AnswerTypeItemType": {
       "description": "",
       "enums": {
         "Text": {
@@ -11417,6 +11728,10 @@
         },
         "URL": {
           "label": "URL",
+          "description": ""
+        },
+        "File": {
+          "label": "File",
           "description": ""
         }
       }
@@ -12147,6 +12462,79 @@
         },
         "UL3741": {
           "label": "UL3741",
+          "description": ""
+        }
+      }
+    },
+    "inverterStyleItemType": {
+      "description": "",
+      "enums": {
+        "Central": {
+          "label": "Central",
+          "description": ""
+        },
+        "String": {
+          "label": "String",
+          "description": ""
+        },
+        "MicroInverter": {
+          "label": "MicroInverter",
+          "description": ""
+        }
+      }
+    },
+    "WireTypeItemType": {
+      "description": "",
+      "enums": {
+        "ClassB": {
+          "label": "ClassB",
+          "description": ""
+        },
+        "ClassC": {
+          "label": "ClassC",
+          "description": ""
+        },
+        "THWN-2": {
+          "label": "THWN-2",
+          "description": ""
+        },
+        "PVWire": {
+          "label": "PVWire",
+          "description": ""
+        }
+      }
+    },
+    "GroundingItemType": {
+      "description": "Inverter grounding descriptions",
+      "enums": {
+        "Grounded": {
+          "label": "Grounded",
+          "description": ""
+        },
+        "Transformerless": {
+          "label": "Transformerless",
+          "description": ""
+        }
+      }
+    },
+    "wireGaugeItemType": {
+      "description": "Units for gauge of a wire or cable",
+      "enums": {
+        "AWG": {
+          "label": "AWG",
+          "description": "American Wire Gauge"
+        }
+      }
+    },
+    "moduleOrientationItemType": {
+      "description": "Orientation of a module, can be Landscape or Potrait",
+      "enums": {
+        "Landscape": {
+          "label": "Landscape",
+          "description": ""
+        },
+        "Portrait": {
+          "label": "Portrait",
           "description": ""
         }
       }
