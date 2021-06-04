@@ -99,6 +99,9 @@
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "WarrantyMaterial": {
+            "$ref": "#/components/schemas/WarrantyMaterial"
           }
         },
         "x-ob-usage-tips": ""
@@ -1459,7 +1462,7 @@
           {
             "type": "object",
             "description": "Method of the determining the location",
-            "x-ob-item-type": "LocationDeterminationMethodItemType",
+            "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "AddressGeocoding"
@@ -1476,7 +1479,7 @@
           {
             "type": "object",
             "description": "The type of contact being specified",
-            "x-ob-item-type": "ContactTypeItemType",
+            "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Homeowner"
@@ -1493,7 +1496,7 @@
           {
             "type": "object",
             "description": "The method of contact the contact prefers",
-            "x-ob-item-type": "PreferredContactMethodItemType",
+            "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Email"
@@ -1578,7 +1581,7 @@
           {
             "type": "object",
             "description": "The type of location being specified",
-            "x-ob-item-type": "LocationTypeItemType",
+            "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "GeneralProximity"
@@ -1629,7 +1632,7 @@
           {
             "type": "object",
             "description": "The type of address being specified",
-            "x-ob-item-type": "AddressTypeItemType",
+            "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Installation"
@@ -2033,8 +2036,8 @@
           },
           {
             "type": "object",
-            "description": "The type of product.",
-            "x-ob-item-type": "ProdTypeItemType",
+            "description": "The type of product",
+            "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Module"
@@ -3497,7 +3500,7 @@
           {
             "type": "object",
             "description": "The enumerated list of the types of major specifications.",
-            "x-ob-item-type": "SpecificationTypeItemType",
+            "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-usage-tips": "If the specification does not have a type listed here, select \"None\" and then use the SpecificationName as an alternative.",
             "x-ob-sample-value": {
               "Value": "AcceptableAmbientTemperatureRange"
@@ -3586,9 +3589,6 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
-          },
-          "ProdCertificationType": {
-            "$ref": "#/components/schemas/ProdCertificationType"
           }
         }
       },
@@ -5083,7 +5083,7 @@
           },
           {
             "type": "object",
-            "description": "Current of a photovoltaic device at short circuit conditions.",
+            "description": "Current of a photovoltaic device at short Circuit conditions.",
             "x-ob-item-type": "num-us:electricCurrentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -7255,6 +7255,9 @@
               },
               "Grounding": {
                 "$ref": "#/components/schemas/Grounding"
+              },
+              "Dimension": {
+                "$ref": "#/components/schemas/Dimension"
               }
             }
           }
@@ -7548,6 +7551,863 @@
             "type": "object",
             "description": "The orientation of a module, can be Landscape or Portrait",
             "x-ob-item-type": "moduleOrientationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "Duration": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "A number defining a length of time",
+            "x-ob-item-type": "xbrli:durationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "EndTime": "2020-11-30",
+              "StartTime": "2045-11-30",
+              "Unit": "Year",
+              "Value": "25"
+            }
+          }
+        ]
+      },
+      "ProductWarranty": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The length of a product Warranty in Years",
+            "x-ob-item-type": "xbrli:dateItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "PowerWarranty": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A description of the warranty for power output if applicable",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "12 Years of 90.2% Output Power, 30 Years of 80.7% Output Power"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "PowerMaximum": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "(Pmax) at STC",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Watt",
+              "Value": "300"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "VoltageAtMaximumPower": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "(Vmpp)",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Volt",
+              "Value": "32.26"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "CurrentAtMaximumPower": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "(Impp)",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Ampere",
+              "Value": "9.31"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "VoltageOpenCircuit ": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "(Voc)",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Volt",
+              "Value": "39.83"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "ModuleEfficiency": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The efficiency of the solar module",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "18.3%"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "PowerToleranceMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The specified range within which a solar panel could overperform its rated power at Standard Test Conditions.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "+ 1.5 %"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "TemperatureNOCT": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The nominal operating cell temperature (NOCT) of a solar module.",
+            "x-ob-item-type": "num-us:temperatureItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Celsius",
+              "Value": "45"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "TemperatureMaximumOperating": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The highest temperature in which a product can operate",
+            "x-ob-item-type": "num-us:temperatureItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Celsius",
+              "Value": "85"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "TemperatureMinimumOperating": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The coldest temperature in which a product can operate",
+            "x-ob-item-type": "num-us:temperatureItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Celsius",
+              "Value": "-40"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "TemperatureCoefficientMaximumPower": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The temperature coefficient of Pmax. Units are %/°C for standardization.",
+            "x-ob-item-type": "xbrli:pureItemType",
+            "x-ob-usage-tips": "%/°C is not a currently available OB Unit. Please verify that data is converted and entered correctly.",
+            "x-ob-sample-value": {
+              "Value": "-0.37"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "TemperatureCoefficientOpenCircuitVoltage": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The temperature coefficient of Voc. Units are %/°C for standardization.",
+            "x-ob-item-type": "xbrli:pureItemType",
+            "x-ob-usage-tips": "%/°C is not a currently available OB Unit. Please verify that data is converted and entered correctly.",
+            "x-ob-sample-value": {
+              "Value": "-0.304"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "TemperatureCoefficientShortCircuitCurrent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The temperature coefficient of Isc. Units are %/°C for standardization.",
+            "x-ob-item-type": "xbrli:pureItemType",
+            "x-ob-usage-tips": "%/°C is not a currently available OB Unit. Please verify that data is converted and entered correctly.",
+            "x-ob-sample-value": {
+              "Value": "0.05"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "VoltageMaximumSystem": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The maximum voltage that a string of modules can support",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Volt",
+              "Value": "1500"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "FuseSeriesRating": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The series fuse rating (need better description)",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Ampere",
+              "Value": "20"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "CellType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The cell type for a solar module",
+            "x-ob-item-type": "cellTechnologyItemType",
+            "x-ob-usage-tips": "Used for large group categorizations",
+            "x-ob-sample-value": {
+              "Value": "monoSi"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "Mass": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The mass of the parent object. ",
+            "x-ob-item-type": "num:massItemType",
+            "x-ob-usage-tips": "Apply appropriate engineering consistency with related object Weight.",
+            "x-ob-sample-value": {
+              "Unit": "Kilogram",
+              "Value": "20"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "Width": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The width of the parent object",
+            "x-ob-item-type": "num:lengthItemType",
+            "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension.",
+            "x-ob-sample-value": {
+              "Unit": "Millimetre",
+              "Value": "1765"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "Length": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The length of the parent object",
+            "x-ob-item-type": "num:lengthItemType",
+            "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension.",
+            "x-ob-sample-value": {
+              "Unit": "Millimetre",
+              "Value": "1048"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "Height": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The height of the parent object",
+            "x-ob-item-type": "num:lengthItemType",
+            "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension",
+            "x-ob-sample-value": {
+              "Unit": "Millimetre",
+              "Value": "35"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "GlazingMaterial": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The material used in the glazing of a solar module",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "GlassTempered"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "ModuleFrameMaterial": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The material used for a module frame",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "AnodizedAluminiumAlloy"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "SolarCellQuantity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The number of ProdSolarCell in a module",
+            "x-ob-item-type": "xbrli:pureItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "120"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "JunctionBoxDiodeQuantity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The number of Junction Box Diodes in a solar module",
+            "x-ob-item-type": "xbrli:pureItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "3"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "JunctionBoxProtectionCertification": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The maximum certification that the Junction Box has been tested for.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "IP 68"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "CableCrossSectionArea": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The cross sectional area of the cable connecting from the solar module",
+            "x-ob-item-type": "num:areaItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Square Millimeter",
+              "Value": "4"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "CableLength": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The length of the connection cable to the solar module",
+            "x-ob-item-type": "num:lengthItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Millimetre",
+              "Value": "1200"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "CableConnector": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of cable connector used on the solar module",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "MC4"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "Weight": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The weight of the parent object",
+            "x-ob-item-type": "forceItemType",
+            "x-ob-usage-tips": "Use appropriate engineering consistency with related object Mass",
+            "x-ob-sample-value": {
+              "Unit": "Newton",
+              "Value": "9.81"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "PackageWidth": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The width of an object for shipping purposes. This includes any cardboard, pallets or other items needed.",
+            "x-ob-item-type": "num:lengthItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Millimetre",
+              "Value": "1765"
+            }
+          }
+        ]
+      },
+      "PackageHeight": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The height of an object for shipping purposes. This includes any cardboard, pallets or other items needed.",
+            "x-ob-item-type": "num:lengthItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Millimetre",
+              "Value": "1765"
+            }
+          }
+        ]
+      },
+      "PowerToleranceMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The specified range within which a solar panel could underperform its rated power at Standard Test Conditions.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "- 1.5 %"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "ProdModule": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
+          },
+          {
+            "type": "object",
+            "description": "A solar module product",
+            "properties": {
+              "ProductWarranty": {
+                "$ref": "#/components/schemas/ProductWarranty"
+              },
+              "PowerWarranty": {
+                "$ref": "#/components/schemas/PowerWarranty"
+              },
+              "PowerMaximum": {
+                "$ref": "#/components/schemas/PowerMaximum"
+              },
+              "VoltageAtMaximumPower": {
+                "$ref": "#/components/schemas/VoltageAtMaximumPower"
+              },
+              "CurrentAtMaximumPower": {
+                "$ref": "#/components/schemas/CurrentAtMaximumPower"
+              },
+              "VoltageOpenCircuit ": {
+                "$ref": "#/components/schemas/VoltageOpenCircuit "
+              },
+              "CurrentShortCircuit": {
+                "$ref": "#/components/schemas/CurrentShortCircuit"
+              },
+              "ModuleEfficiency": {
+                "$ref": "#/components/schemas/ModuleEfficiency"
+              },
+              "PowerToleranceMax": {
+                "$ref": "#/components/schemas/PowerToleranceMax"
+              },
+              "TemperatureNOCT": {
+                "$ref": "#/components/schemas/TemperatureNOCT"
+              },
+              "TemperatureMaximumOperating": {
+                "$ref": "#/components/schemas/TemperatureMaximumOperating"
+              },
+              "TemperatureMinimumOperating": {
+                "$ref": "#/components/schemas/TemperatureMinimumOperating"
+              },
+              "TemperatureCoefficientMaximumPower": {
+                "$ref": "#/components/schemas/TemperatureCoefficientMaximumPower"
+              },
+              "TemperatureCoefficientOpenCircuitVoltage": {
+                "$ref": "#/components/schemas/TemperatureCoefficientOpenCircuitVoltage"
+              },
+              "TemperatureCoefficientShortCircuitCurrent": {
+                "$ref": "#/components/schemas/TemperatureCoefficientShortCircuitCurrent"
+              },
+              "VoltageMaximumSystem": {
+                "$ref": "#/components/schemas/VoltageMaximumSystem"
+              },
+              "FuseSeriesRating": {
+                "$ref": "#/components/schemas/FuseSeriesRating"
+              },
+              "ProdSolarCell": {
+                "$ref": "#/components/schemas/ProdSolarCell"
+              },
+              "ProdCode": {
+                "$ref": "#/components/schemas/ProdCode"
+              },
+              "Description": {
+                "$ref": "#/components/schemas/Description"
+              },
+              "FileFolderURL": {
+                "$ref": "#/components/schemas/FileFolderURL"
+              },
+              "ProdDatasheet": {
+                "$ref": "#/components/schemas/ProdDatasheet"
+              },
+              "ProdGlazing": {
+                "$ref": "#/components/schemas/ProdGlazing"
+              },
+              "ModuleFrameMaterial": {
+                "$ref": "#/components/schemas/ModuleFrameMaterial"
+              },
+              "SolarCellQuantity": {
+                "$ref": "#/components/schemas/SolarCellQuantity"
+              },
+              "JunctionBoxProtectionCertification": {
+                "$ref": "#/components/schemas/JunctionBoxProtectionCertification"
+              },
+              "CableCrossSectionArea": {
+                "$ref": "#/components/schemas/CableCrossSectionArea"
+              },
+              "CableLength": {
+                "$ref": "#/components/schemas/CableLength"
+              },
+              "CableConnector": {
+                "$ref": "#/components/schemas/CableConnector"
+              },
+              "Dimension": {
+                "$ref": "#/components/schemas/Dimension"
+              },
+              "PowerToleranceMin": {
+                "$ref": "#/components/schemas/PowerToleranceMin"
+              },
+              "IsBifacial": {
+                "$ref": "#/components/schemas/IsBifacial"
+              },
+              "BypassDiodeQuantity": {
+                "$ref": "#/components/schemas/BypassDiodeQuantity"
+              }
+            }
+          }
+        ]
+      },
+      "WarrantyMaterial": {
+        "type": "object",
+        "description": "A warranty is a type of guarantee that a manufacturer or similar party makes regarding the condition of its product. It also refers to the terms and situations in which repairs or exchanges will be made if the product does not function as originally described or intended.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Duration": {
+            "$ref": "#/components/schemas/Duration"
+          }
+        }
+      },
+      "ProdSolarCell": {
+        "type": "object",
+        "description": "A subcomponent of a ProdModule",
+        "properties": {
+          "CellType": {
+            "$ref": "#/components/schemas/CellType"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Mass": {
+            "$ref": "#/components/schemas/Mass"
+          },
+          "Width": {
+            "$ref": "#/components/schemas/Width"
+          },
+          "Length": {
+            "$ref": "#/components/schemas/Length"
+          },
+          "Height": {
+            "$ref": "#/components/schemas/Height"
+          },
+          "ProdCode": {
+            "$ref": "#/components/schemas/ProdCode"
+          }
+        }
+      },
+      "ProdGlazing": {
+        "type": "object",
+        "description": "The collection of glass, plastic or other solar cell transparent covers used in crafting a solar module",
+        "properties": {
+          "Height": {
+            "$ref": "#/components/schemas/Height"
+          },
+          "GlazingMaterial": {
+            "$ref": "#/components/schemas/GlazingMaterial"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        }
+      },
+      "Dimension": {
+        "type": "object",
+        "description": "Dimensions of an object",
+        "properties": {
+          "Length": {
+            "$ref": "#/components/schemas/Length"
+          },
+          "Width": {
+            "$ref": "#/components/schemas/Width"
+          },
+          "Height": {
+            "$ref": "#/components/schemas/Height"
+          },
+          "Mass": {
+            "$ref": "#/components/schemas/Mass"
+          },
+          "Weight": {
+            "$ref": "#/components/schemas/Weight"
+          },
+          "PackageWidth": {
+            "$ref": "#/components/schemas/PackageWidth"
+          },
+          "PackageHeight": {
+            "$ref": "#/components/schemas/PackageWidth"
+          },
+          "PackageLength": {
+            "$ref": "#/components/schemas/PackageLength"
+          }
+        }
+      },
+      "IsBifacial": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "True if a module is bifacial, False otherwise",
+            "x-ob-item-type": "xbrli:booleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "PackageLength": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The length of an object for shipping purposes. This includes any cardboard, pallets or other items needed.",
+            "x-ob-item-type": "num:lengthItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "BypassDiodeQuantity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The number of bypass diodes connected in parallel with cell strings in the module.",
+            "x-ob-item-type": "xbrli:pureItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -12540,6 +13400,43 @@
         "Portrait": {
           "label": "Portrait",
           "description": ""
+        }
+      }
+    },
+    "cellTechnologyItemType": {
+      "description": "The type of technology for a solar cell.",
+      "enums": {
+        "monoSi": {
+          "label": "monoSi",
+          "description": "Monocrystalline silicon"
+        },
+        "polySi": {
+          "label": "polySi",
+          "description": "Polycrystalline silicon"
+        },
+        "HIT": {
+          "label": "HIT",
+          "description": "Heterojunction with Intrinsic thin-layer"
+        },
+        "aSi": {
+          "label": "aSi",
+          "description": "Amorphous silicon thin film"
+        },
+        "thinfilm": {
+          "label": "thinfilm",
+          "description": "Thin film (generic)"
+        },
+        "CIGS": {
+          "label": "CIGS",
+          "description": "Cadmium indium gallium selenium thin film"
+        },
+        "other": {
+          "label": "other",
+          "description": "Other type not listed"
+        },
+        "CdTe": {
+          "label": "CdTe",
+          "description": "Cadmium telluride thin film"
         }
       }
     }
