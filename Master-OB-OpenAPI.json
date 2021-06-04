@@ -7695,7 +7695,7 @@
           },
           {
             "type": "object",
-            "description": "The efficiency of the solar module",
+            "description": "The efficiency of the solar module at standard test condition (STC).",
             "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -7894,7 +7894,7 @@
               "Unit": "Kilogram",
               "Value": "20"
             },
-            "x-ob-item-type-group": ""
+            "x-ob-item-type-group": "massUnitItemType"
           }
         ]
       },
@@ -7994,7 +7994,7 @@
           {
             "type": "object",
             "description": "The number of ProdSolarCell in a module",
-            "x-ob-item-type": "xbrli:pureItemType",
+            "x-ob-item-type": "xbrli:integerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "120"
@@ -8098,7 +8098,7 @@
           {
             "type": "object",
             "description": "The weight of the parent object",
-            "x-ob-item-type": "forceItemType",
+            "x-ob-item-type": "num:massItemType",
             "x-ob-usage-tips": "Use appropriate engineering consistency with related object Mass",
             "x-ob-sample-value": {
               "Unit": "Newton",
@@ -8268,6 +8268,9 @@
               },
               "BypassDiodeQuantity": {
                 "$ref": "#/components/schemas/BypassDiodeQuantity"
+              },
+              "CellsInSeries": {
+                "$ref": "#/components/schemas/CellsInSeries"
               }
             }
           }
@@ -8407,7 +8410,37 @@
           {
             "type": "object",
             "description": "The number of bypass diodes connected in parallel with cell strings in the module.",
-            "x-ob-item-type": "xbrli:pureItemType",
+            "x-ob-item-type": "xbrli:integerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "CellsInSeries": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The number of cells in series in a module.",
+            "x-ob-item-type": "xbrli:integerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "CellStringsParallelQuantity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The number of parallel-connected strings (a string is a series-connected number of cells).",
+            "x-ob-item-type": "xbrli:integerItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -13468,6 +13501,18 @@
         "kW",
         "MW",
         "W"
+      ]
+    },
+    "massUnitItemType": {
+      "type": "#/components/x-ob-units/num:massItemType",
+      "description": "Restriction of num:massItemType to only units of mass: g, kg, t, kt, Mt, Gt",
+      "group": [
+        "t",
+        "g",
+        "kg",
+        "kt",
+        "Mt",
+        "Gt"
       ]
     }
   }
