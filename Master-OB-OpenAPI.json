@@ -7427,6 +7427,9 @@
           },
           "Contacts": {
             "$ref": "#/components/schemas/Contacts"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
           }
         }
       },
