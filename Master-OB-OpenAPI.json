@@ -7428,8 +7428,8 @@
           "Contacts": {
             "$ref": "#/components/schemas/Contacts"
           },
-          "CommentTags": {
-            "$ref": "#/components/schemas/CommentTags"
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
           }
         }
       },
@@ -7518,27 +7518,6 @@
           }
         ]
       },
-      "CommentTag": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A tag, keyword or label associated with a comment.",
-            "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": "system"
-          }
-        ]
-      },
-      "CommentTags": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CommentTag"
-        }
-      },
       "ModuleOrientation": {
         "allOf": [
           {
@@ -7553,6 +7532,27 @@
             "x-ob-sample-value": ""
           }
         ]
+      },
+      "Tag": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A tag, keyword or label.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "Tags": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Tag"
+        }
       }
     }
   },
@@ -12540,6 +12540,10 @@
         "Portrait": {
           "label": "Portrait",
           "description": ""
+        },
+        "Mixed": {
+          "label": "Mixed",
+          "description": "Use when the object (e.g., Array) has modules in both Portrait and Landscape "
         }
       }
     }
