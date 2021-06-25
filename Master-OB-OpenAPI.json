@@ -102,6 +102,12 @@
           },
           "WarrantyMaterial": {
             "$ref": "#/components/schemas/WarrantyMaterial"
+          },
+          "Dimension": {
+            "$ref": "#/components/schemas/Dimension"
+          },
+          "PackageDimension": {
+            "$ref": "#/components/schemas/PackageDimension"
           }
         },
         "x-ob-usage-tips": ""
@@ -8108,42 +8114,6 @@
           }
         ]
       },
-      "PackageWidth": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The width of an object for shipping purposes. This includes any cardboard, pallets or other items needed.",
-            "x-ob-item-type": "num:lengthItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "Millimetre",
-              "Value": "1765"
-            }
-          }
-        ]
-      },
-      "PackageHeight": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The height of an object for shipping purposes. This includes any cardboard, pallets or other items needed.",
-            "x-ob-item-type": "num:lengthItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "Millimetre",
-              "Value": "1765"
-            }
-          }
-        ]
-      },
       "PowerToleranceMin": {
         "allOf": [
           {
@@ -8360,15 +8330,6 @@
           },
           "Weight": {
             "$ref": "#/components/schemas/Weight"
-          },
-          "PackageWidth": {
-            "$ref": "#/components/schemas/PackageWidth"
-          },
-          "PackageHeight": {
-            "$ref": "#/components/schemas/PackageWidth"
-          },
-          "PackageLength": {
-            "$ref": "#/components/schemas/PackageLength"
           }
         }
       },
@@ -8381,21 +8342,6 @@
             "type": "object",
             "description": "True if a module is bifacial, False otherwise",
             "x-ob-item-type": "xbrli:booleanItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": ""
-          }
-        ]
-      },
-      "PackageLength": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The length of an object for shipping purposes. This includes any cardboard, pallets or other items needed.",
-            "x-ob-item-type": "num:lengthItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -8446,6 +8392,24 @@
             "x-ob-sample-value": ""
           }
         ]
+      },
+      "PackageDimension": {
+        "type": "object",
+        "description": "An object with properties describing package dimensions",
+        "properties": {
+          "Height": {
+            "$ref": "#/components/schemas/Height"
+          },
+          "Length": {
+            "$ref": "#/components/schemas/Length"
+          },
+          "Weight": {
+            "$ref": "#/components/schemas/Weight"
+          },
+          "Width": {
+            "$ref": "#/components/schemas/Width"
+          }
+        }
       }
     }
   },
