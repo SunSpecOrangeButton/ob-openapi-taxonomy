@@ -106,8 +106,8 @@
           "Dimension": {
             "$ref": "#/components/schemas/Dimension"
           },
-          "PackageDimension": {
-            "$ref": "#/components/schemas/PackageDimension"
+          "Packages": {
+            "$ref": "#/components/schemas/Packages"
           }
         },
         "x-ob-usage-tips": ""
@@ -4435,7 +4435,7 @@
           {
             "type": "object",
             "description": "A quantity",
-            "x-ob-item-type": "xbrli:pureItemType",
+            "x-ob-item-type": "xbrli:integerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -8393,22 +8393,25 @@
           }
         ]
       },
-      "PackageDimension": {
+      "Package": {
         "type": "object",
-        "description": "An object with properties describing package dimensions",
+        "description": "Elements describing a package",
         "properties": {
-          "Height": {
-            "$ref": "#/components/schemas/Height"
+          "Dimension": {
+            "$ref": "#/components/schemas/Dimension"
           },
-          "Length": {
-            "$ref": "#/components/schemas/Length"
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           },
-          "Weight": {
-            "$ref": "#/components/schemas/Weight"
-          },
-          "Width": {
-            "$ref": "#/components/schemas/Width"
+          "Quantity": {
+            "$ref": "#/components/schemas/Quantity"
           }
+        }
+      },
+      "Packages": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Package"
         }
       }
     }
