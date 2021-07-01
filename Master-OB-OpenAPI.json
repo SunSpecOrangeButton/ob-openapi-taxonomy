@@ -8881,42 +8881,6 @@
     "textBlockItemType": {
       "description": "textBlockItemType specializes xmlNodesItemType. The unescaped content MUST have mixed content containing a simple string, or a fragment of XHTML or a mixture of both."
     },
-    "num:percentItemType": {
-      "description": "The percent item type is used to indicate that the value of the element is intended to be presented as a percentage. This does not contravene Specification section 4.8.2, which requires that percentages not be multiplied by 100."
-    },
-    "weightItemType": {
-      "description": "The weight item type represents the weight of an object which can be measured."
-    },
-    "num-us:insolationItemType": {
-      "description": "The insolation item type is used to represent a measure of energy per area over a period of time."
-    },
-    "num-us:irradianceItemType": {
-      "description": "The irradiance item type is used to represent a measure irradiance (power per unit area)"
-    },
-    "num-us:speedItemType": {
-      "description": " The speed item type is used to represent a measure of speed (distance travelled by an object per unit time). Units include knots, mach, and metres per second."
-    },
-    "massFlowItemType": {
-      "description": "The mass flow item type is used to represent a measure of mass flow rate."
-    },
-    "monetaryPerLengthItemType": {
-      "description": "The monetary per length item type is used to represent a measure of price or cost per unit length"
-    },
-    "monetaryPerAreaItemType": {
-      "description": "The monetary per area item type is used to represent a measure of price or cost per unit area"
-    },
-    "monetaryPerVolumeItemType": {
-      "description": "The monetary per volume item type is used to represent a measure of price or cost per unit volume"
-    },
-    "monetaryPerDurationItemType": {
-      "description": "The monetary per duration item type is used to represent a measure of price or cost per unit duration"
-    },
-    "monetaryPerEnergyItemType": {
-      "description": "The monetary per energy item type is used to represent a measure of price or cost per unit energy"
-    },
-    "monetaryPerMassItemType": {
-      "description": "The monetary per mass item type is used to represent a measure of price or cost per unit mass"
-    },
     "solar-types:inverterItemType": {
       "description": "",
       "enums": {
