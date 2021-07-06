@@ -7696,7 +7696,7 @@
           {
             "type": "object",
             "description": "The efficiency of the solar module at standard test condition (STC).",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "18.3%"
@@ -7713,7 +7713,7 @@
           {
             "type": "object",
             "description": "The specified range within which a solar panel could overperform its rated power at Standard Test Conditions.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "+ 1.5 %"
@@ -7783,9 +7783,9 @@
           },
           {
             "type": "object",
-            "description": "The temperature coefficient of Pmax. Units are %/°C for standardization.",
-            "x-ob-item-type": "xbrli:pureItemType",
-            "x-ob-usage-tips": "%/°C is not a currently available OB Unit. Please verify that data is converted and entered correctly.",
+            "description": "The temperature coefficient of power at the maximum power point.",
+            "x-ob-item-type": "tempCoefficientItemType",
+            "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "-0.37"
             },
@@ -7800,9 +7800,9 @@
           },
           {
             "type": "object",
-            "description": "The temperature coefficient of Voc. Units are %/°C for standardization.",
-            "x-ob-item-type": "xbrli:pureItemType",
-            "x-ob-usage-tips": "%/°C is not a currently available OB Unit. Please verify that data is converted and entered correctly.",
+            "description": "The temperature coefficient of voltage at open circuit.",
+            "x-ob-item-type": "tempCoefficientItemType",
+            "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "-0.304"
             },
@@ -7817,9 +7817,9 @@
           },
           {
             "type": "object",
-            "description": "The temperature coefficient of Isc. Units are %/°C for standardization.",
-            "x-ob-item-type": "xbrli:pureItemType",
-            "x-ob-usage-tips": "%/°C is not a currently available OB Unit. Please verify that data is converted and entered correctly.",
+            "description": "The temperature coefficient of current at short circuit.",
+            "x-ob-item-type": "tempCoefficientItemType",
+            "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "0.05"
             },
@@ -8116,7 +8116,7 @@
           {
             "type": "object",
             "description": "The specified range within which a solar panel could underperform its rated power at Standard Test Conditions.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "- 1.5 %"
@@ -8406,6 +8406,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/Package"
+        }
+      },
+      "Tags": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Tag"
         }
       }
     }
