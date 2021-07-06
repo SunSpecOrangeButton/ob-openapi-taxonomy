@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "1.1.4",
+    "version": "1.1.6",
     "title": "OB OpenAPI Taxonomy",
     "description": "OB OpenAPI Definitions For Orange Button."
   },
@@ -7437,8 +7437,8 @@
           "Contacts": {
             "$ref": "#/components/schemas/Contacts"
           },
-          "CommentTags": {
-            "$ref": "#/components/schemas/CommentTags"
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
           }
         }
       },
@@ -7527,27 +7527,6 @@
           }
         ]
       },
-      "CommentTag": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A tag, keyword or label associated with a comment.",
-            "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": "system"
-          }
-        ]
-      },
-      "CommentTags": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CommentTag"
-        }
-      },
       "ModuleOrientation": {
         "allOf": [
           {
@@ -7557,6 +7536,21 @@
             "type": "object",
             "description": "The orientation of a module, can be Landscape or Portrait",
             "x-ob-item-type": "moduleOrientationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "Tag": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A tag, keyword or label.",
+            "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -9740,42 +9734,6 @@
     },
     "textBlockItemType": {
       "description": "textBlockItemType specializes xmlNodesItemType. The unescaped content MUST have mixed content containing a simple string, or a fragment of XHTML or a mixture of both."
-    },
-    "num:percentItemType": {
-      "description": "The percent item type is used to indicate that the value of the element is intended to be presented as a percentage. This does not contravene Specification section 4.8.2, which requires that percentages not be multiplied by 100."
-    },
-    "weightItemType": {
-      "description": "The weight item type represents the weight of an object which can be measured."
-    },
-    "num-us:insolationItemType": {
-      "description": "The insolation item type is used to represent a measure of energy per area over a period of time."
-    },
-    "num-us:irradianceItemType": {
-      "description": "The irradiance item type is used to represent a measure irradiance (power per unit area)"
-    },
-    "num-us:speedItemType": {
-      "description": " The speed item type is used to represent a measure of speed (distance travelled by an object per unit time). Units include knots, mach, and metres per second."
-    },
-    "massFlowItemType": {
-      "description": "The mass flow item type is used to represent a measure of mass flow rate."
-    },
-    "monetaryPerLengthItemType": {
-      "description": "The monetary per length item type is used to represent a measure of price or cost per unit length"
-    },
-    "monetaryPerAreaItemType": {
-      "description": "The monetary per area item type is used to represent a measure of price or cost per unit area"
-    },
-    "monetaryPerVolumeItemType": {
-      "description": "The monetary per volume item type is used to represent a measure of price or cost per unit volume"
-    },
-    "monetaryPerDurationItemType": {
-      "description": "The monetary per duration item type is used to represent a measure of price or cost per unit duration"
-    },
-    "monetaryPerEnergyItemType": {
-      "description": "The monetary per energy item type is used to represent a measure of price or cost per unit energy"
-    },
-    "monetaryPerMassItemType": {
-      "description": "The monetary per mass item type is used to represent a measure of price or cost per unit mass"
     },
     "solar-types:inverterItemType": {
       "description": "",
@@ -13399,6 +13357,320 @@
         },
         "Portrait": {
           "label": "Portrait",
+          "description": ""
+        },
+        "Mixed": {
+          "label": "Mixed",
+          "description": "Use when the object (e.g., Array) has modules in both Portrait and Landscape "
+        }
+      }
+    },
+    "weightItemType": {
+      "description": "Units for weight",
+      "units": {
+        "lb": {
+          "label": "Pound",
+          "description": ""
+        },
+        "kg": {
+          "label": "Kilogram",
+          "description": ""
+        },
+        "T": {
+          "label": "Ton",
+          "description": "US ton, equal to 2000lb"
+        },
+        "t": {
+          "label": "Tonne",
+          "description": "Metric ton, equal to 1000kg"
+        }
+      }
+    },
+    "irradianceItemType": {
+      "description": "Units for irradiance",
+      "units": {
+        "W_per_sqm": {
+          "label": "Watts per square meter",
+          "description": ""
+        },
+        "kW_per_sqm": {
+          "label": "Kilowatts per square meter",
+          "description": ""
+        }
+      }
+    },
+    "insolationItemType": {
+      "description": "Units for insolation (time-integrated irradiance)",
+      "units": {
+        "Wh_per_sqm": {
+          "label": "Watt-hours per square meter",
+          "description": ""
+        },
+        "kWh_per_sqm": {
+          "label": "Kilowatt-hours per square meter",
+          "description": ""
+        }
+      }
+    },
+    "speedItemType": {
+      "description": "Units for speed",
+      "units": {
+        "mi_per_h": {
+          "label": "Miles per hour",
+          "description": ""
+        },
+        "ft_per_s": {
+          "label": "Feet per second",
+          "description": ""
+        },
+        "m_per_s": {
+          "label": "Meters per second",
+          "description": ""
+        },
+        "km_per_h": {
+          "label": "Kilometers per hour",
+          "description": ""
+        }
+      }
+    },
+    "percentItemType": {
+      "description": "Percent unit",
+      "units": {
+        "percent": {
+          "label": "Percent",
+          "description": ""
+        }
+      }
+    },
+    "perUnitItemType": {
+      "description": "Per unit",
+      "units": {
+        "pu": {
+          "label": "Per unit",
+          "description": ""
+        }
+      }
+    },
+    "tempCoefficientItemType": {
+      "description": "Units for temperature coefficients, which are change in numerator per unit change in temperature",
+      "units": {
+        "V_per_Cel": {
+          "label": "Voltage per degree Celsius",
+          "description": ""
+        },
+        "A_per_Cel": {
+          "label": "Ampere per degree Celsius",
+          "description": ""
+        },
+        "W_per_Cel": {
+          "label": "Watts per degree Celsius",
+          "description": ""
+        },
+        "percent_per_Cel": {
+          "label": "Percent change per degree Celsius",
+          "description": ""
+        },
+        "pu_per_Cel": {
+          "label": "Change per unit, per degree Celsius",
+          "description": "Unit equal to 1/C"
+        }
+      }
+    },
+    "monetaryPerAreaItemType": {
+      "description": "Currency per unit area",
+      "units": {
+        "USD_per_acre": {
+          "label": "US dollars per acre",
+          "description": ""
+        },
+        "USD_per_sqmi": {
+          "label": "US dollars per square mile",
+          "description": ""
+        },
+        "USD_per_sqm": {
+          "label": "US dollars per square meter",
+          "description": ""
+        },
+        "USD_per_sqkm": {
+          "label": "US dollars per square kilometer",
+          "description": ""
+        },
+        "EUR_per_sqm": {
+          "label": "Euros per square meter",
+          "description": ""
+        },
+        "EUR_per_sqkm": {
+          "label": "Euros per square kilometer",
+          "description": ""
+        }
+      }
+    },
+    "durationItemType": {
+      "description": "Units for time periods",
+      "units": {
+        "y": {
+          "label": "Year",
+          "description": ""
+        },
+        "mo": {
+          "label": "Month",
+          "description": ""
+        },
+        "d": {
+          "label": "Day",
+          "description": ""
+        },
+        "h": {
+          "label": "Hour",
+          "description": ""
+        },
+        "min": {
+          "label": "Minute",
+          "description": ""
+        },
+        "s": {
+          "label": "Second",
+          "description": ""
+        }
+      }
+    },
+    "monetaryPerDurationItemType": {
+      "description": "Units for currency per time",
+      "units": {
+        "USD_per_y": {
+          "label": "US dollars per year",
+          "description": ""
+        },
+        "USD_per_mo": {
+          "label": "US dollars per month",
+          "description": ""
+        },
+        "USD_per_h": {
+          "label": "US dollars per hour",
+          "description": ""
+        },
+        "USD_per_d": {
+          "label": "US dollars per day",
+          "description": ""
+        },
+        "EUR_per_y": {
+          "label": "Euro per year",
+          "description": ""
+        },
+        "EUR_per_mo": {
+          "label": "Euro per month",
+          "description": ""
+        },
+        "EUR_per_d": {
+          "label": "Euro per day",
+          "description": ""
+        },
+        "EUR_per_h": {
+          "label": "Euro per hour",
+          "description": ""
+        }
+      }
+    },
+    "monetaryPerEnergyItemType": {
+      "description": "Units for current per energy",
+      "units": {
+        "USD_per_MWh": {
+          "label": "US dollars per megawatt-hour",
+          "description": ""
+        },
+        "USD_per_kWh": {
+          "label": "US dollars per kilowatt-hour",
+          "description": ""
+        },
+        "EUR_per_MWh": {
+          "label": "Euro per megawatt-hour",
+          "description": ""
+        },
+        "EUR_per_kWh": {
+          "label": "Euro per kilowatt-hour",
+          "description": ""
+        }
+      }
+    },
+    "monetaryPerMassItemType": {
+      "description": "Units for currency per mass or weight",
+      "units": {
+        "USD_per_lb": {
+          "label": "US dollars per pound",
+          "description": ""
+        },
+        "USD_per_kg": {
+          "label": "US dollars per kilogram",
+          "description": ""
+        },
+        "USD_per_T": {
+          "label": "US dollars per ton",
+          "description": ""
+        },
+        "USD_per_t": {
+          "label": "US dollars per metric ton",
+          "description": ""
+        },
+        "EUR_per_kg": {
+          "label": "Euro per kilogram",
+          "description": ""
+        },
+        "EUR_per_t": {
+          "label": "Euro per metric ton",
+          "description": ""
+        }
+      }
+    },
+    "monetaryPerVolumeItemType": {
+      "description": "Units for currenncy per volume",
+      "units": {
+        "USD_per_m3": {
+          "label": "US dollars per cubic meter",
+          "description": ""
+        },
+        "USD_per_gal": {
+          "label": "US dollars per gallon",
+          "description": ""
+        },
+        "USD_per_l": {
+          "label": "US dollars per liter",
+          "description": ""
+        },
+        "EUR_per_l": {
+          "label": "Euro per liter",
+          "description": ""
+        },
+        "EUR_per_m3": {
+          "label": "Euro per cubic meter",
+          "description": ""
+        }
+      }
+    },
+    "monetaryPerPowerItemType": {
+      "description": "Units for current per power",
+      "units": {
+        "USD_per_W": {
+          "label": "US dollars per Watt",
+          "description": ""
+        },
+        "USD_per_kW": {
+          "label": "US dollars per kilowatt",
+          "description": ""
+        },
+        "USD_per_MW": {
+          "label": "US dollars per megawatt",
+          "description": ""
+        },
+        "EUR_per_W": {
+          "label": "Euro per Watt",
+          "description": ""
+        },
+        "EUR_per_kW": {
+          "label": "Euro per kilowatt",
+          "description": ""
+        },
+        "EUR_per_MW": {
+          "label": "Euro per megawatt",
           "description": ""
         }
       }
