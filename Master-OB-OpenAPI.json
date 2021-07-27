@@ -100,14 +100,14 @@
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
           },
-          "WarrantyMaterial": {
-            "$ref": "#/components/schemas/WarrantyMaterial"
-          },
           "Dimension": {
             "$ref": "#/components/schemas/Dimension"
           },
           "Packages": {
             "$ref": "#/components/schemas/Packages"
+          },
+          "Warranties ": {
+            "$ref": "#/components/schemas/Warranties "
           }
         },
         "x-ob-usage-tips": ""
@@ -8239,24 +8239,6 @@
             }
           }
         ]
-      },
-      "WarrantyMaterial": {
-        "type": "object",
-        "description": "A warranty is a type of guarantee that a manufacturer or similar party makes regarding the condition of its product. It also refers to the terms and situations in which repairs or exchanges will be made if the product does not function as originally described or intended.",
-        "properties": {
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "Duration": {
-            "$ref": "#/components/schemas/Duration"
-          }
-        }
       },
       "ProdSolarCell": {
         "type": "object",
