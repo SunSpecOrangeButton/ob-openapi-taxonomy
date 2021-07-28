@@ -8404,7 +8404,7 @@
           {
             "type": "object",
             "description": "Classification of the Warranty. What type of Warranty is it?",
-            "x-ob-item-type": "warrantyType",
+            "x-ob-item-type": "WarrantyItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -13836,6 +13836,27 @@
         "CdTe": {
           "label": "CdTe",
           "description": "Cadmium telluride thin film"
+        }
+      }
+    },
+    "WarrantyItemType": {
+      "description": "Types of warranties",
+      "enums": {
+        "Power": {
+          "label": "Power",
+          "description": ""
+        },
+        "Service": {
+          "label": "Service",
+          "description": ""
+        },
+        "Material": {
+          "label": "Material",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
         }
       }
     }
