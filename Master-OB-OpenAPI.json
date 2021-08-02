@@ -1468,7 +1468,7 @@
           {
             "type": "object",
             "description": "Method of the determining the location",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "LocationDeterminationMethodItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "AddressGeocoding"
@@ -1485,7 +1485,7 @@
           {
             "type": "object",
             "description": "The type of contact being specified",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ContactTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Homeowner"
@@ -1502,7 +1502,7 @@
           {
             "type": "object",
             "description": "The method of contact the contact prefers",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "PreferredContactMethodItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Email"
@@ -1587,7 +1587,7 @@
           {
             "type": "object",
             "description": "The type of location being specified",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "LocationTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "GeneralProximity"
@@ -2043,7 +2043,7 @@
           {
             "type": "object",
             "description": "The type of product",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "ProdTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Module"
@@ -3506,7 +3506,7 @@
           {
             "type": "object",
             "description": "The enumerated list of the types of major specifications.",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "SpecificationTypeItemType",
             "x-ob-usage-tips": "If the specification does not have a type listed here, select \"None\" and then use the SpecificationName as an alternative.",
             "x-ob-sample-value": {
               "Value": "AcceptableAmbientTemperatureRange"
@@ -5089,7 +5089,7 @@
           },
           {
             "type": "object",
-            "description": "Current of a photovoltaic device at short Circuit conditions.",
+            "description": "Current of a photovoltaic device at short circuit conditions.",
             "x-ob-item-type": "num-us:electricCurrentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
