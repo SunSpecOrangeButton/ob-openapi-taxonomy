@@ -3581,12 +3581,6 @@
         "type": "object",
         "description": "A certification for a product",
         "properties": {
-          "ProdCertificationName": {
-            "$ref": "#/components/schemas/ProdCertificationName"
-          },
-          "ProdCertificationValue": {
-            "$ref": "#/components/schemas/ProdCertificationValue"
-          },
           "CertificationAgency": {
             "$ref": "#/components/schemas/CertificationAgency"
           },
@@ -3595,42 +3589,23 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "CertificationDate": {
+            "$ref": "#/components/schemas/CertificationDate"
+          },
+          "CertificateValue": {
+            "$ref": "#/components/schemas/CertificateValue"
+          },
+          "CertificationExpirationDate": {
+            "$ref": "#/components/schemas/CertificationExpirationDate"
+          },
+          "CertificationTypeProduct": {
+            "$ref": "#/components/schemas/CertificationTypeProduct"
+          },
+          "CertificationName": {
+            "$ref": "#/components/schemas/CertificationName"
           }
         }
-      },
-      "ProdCertificationName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The name of the certification",
-            "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Quality Certification"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "ProdCertificationValue": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The value of the certification",
-            "x-ob-item-type": "xbrli:stringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "ISO 9001"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
       },
       "CertificationAgency": {
         "type": "object",
@@ -4739,23 +4714,6 @@
             "x-ob-sample-value": {
               "Unit": "US Dollar",
               "Value": "1000"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "ProdCertificationType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "An enumerated list of the possible certifications that a product can have.",
-            "x-ob-item-type": "ProdCertificationTypeItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "UL1741"
             },
             "x-ob-item-type-group": ""
           }
@@ -8413,6 +8371,89 @@
         "items": {
           "$ref": "#/components/schemas/Tag"
         }
+      },
+      "CertificateValue": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The document identifier of a certification.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "ABC-123"
+            }
+          }
+        ]
+      },
+      "CertificationDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The date on which a certification is made.",
+            "x-ob-item-type": "xbrli:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2021-01-01"
+            }
+          }
+        ]
+      },
+      "CertificationExpirationDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The expiration date of a certification.",
+            "x-ob-item-type": "xbrli:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2025-01-01"
+            }
+          }
+        ]
+      },
+      "CertificationTypeProduct": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An enumerated list of the possible certifications that a product can have.",
+            "x-ob-item-type": "ProdCertificationTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "CertificationName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of the certification.",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "UL1741"
+            }
+          }
+        ]
       }
     }
   },
