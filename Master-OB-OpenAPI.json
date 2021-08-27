@@ -8431,7 +8431,7 @@
           {
             "type": "object",
             "description": "An enumerated list of the possible certifications that a product can have.",
-            "x-ob-item-type": "ProdCertificationTypeItemType",
+            "x-ob-item-type": "CertificationTypeProductItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -13262,7 +13262,7 @@
         }
       }
     },
-    "ProdCertificationTypeItemType": {
+    "CertificationTypeProductItemType": {
       "description": "",
       "enums": {
         "IEC61215": {
