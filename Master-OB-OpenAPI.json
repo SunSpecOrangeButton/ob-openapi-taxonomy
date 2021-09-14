@@ -336,12 +336,6 @@
           },
           "VoltageOpenCircuit": {
             "$ref": "#/components/schemas/VoltageOpenCircuit"
-          },
-          "CurrentMaxPower": {
-            "$ref": "#/components/schemas/CurrentMaxPower"
-          },
-          "VoltageMaxPower": {
-            "$ref": "#/components/schemas/VoltageMaxPower"
           }
         },
         "x-ob-usage-tips": ""
@@ -5085,44 +5079,33 @@
       "CurrentShortCircuit": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
             "description": "Current of a photovoltaic device at short circuit conditions.",
             "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
+            "x-ob-sample-value": {}
           }
         ]
       },
       "VoltageOpenCircuit": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
-            "description": "Voltage of a photovoltaic device at open circuit conditions.",
+            "description": "Voltage at open circuit conditions",
             "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
+              "Unit": "Volt",
+              "Value": "39.83"
+            }
           }
         ]
       },
@@ -5962,28 +5945,6 @@
           }
         ]
       },
-      "VoltageMaxPower": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Voltage of a photovoltaic device at the maximum power point.",
-            "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "EquipTypeWarrTerm": {
         "allOf": [
           {
@@ -6345,28 +6306,6 @@
             "type": "object",
             "description": "Depth of snow on the ground during a given period of time",
             "x-ob-item-type": "num:lengthItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "CurrentMaxPower": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Current of a photovoltaic device at the maximum power point.",
-            "x-ob-item-type": "num-us:electricCurrentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -7641,7 +7580,7 @@
           },
           {
             "type": "object",
-            "description": "(Vmpp)",
+            "description": "Voltage of a photovoltaic device at the maximum power point.",
             "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -7659,30 +7598,12 @@
           },
           {
             "type": "object",
-            "description": "(Impp)",
+            "description": "Current of a photovoltaic device at the maximum power point.",
             "x-ob-item-type": "num-us:electricCurrentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Ampere",
               "Value": "9.31"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "VoltageOpenCircuit ": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "(Voc)",
-            "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "Volt",
-              "Value": "39.83"
             },
             "x-ob-item-type-group": ""
           }
@@ -8148,9 +8069,6 @@
               },
               "CurrentAtMaximumPower": {
                 "$ref": "#/components/schemas/CurrentAtMaximumPower"
-              },
-              "VoltageOpenCircuit ": {
-                "$ref": "#/components/schemas/VoltageOpenCircuit "
               },
               "CurrentShortCircuit": {
                 "$ref": "#/components/schemas/CurrentShortCircuit"
