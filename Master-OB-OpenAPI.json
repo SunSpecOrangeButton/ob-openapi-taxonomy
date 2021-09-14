@@ -100,14 +100,14 @@
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
           },
-          "WarrantyMaterial": {
-            "$ref": "#/components/schemas/WarrantyMaterial"
-          },
           "Dimension": {
             "$ref": "#/components/schemas/Dimension"
           },
           "Packages": {
             "$ref": "#/components/schemas/Packages"
+          },
+          "Warranties ": {
+            "$ref": "#/components/schemas/Warranties "
           }
         },
         "x-ob-usage-tips": ""
@@ -8240,24 +8240,6 @@
           }
         ]
       },
-      "WarrantyMaterial": {
-        "type": "object",
-        "description": "A warranty is a type of guarantee that a manufacturer or similar party makes regarding the condition of its product. It also refers to the terms and situations in which repairs or exchanges will be made if the product does not function as originally described or intended.",
-        "properties": {
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "Duration": {
-            "$ref": "#/components/schemas/Duration"
-          }
-        }
-      },
       "ProdSolarCell": {
         "type": "object",
         "description": "A subcomponent of a ProdModule",
@@ -8412,6 +8394,145 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/Tag"
+        }
+      },
+      "WarrantyType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Classification of the Warranty. What type of Warranty is it?",
+            "x-ob-item-type": "WarrantyItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Power"
+            }
+          }
+        ]
+      },
+      "WarrantyID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Universally Unique Identifier for the Warranty",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
+            }
+          }
+        ]
+      },
+      "WarrantyName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Human Readable Name for the Warranty",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Standard REC 25 yr Warranty"
+            }
+          }
+        ]
+      },
+      "WarrantyDuration": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "How long is the Warranty Valid For? ",
+            "x-ob-item-type": "durationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Enter as integer; Specify Units.",
+            "x-ob-sample-value": {
+              "Value": 25,
+              "Units": "y"
+            }
+          }
+        ]
+      },
+      "WarrantyEffectiveDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date the Warranty Comes Into Force",
+            "x-ob-item-type": "xbrli:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2012-07-16"
+            }
+          }
+        ]
+      },
+      "WarrantyExpirationDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date the Warranty Is No Longer in Force",
+            "x-ob-item-type": "xbrli:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2037-07-16"
+            }
+          }
+        ]
+      },
+      "Warranty": {
+        "type": "object",
+        "description": "Guarantee of minimum quality level",
+        "properties": {
+          "WarrantyType": {
+            "$ref": "#/components/schemas/WarrantyType"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "WarrantyID": {
+            "$ref": "#/components/schemas/WarrantyID"
+          },
+          "WarrantyName": {
+            "$ref": "#/components/schemas/WarrantyName"
+          },
+          "WarrantyDuration": {
+            "$ref": "#/components/schemas/WarrantyDuration"
+          },
+          "WarrantyEffectiveDate": {
+            "$ref": "#/components/schemas/WarrantyEffectiveDate"
+          },
+          "WarrantyExpirationDate": {
+            "$ref": "#/components/schemas/WarrantyExpirationDate"
+          }
+        }
+      },
+      "Warranties ": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Warranty"
         }
       }
     }
@@ -13715,6 +13836,27 @@
         "CdTe": {
           "label": "CdTe",
           "description": "Cadmium telluride thin film"
+        }
+      }
+    },
+    "WarrantyItemType": {
+      "description": "Types of warranties",
+      "enums": {
+        "Power": {
+          "label": "Power",
+          "description": ""
+        },
+        "Service": {
+          "label": "Service",
+          "description": ""
+        },
+        "Material": {
+          "label": "Material",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
         }
       }
     }
